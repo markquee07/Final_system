@@ -1,0 +1,52 @@
+File				User
+- Register
+	- Member 		(admin and secretary)
+	- Pastor		(admin and secretary)
+	- Church Officials 	(admin and secretary)
+	- Burial Officials 	(admin and secretary)
+
+- Attendance                    (admin and secretary)
+
+- Church Financial Transaction
+	- Income		(admin and church Treasurer)
+	- Expenses		(admin and church Treasurer)
+	- Emergency Funds	(admin and church Treasurer)
+- Burial Financial Transaction
+	- Monthly Fee		(admin and burial Treasurer)
+	- Expenditures		(admin and burial Treasurer)
+	
+
+
+View
+- Members
+- Family details
+- Church Officials		
+- Burial Officials
+- Attendance
+	-Burial
+		-fines		(admin and burial Treasurer)
+	-Church
+		-fines		(admin and church Treasurer)
+- Church Financial Transaction
+	-Income
+	-Expenses
+	-Fines
+- Burial Financial Transaction
+	-Monthly fee
+	-Expenditures
+
+Report
+-
+-
+-
+-
+
+
+
+
+Maintenance
+-UserAccount
+-Church official
+-Burial Official
+-Fines
+-Church Name
