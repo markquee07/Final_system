@@ -33,7 +33,7 @@
                 MsgBox("All field must be filled up", MsgBoxStyle.Exclamation, Title:="")
             Else
                 If .validateLogin() Then
-                    frmMain.ShowDialog()
+                    frmMainFinal.ShowDialog()
                 Else
                     MsgBox("Invalid Username/Password", MsgBoxStyle.Critical, Title:="")
                 End If

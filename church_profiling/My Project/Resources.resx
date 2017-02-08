@@ -139,9 +139,6 @@
   <data name="light_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attendance1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attendance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="income_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\income_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,9 +153,6 @@
   </data>
   <data name="burial_meeting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\burial_meeting.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="view_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\view_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +181,14 @@
   <data name="list_of_family" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list_of_family.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="attendance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attendance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="treasurers_report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\treasurers_report.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="expenses" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expenses.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,9 +232,6 @@
   <data name="report_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="meetings_report" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\meetings_report.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="income_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\income_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -268,9 +265,6 @@
   <data name="financial_transaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\financial_transaction.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="file_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\file_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="church_name" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\church_name.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -280,8 +274,14 @@
   <data name="income" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\income.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="attendance_report_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attendance_report_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="manage_bruial_official_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manage_bruial_official_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list_of_officials2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_of_officials2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="membership_org_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\membership_org_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -291,6 +291,9 @@
   </data>
   <data name="membership_org" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\membership_org.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_meeting_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_meeting_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="attendance_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attendance_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,32 +316,32 @@
   <data name="list_of_family2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list_of_family2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maintenance_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maintenance_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="attendance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attendance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="attendance1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attendance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="burial_officials_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\burial_officials_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="file_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="church_meeting_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\church_meeting_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="meetings_report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meetings_report.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="manage_financial_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manage_financial_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attendance_report_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attendance_report_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maintenance_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintenance_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -349,10 +352,160 @@
   <data name="manage_financial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manage_financial.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="list_of_officials2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\list_of_officials2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="view_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="attendance_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attendance_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="attendance_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attendance_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burial_financial_trans_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burial_financial_trans_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burial_financial_trans_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burial_financial_trans_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burial_official_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burial_official_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Burial_official_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Burial_official_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burial_officials_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burial_officials_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burial_officials_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burial_officials_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="certificate_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\certificate_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="certificate_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\certificate_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_financial_trans_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_financial_trans_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_financial_trans_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_financial_trans_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_name_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_name_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_name_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_name_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_official_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_official_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_official_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_official_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_officials_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_officials_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="church_officials_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\church_officials_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emergency_funds_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emergency_funds_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emergency_funds_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emergency_funds_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expenditures_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expenditures_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expenditures_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expenditures_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expenses_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expenses_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expenses_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expenses_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="File_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\File_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="File_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\File_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fines_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fines_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fines_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fines_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="income_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\income_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="income_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\income_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_sky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maintenance_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintenance_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maintenance_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintenance_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="member_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\member_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="member_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\member_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="members_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\members_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="members_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\members_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monthly_fee_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monthly_fee_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monthly_fee_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monthly_fee_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pastor_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pastor_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pastor_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pastor_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="register_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="register_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_account_deepsky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_account_deepsky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_account_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_account_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view_dodge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view_dodge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view_sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view_sky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

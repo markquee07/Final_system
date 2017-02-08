@@ -136,6 +136,12 @@
     <Compile Include="Forms\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmMainFinal.Designer.vb">
+      <DependentUpon>frmMainFinal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainFinal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmMember_registration.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainFinal.resx">
+      <DependentUpon>frmMainFinal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMember_registration.resx">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +271,57 @@
     <Content Include="opencv_ffmpeg310_64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\view_sky.jpg" />
+    <None Include="Resources\view_dodge.jpg" />
+    <None Include="Resources\user_account_dodge.jpg" />
+    <None Include="Resources\user_account_deepsky.jpg" />
+    <None Include="Resources\report_dodge.jpg" />
+    <None Include="Resources\report_deepsky.jpg" />
+    <None Include="Resources\register_dodge.jpg" />
+    <None Include="Resources\register_deepsky.jpg" />
+    <None Include="Resources\Pastor_dodge.jpg" />
+    <None Include="Resources\pastor_deepsky.jpg" />
+    <None Include="Resources\monthly_fee_dodge.jpg" />
+    <None Include="Resources\monthly_fee_deepsky.jpg" />
+    <None Include="Resources\members_dodge.jpg" />
+    <None Include="Resources\members_deepsky.jpg" />
+    <None Include="Resources\member_dodge.jpg" />
+    <None Include="Resources\member_deepsky.jpg" />
+    <None Include="Resources\maintenance_dodge.jpg" />
+    <None Include="Resources\maintenance_deepsky.jpg" />
+    <None Include="Resources\logout_white.png" />
+    <None Include="Resources\logout_sky.png" />
+    <None Include="Resources\logout_blue.png" />
+    <None Include="Resources\income_dodge.jpg" />
+    <None Include="Resources\income_deepsky.jpg" />
+    <None Include="Resources\fines_dodge.jpg" />
+    <None Include="Resources\fines_deepsky.jpg" />
+    <None Include="Resources\File_dodge.jpg" />
+    <None Include="Resources\File_deepsky.jpg" />
+    <None Include="Resources\expenses_dodge.jpg" />
+    <None Include="Resources\expenses_deepsky.jpg" />
+    <None Include="Resources\expenditures_dodge.jpg" />
+    <None Include="Resources\expenditures_deepsky.jpg" />
+    <None Include="Resources\emergency_funds_dodge.jpg" />
+    <None Include="Resources\emergency_funds_deepsky.jpg" />
+    <None Include="Resources\church_officials_dodge.jpg" />
+    <None Include="Resources\church_officials_deepsky.jpg" />
+    <None Include="Resources\church_official_dodge.jpg" />
+    <None Include="Resources\church_official_deepsky.jpg" />
+    <None Include="Resources\church_name_dodge.jpg" />
+    <None Include="Resources\church_name_deepsky.jpg" />
+    <None Include="Resources\church_financial_trans_dodge.jpg" />
+    <None Include="Resources\church_financial_trans_deepsky.jpg" />
+    <None Include="Resources\certificate_dodge.jpg" />
+    <None Include="Resources\certificate_deepsky.jpg" />
+    <None Include="Resources\burial_officials_dodge.jpg" />
+    <None Include="Resources\burial_officials_deepsky.jpg" />
+    <None Include="Resources\Burial_official_dodge.jpg" />
+    <None Include="Resources\burial_official_deepsky.jpg" />
+    <None Include="Resources\burial_financial_trans_dodge.jpg" />
+    <None Include="Resources\burial_financial_trans_deepsky.jpg" />
+    <None Include="Resources\attendance_dodge.jpg" />
+    <None Include="Resources\attendance_deepsky.jpg" />
     <None Include="Resources\image_icon1.jpg" />
     <None Include="Resources\c2.png" />
     <None Include="Resources\c.png" />
