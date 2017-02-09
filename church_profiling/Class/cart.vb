@@ -112,6 +112,11 @@
     End Sub
 
 
+    Public Sub saveBurialOfficial(id As Integer, _position As String, year As String)
+        Dim sql As String = "insert into tbl_burialofficial values (" & id & ",'" & _position & "','" & Year & "');"
+        GLOBAL_VARS.db.executeNonReader(sql)
+    End Sub
+
     Public Sub savePastorInformation()
         Dim sql As String = "insert into tbl_host_pastor values (null,'" & Me.p_first_name & "','" & Me.p_last_name & "','" & Me.p_middle_name & "','" & Me.p_address & "','" & Me.p_gender & "','" & Me.p_date_of_birth & "','" & Me.p_contact_no & "','" & Me.p_name_of_school_grad & "','" & Me.p_address_of_school_grad & "','" & Me.p_year_grad & "','" & Me.p_name_of_church & "','" & Me.p_address_of_church & "','" & Me.p_year_of_service & "');"
         GLOBAL_VARS.db.executeNonReader(sql)
