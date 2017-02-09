@@ -14,6 +14,9 @@
         If selected_p_id <= 0 Then
             MsgBox("Please select member", MsgBoxStyle.Information, "Information")
         Else
+            If Button1.Text = "Edit" Then
+
+            End If
             p_id2 = p_id
             frmViewMemberDetails.ShowDialog()
         End If

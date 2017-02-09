@@ -176,6 +176,30 @@
         End If
         GLOBAL_VARS.db.reader.Close()
     End Sub
+    Public Sub updateMember(ByVal id As Integer)
+        Dim sql As String = "UPDATE tbl_member_information SET " & _
+                           "First_name='" & Me.First_name & "'," & _
+                           "LAST_NAME='" & Me.Last_name & "', " & _
+                           "Middle_name='" & Me.Middle_name & "' , " & _
+                           "Date_of_birth='" & Me.Date_of_birth & "' , " & _
+                           "Gender='" & Me.Gender & "' , " & _
+                           "Province='" & Me.Province & "' , " & _
+                           "City='" & Me.City & "' , " & _
+                           "Barangay='" & Me.Barangay & "' , " & _
+                           "Baptized_status='" & Me.Baptized_status & "' , " & _
+                            "Baptized_date='" & Me.Baptized_date & "' , " & _
+                           "Contact_no='" & Me.Contact_no & "' , " & _
+                           "Email_ad='" & Me.Email_ad & "' , " & _
+                           "Blood_type='" & Me.Blood_type & "' , " & _
+                           "Contact_no='" & Me.Contact_no & "' , " & _
+                            "Contact_no='" & Me.Contact_no & "' , " & _
+                            "Contact_no='" & Me.Contact_no & "' , " & _
+                           "Contact_no='" & Me.Contact_no & "' , " & _
+                           "date_registered= Now()  " & _
+                           "WHERE ID=" & id
+        GLOBAL_VARS.db.executeNonReader(sql)
+        MsgBox("Succesfuly Updated", MsgBoxStyle.Information, "information")
+    End Sub
     Public Sub displayMemberDetails(ByVal p_id As Integer)
 
         Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,date_format(m.date_of_birth, '%M %d, %Y') as date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,date_format(m.baptized_date, '%M %d,%Y') as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,date_format(m.marriage_date, '%M %d,%Y') as marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.nature_of_business,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id where m.id=" & p_id & ";"
