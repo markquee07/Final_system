@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2017 at 04:32 PM
+-- Generation Time: Feb 09, 2017 at 03:25 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -309,14 +309,7 @@ CREATE TABLE `tbl_useraccount` (
 
 INSERT INTO `tbl_useraccount` (`id`, `First_Name`, `Last_Name`, `Username`, `Password`, `User_type`, `Contact_no`, `Date_registered`) VALUES
 (1, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '11111', '2017-01-29 13:13:26'),
-(2, 'marianne', 'bautista', '', '202cb962ac59075b964b07152d234b70', 'ADMIN', '0', '2017-02-07 09:06:47'),
-(3, 'marianne', 'joy', '', '202cb962ac59075b964b07152d234b70', 'ADMIN', '1313', '2017-02-07 09:09:03'),
-(4, 'm', 'm', '9876', '6f8f57715090da2632453988d9a1501b', 'ADMIN', '9876', '2017-02-07 09:49:05'),
-(5, 'k', 'k', '66', '8ce4b16b22b58894aa86c421e8759df3', 'ADMIN', '66', '2017-02-07 10:28:36'),
-(6, 'm', 'm', 'admin', '6f8f57715090da2632453988d9a1501b', 'ADMIN', '12', '2017-02-07 10:35:22'),
-(7, 'k', 'k', 'k', '8ce4b16b22b58894aa86c421e8759df3', 'ADMIN', '12', '2017-02-07 10:40:14'),
-(8, 'n', 'n', 'n', '7b8b965ad4bca0e41ab51de7b31363a1', 'ADMIN', '9090', '2017-02-07 10:44:44'),
-(9, 'adad', 'asd', 'ads', '7815696ecbf1c96e6894b779456d330e', 'SECRETARY', '12214214', '2017-02-07 16:34:49');
+(3, 'marianne', 'joy', 'gwapa', '202cb962ac59075b964b07152d234b70', 'ADMIN', '0935ikawnabahalasapito', '2017-02-09 09:57:35');
 
 -- --------------------------------------------------------
 
@@ -537,7 +530,7 @@ ALTER TABLE `tbl_offerings`
 -- AUTO_INCREMENT for table `tbl_useraccount`
 --
 ALTER TABLE `tbl_useraccount`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tbl_wedding`
 --
