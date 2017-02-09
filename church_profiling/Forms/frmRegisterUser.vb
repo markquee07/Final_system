@@ -1,6 +1,7 @@
 ﻿Public Class frmRegisterUser
 
     Public user As New Useraccount
+    Public user_id As Integer
 
     Private Sub txtFname_TextChanged(sender As Object, e As EventArgs) Handles txtFname.TextChanged
         If txtFname.Text.Length < 1 Then
@@ -69,6 +70,13 @@
                 .User_type = cboUsertype.Text
                 .Contact_no = txtContactNum.Text
                 .Username = txtUsername.Text
+                If btnRegister.Text = "Update" Then
+
+                    user.updateUser(user_id)
+                    clearInformation()
+                    user.loaduserc(frmUserAccountProfile.lsvUsers)
+
+                Else
                 If .isuserExist(txtUsername.Text) Then
                     MsgBox("Username already exist", MsgBoxStyle.Exclamation, "Warning")
                     txtUsername.Clear()
@@ -78,8 +86,11 @@
                     txtcPass.Clear()
                 Else
                     .saveNewAccount()
+                    user.loaduserc(frmUserAccountProfile.lsvUsers)
                     clearInformation()
                 End If
+                End If
+
             End With
         End If
     End Sub
@@ -129,6 +140,32 @@
     End Sub
 
     Private Sub frmRegisterUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If btnRegister.Text = "Update" Then
+            user.displayUserSelected(user_id)
+            txtFname.Text = user.First_Name
+            txtLname.Text = user.Last_Name
+            txtUsername.Text = user.Username
+            txtcPass.Text = user.Password
+            txtPassword.Text = user.Password
+            txtContactNum.Text = user.Contact_no
+            cboUsertype.Text = user.User_type
+            txtPassword.Visible = False
+            Label4.Visible = False
+            txtcPass.Visible = False
+            Label4.Visible = False
+            PictureBox4.Visible = False
+            PictureBox9.Visible = False
+            lblcpass.Visible = False
+            PictureBox5.Location = New Point(48, 305)
+            cboUsertype.Location = New Point(64, 313)
+            Label5.Location = New Point(69, 315)
+            PictureBox8.Location = New Point(47, 356)
+            txtContactNum.Location = New Point(63, 369)
+            Label7.Location = New Point(68, 367)
+            btnRegister.Location = New Point(48, 400)
+            Me.Size = New Size(400, 580)
+            Label6.Text="UPDATE USER"
+        End If
 
     End Sub
 
