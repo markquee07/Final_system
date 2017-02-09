@@ -536,7 +536,7 @@ Partial Class frmChurchOfficials
         Me.txtYear.Name = "txtYear"
         Me.txtYear.Size = New System.Drawing.Size(105, 22)
         Me.txtYear.TabIndex = 85
-        Me.txtYear.Text = "2017-2018"
+        Me.txtYear.Text = " "
         Me.txtYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lsvPastorList

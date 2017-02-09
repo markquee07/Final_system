@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2017 at 03:29 PM
+-- Generation Time: Feb 09, 2017 at 05:58 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -34,6 +34,32 @@ CREATE TABLE `tbl_attendance` (
   `Status` varchar(10) NOT NULL,
   `Description` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_burialofficial`
+--
+
+CREATE TABLE `tbl_burialofficial` (
+  `member_id` int(10) UNSIGNED NOT NULL,
+  `Position` varchar(45) NOT NULL,
+  `Year` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_burialofficial`
+--
+
+INSERT INTO `tbl_burialofficial` (`member_id`, `Position`, `Year`) VALUES
+(13, 'PRESIDENT', '2017-2018'),
+(15, 'VICE-PRESIDENT', '2017-2018'),
+(19, 'TREASURER', '2017-2018'),
+(21, 'SECRETARY', '2017-2018'),
+(14, 'PRESIDENT', '2017-2018'),
+(16, 'VICE-PRESIDENT', '2017-2018'),
+(23, 'TREASURER', '2017-2018'),
+(12, 'SECRETARY', '2017-2018');
 
 -- --------------------------------------------------------
 
@@ -129,6 +155,18 @@ CREATE TABLE `tbl_church_officials` (
   `Position_type` varchar(20) NOT NULL,
   `Year` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_church_officials`
+--
+
+INSERT INTO `tbl_church_officials` (`member_id`, `Position_type`, `Year`) VALUES
+(16, 'ELDER', '2017-2018'),
+(19, 'DEACON 1', '2017-2018'),
+(16, 'DEACON 2', '2017-2018'),
+(11, 'DEACON 3', '2017-2018'),
+(12, 'TREASURER', '2017-2018'),
+(14, 'SECRETARY', '2017-2018');
 
 -- --------------------------------------------------------
 
@@ -276,6 +314,18 @@ INSERT INTO `tbl_host_pastor` (`id`, `First_Name`, `Last_name`, `Middle_Name`, `
 (21, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
 (22, 'asd', 'asd', 'asd', 'asd', 'MALE', '2017-02-09 00:00:00', '23123', '', '', '', 'None', 'None', 'None'),
 (23, 'asd', 'asdasd', 'asd', 'asd', 'MALE', '2017-02-09 00:00:00', '123', 'zzzzz', 'zzzzz', 'zzzzzz', 'None', 'None', 'None');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_listofhostpastor`
+--
+
+CREATE TABLE `tbl_listofhostpastor` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `Pastor_id` int(10) UNSIGNED NOT NULL,
+  `Officer_type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -439,6 +489,12 @@ ALTER TABLE `tbl_attendance`
   ADD KEY `FK_tbl_church_attendance_2` (`Member_id`);
 
 --
+-- Indexes for table `tbl_burialofficial`
+--
+ALTER TABLE `tbl_burialofficial`
+  ADD KEY `FK_tbl_burialOfficial_1` (`member_id`);
+
+--
 -- Indexes for table `tbl_child_information`
 --
 ALTER TABLE `tbl_child_information`
@@ -508,6 +564,12 @@ ALTER TABLE `tbl_host_pastor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_listofhostpastor`
+--
+ALTER TABLE `tbl_listofhostpastor`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_member_information`
 --
 ALTER TABLE `tbl_member_information`
@@ -562,7 +624,7 @@ ALTER TABLE `tbl_church_expenses`
 -- AUTO_INCREMENT for table `tbl_church_information`
 --
 ALTER TABLE `tbl_church_information`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_emergency_funds`
 --
@@ -584,6 +646,11 @@ ALTER TABLE `tbl_fines`
 ALTER TABLE `tbl_host_pastor`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
+-- AUTO_INCREMENT for table `tbl_listofhostpastor`
+--
+ALTER TABLE `tbl_listofhostpastor`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `tbl_member_information`
 --
 ALTER TABLE `tbl_member_information`
@@ -597,7 +664,7 @@ ALTER TABLE `tbl_offerings`
 -- AUTO_INCREMENT for table `tbl_useraccount`
 --
 ALTER TABLE `tbl_useraccount`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_wedding`
 --
@@ -615,6 +682,12 @@ ALTER TABLE `tbl_attendance`
   ADD CONSTRAINT `FK_tbl_church_attendance_2` FOREIGN KEY (`Member_id`) REFERENCES `tbl_child_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `tbl_burialofficial`
+--
+ALTER TABLE `tbl_burialofficial`
+  ADD CONSTRAINT `FK_tbl_burialOfficial_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `tbl_church_income`
 --
 ALTER TABLE `tbl_church_income`
@@ -626,7 +699,8 @@ ALTER TABLE `tbl_church_income`
 -- Constraints for table `tbl_church_officials`
 --
 ALTER TABLE `tbl_church_officials`
-  ADD CONSTRAINT `FK_tbl_church_officials_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_tbl_church_officials_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_tbl_church_officials_2` FOREIGN KEY (`member_id`) REFERENCES `tbl_host_pastor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tbl_educational_background`
