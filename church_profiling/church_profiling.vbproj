@@ -97,9 +97,16 @@
   <ItemGroup>
     <Compile Include="Class\Attendance.vb" />
     <Compile Include="Class\cart.vb" />
+    <Compile Include="Class\Church.vb" />
     <Compile Include="Class\Database.vb" />
     <Compile Include="Class\Selected_Official.vb" />
     <Compile Include="Class\Useraccount.vb" />
+    <Compile Include="Forms\frmAddChurchName.Designer.vb">
+      <DependentUpon>frmAddChurchName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddChurchName.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmAttendance.Designer.vb">
       <DependentUpon>frmAttendance.vb</DependentUpon>
     </Compile>
@@ -116,6 +123,12 @@
       <DependentUpon>frmchangepass.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmchangepass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmchurchlist.Designer.vb">
+      <DependentUpon>frmchurchlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmchurchlist.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmChurchOfficials.Designer.vb">
@@ -223,6 +236,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\frmAddChurchName.resx">
+      <DependentUpon>frmAddChurchName.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAttendance.resx">
       <DependentUpon>frmAttendance.vb</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmchangepass.resx">
       <DependentUpon>frmchangepass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmchurchlist.resx">
+      <DependentUpon>frmchurchlist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChurchOfficials.resx">
       <DependentUpon>frmChurchOfficials.vb</DependentUpon>

@@ -618,4 +618,8 @@ Public Class frmMainFinal
 
 
     End Sub
+
+    Private Sub ptbM_church_name_Click(sender As Object, e As EventArgs) Handles ptbM_church_name.Click
+        frmchurchlist.ShowDialog()
+    End Sub
 End Class

@@ -35,8 +35,14 @@
         If selected_p_id <= 0 Then
             MsgBox("Please select member", MsgBoxStyle.Information, "Information")
         Else
-            p_id2 = p_id
-            frmFamilyDetails.ShowDialog()
+            If Button2.Text = "Add Child(ren)" Then
+
+                frmSiblingsRegistration.ShowDialog()
+            Else
+                p_id2 = p_id
+                frmFamilyDetails.ShowDialog()
+            End If
+          
         End If
         selected_p_id = 0
     End Sub

@@ -75,6 +75,7 @@
                     user.updateUser(user_id)
                     clearInformation()
                     user.loaduserc(frmUserAccountProfile.lsvUsers)
+                    Me.Close()
 
                 Else
                 If .isuserExist(txtUsername.Text) Then
@@ -151,19 +152,20 @@
             cboUsertype.Text = user.User_type
             txtPassword.Visible = False
             Label4.Visible = False
+            Label5.Visible = False
             txtcPass.Visible = False
             Label4.Visible = False
             PictureBox4.Visible = False
             PictureBox9.Visible = False
             lblcpass.Visible = False
-            PictureBox5.Location = New Point(48, 305)
-            cboUsertype.Location = New Point(64, 313)
-            Label5.Location = New Point(69, 315)
-            PictureBox8.Location = New Point(47, 356)
-            txtContactNum.Location = New Point(63, 369)
-            Label7.Location = New Point(68, 367)
-            btnRegister.Location = New Point(48, 400)
-            Me.Size = New Size(400, 580)
+            PictureBox5.Location = New Point(51, 234)
+            cboUsertype.Location = New Point(67, 247)
+            Label5.Location = New Point(72, 245)
+            PictureBox8.Location = New Point(50, 285)
+            txtContactNum.Location = New Point(66, 298)
+            Label7.Location = New Point(71, 296)
+            btnRegister.Location = New Point(51, 334)
+            Me.Size = New Size(400, 460)
             Label6.Text="UPDATE USER"
         End If
 
@@ -184,5 +186,13 @@
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
 
+    End Sub
+
+    Private Sub frmRegisterUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+    End Sub
+
+    Private Sub frmRegisterUser_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.clearInformation()
     End Sub
 End Class

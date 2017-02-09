@@ -14,6 +14,7 @@ Public Class frmMember_registration
         If btnSave.Text = "Update" Then
             c.displayMemberDetails(m_id)
             With Me
+                .ID.Text = c.Member_id
                 .txtFname.Text = c.First_name
                 .txtLname.Text = c.Last_name
                 .txtMname.Text = c.Middle_name
@@ -39,6 +40,8 @@ Public Class frmMember_registration
 
                 If c.Course_graduated = "None" Then
                     cbNone.Checked = True
+                    txtCourseGrad.Text = c.Course_graduated
+                    txtSchoolGrad.Text = c.Name_of_school_graduated
                 ElseIf c.Course_graduated = "Elementary" Then
                     txtCourseGrad.Text = c.Course_graduated
                     txtSchoolGrad.Text = c.Name_of_school_graduated
@@ -63,11 +66,12 @@ Public Class frmMember_registration
 
 
 
-                If c.License_specification <> "None" Then
+                If c.License_specification <> "No" Then
                     .txtSpecify.Text = c.License_specification
                     cbLicenseYES.Checked = True
                     cbBaptizedYes.Enabled = False
                 Else
+                    .txtSpecify.Text = c.Licensure_passer
                     .cbLicenseNo.Checked = True
                     cbBaptizedNo.Enabled = False
                 End If
@@ -86,13 +90,29 @@ Public Class frmMember_registration
                     Else
                     End If
                 End If
-                txtNatureofwork.Text = c.Nature_of_work
+                If c.Nature_of_work = Nothing Then
+                    txtNatureofwork.Text = c.Nature_of_work
+                Else
+                    txtNatureofwork.Text = c.Nature_of_work
+                End If
+
                 txtNameofcomp.Text = c.Name_of_company
                 txtSalary.Text = c.Salary
                 txtSelfEmplyed.Text = c.Self_employed
                 txtBusinessAddress.Text = c.Business_address
                 txtEstimatedIncome.Text = c.Estimated_annual_income
-                txtNameOfBusiness.Text = c.Name_of_business
+                If c.Nature_of_work = Nothing Then
+                    txtNameOfBusiness.Text = c.Name_of_business
+                Else
+                    txtNameOfBusiness.Text = c.Name_of_business
+                End If
+                If c.Work_status = "None" Then
+                    cbWorkNo.Checked =
+                        txtWorkAddress.Text = c.Work_address
+                Else
+                    cbWorkYEs.Checked = True
+                    txtWorkAddress.Text = c.Work_address
+                End If
             End With
         Else
             ID.Text = generatedID(8)
@@ -111,13 +131,7 @@ Public Class frmMember_registration
             txtNameofcomp.Enabled = False
             txtSalary.Enabled = False
         End If
-        If c.Work_status = "No" Then
-            cbWorkNo.Checked = True
-        Else
-            cbWorkYEs.Checked = True
-            txtWorkAddress.Text = c.Work_address
-        End If
-
+       
        
     End Sub
 
@@ -355,19 +369,26 @@ Public Class frmMember_registration
         ElseIf cbSingle.Checked = False And cbMarried.Checked = False And cbDivorce.Checked = False And cbWidow.Checked = False Then
             MsgBox("All Required Fields must be Fill-in", MsgBoxStyle.Exclamation)
         Else
-            Me.defualtValue()
-            c.savePersonalInformation()
-            Dim d As DialogResult = MsgBox("Do you have children?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Question")
-            If d = MsgBoxResult.Yes Then
-                With frmSiblingsRegistration
-                    .mem_last_id = c.member_last_id
-                    .ShowDialog()
-                End With
+            If btnSave.Text = "PROCEED" Then
+                Dim d As DialogResult = MsgBox("Do you have children?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Question")
+                If d = MsgBoxResult.Yes Then
+                    With frmSiblingsRegistration
+                        .mem_last_id = c.member_last_id
+                        .ShowDialog()
+                    End With
+                Else
+                    Me.defualtValue()
+                    c.savePersonalInformation()
+                    MsgBox("Information Successfully Saved", MsgBoxStyle.Information)
+                    Me.clearMemberInformation()
+                End If
             Else
-                MsgBox("Information Successfully Saved", MsgBoxStyle.Information)
-                Me.clearMemberInformation()
+                c.updateMember(m_id)
+                c.displayMemberInformation(frmListOfHousehold.lsvListOfMember)
+
 
             End If
+           
         End If
     End Sub
     Public Sub clearMemberInformation()
@@ -445,10 +466,10 @@ Public Class frmMember_registration
             c.Business_address = "None"
         End If
         If cbBaptizedNo.Checked = True Then
-            c.Baptized_date = "0000-00-00"
+            'c.Baptized_date = "0000-00-00"
         End If
         If cbMarried.Checked = False Then
-            c.Marriage_date = "0000-00-00"
+            'c.Marriage_date = "0000-00-00"
         End If
 
         If txtSelfEmplyed.Text = Nothing Then

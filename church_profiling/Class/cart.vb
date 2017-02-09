@@ -139,7 +139,7 @@
     End Sub
 
     Public Sub saveOccupatiion(mem_id As Integer)
-        Dim sql As String = "insert into tbl_work_information values (" & mem_id & ",'" & Me.Work_status & "','" & Me.Work_address & "','" & Me.Nature_of_work & "','" & Me.Name_of_company & "','" & Me.Salary & "','" & Me.Self_employed & "','" & Me.Nature_of_business & "','" & Me.Name_of_business & "','" & Me.Business_address & "'," & Me.Estimated_annual_income & ");"
+        Dim sql As String = "insert into tbl_work_information values (" & mem_id & ",'" & Me.Work_status & "','" & Me.Work_address & "','" & Me.Nature_of_work & "','" & Me.Name_of_company & "','" & Me.Salary & "','" & Me.Self_employed & "','" & Me.Name_of_business & "','" & Me.Business_address & "'," & Me.Estimated_annual_income & ");"
         GLOBAL_VARS.db.executeNonReader(sql)
     End Sub
 
@@ -159,7 +159,7 @@
 
     Public Sub displayMemberInformation(ByVal lsv As ListView)
         lsv.Items.Clear()
-        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,m.baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,m.marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.nature_of_business,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id;"
+        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,if (baptized_date = '0000-00-00 00:00:00','None',date_format(baptized_date,'%M %d, %Y')) as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,if (marriage_date = '0000-00-00 00:00:00','None',date_format(marriage_date,'%M %d, %Y')) as Marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id;"
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
             While GLOBAL_VARS.db.reader.Read()
@@ -195,7 +195,6 @@
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_company").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Salary").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Self_employed").ToString())
-                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Nature_of_business").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_business").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Business_address").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Estimated_annual_income").ToString())
@@ -246,29 +245,43 @@
                             "Civil_status='" & Me.Civil_status & "' , " & _
                             "Church_name='" & Me.Church_name & "' , " & _
                            "Pastor_name='" & Me.Pastor_name & "' , " & _
-                           "Marriage_date='" & Me.Marriage_date & "' , " & _
+                           "Marriage_date='" & Me.Marriage_date & "'  " & _
+                           "WHERE ID=" & id
+        GLOBAL_VARS.db.executeNonReader(sql)
+        updateMemberA1(id)
+        updateMemberB1(id)
+        MsgBox("Succesfuly Updated", MsgBoxStyle.Information, "information")
+    End Sub
+    Public Sub updateMemberA1(ByVal id As Integer)
+        Dim sql As String = "UPDATE tbl_educational_background SET " & _
                            "HEA='" & Me.HEA & "' , " & _
                            "Course_graduated='" & Me.Course_graduated & "' , " & _
                            "Name_of_school_graduated='" & Me.Name_of_school_graduated & "' , " & _
                            "Licensure_passer='" & Me.Licensure_passer & "' , " & _
-                           "License_specification='" & Me.License_specification & "' , " & _
-                           "Work_status='" & Me.Work_status & "' , " & _
+                           "License_specification='" & Me.License_specification & "'  " & _
+                           "WHERE member_ID=" & id
+        GLOBAL_VARS.db.executeNonReader(sql)
+
+    End Sub
+    Public Sub updateMemberB1(ByVal id As Integer)
+        Dim sql As String = "Update tbl_work_information set " & _
+                            "Work_status='" & Me.Work_status & "' , " & _
                            "Work_address='" & Me.Work_address & "' , " & _
                            "Nature_of_work='" & Me.Nature_of_work & "' , " & _
                            "Name_of_company='" & Me.Name_of_company & "' , " & _
                            "Salary='" & Me.Salary & "' , " & _
                            "Self_employed='" & Me.Self_employed & "' , " & _
-                           "Nature_of_business='" & Me.Nature_of_business & "' , " & _
                            "Name_of_business='" & Me.Name_of_business & "' , " & _
                            "Business_address='" & Me.Business_address & "' , " & _
-                           "Estimated_annual_income='" & Me.Estimated_annual_income & "' , " & _
-                           "WHERE ID=" & id
+                           "Estimated_annual_income='" & Me.Estimated_annual_income & "'  " & _
+                            "WHERE members_ID=" & id
         GLOBAL_VARS.db.executeNonReader(sql)
-        MsgBox("Succesfuly Updated", MsgBoxStyle.Information, "information")
+
     End Sub
+
     Public Sub displayMemberDetails(ByVal p_id As Integer)
 
-        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,date_format(m.date_of_birth, '%M %d, %Y') as date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,date_format(m.baptized_date, '%M %d,%Y') as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,date_format(m.marriage_date, '%M %d,%Y') as marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.nature_of_business,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id where m.id=" & p_id & ";"
+        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,date_format(m.date_of_birth, '%M %d, %Y') as date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,date_format(m.baptized_date, '%M %d,%Y') as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,date_format(m.marriage_date, '%M %d,%Y') as marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id where m.id=" & p_id & ";"
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
             GLOBAL_VARS.db.reader.Read()
@@ -303,7 +316,6 @@
                 .Name_of_company = GLOBAL_VARS.db.reader("Name_of_company").ToString()
                 .Salary = GLOBAL_VARS.db.reader("Salary").ToString()
                 .Self_employed = GLOBAL_VARS.db.reader("Self_employed").ToString()
-                .Nature_of_business = GLOBAL_VARS.db.reader("Nature_of_business").ToString()
                 .Name_of_business = GLOBAL_VARS.db.reader("Name_of_business").ToString()
                 .Business_address = GLOBAL_VARS.db.reader("Business_address").ToString()
                 .Estimated_annual_income = GLOBAL_VARS.db.reader("Estimated_annual_income").ToString()
@@ -343,9 +355,9 @@
     End Sub
 
 
-    Public Sub saveChurchOfficial(member_id As Integer)
-        Dim sql As String = "insert into tbl_church_officials values (" & Me.Member_id & ",'" & Me.Position & "'," & Me.Year & ");"
+    Public Sub saveChurchOfficial(member_id As Integer, position As String, year As String)
+        Dim sql As String = "insert into tbl_church_officials values (" & member_id & ",'" & position & "','" & year & "');"
         GLOBAL_VARS.db.executeNonReader(sql)
     End Sub
-   
+
 End Class

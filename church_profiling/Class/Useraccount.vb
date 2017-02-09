@@ -130,8 +130,7 @@
                            "LAST_NAME='" & Me.Last_Name & "', " & _
                            "USERNAME='" & Me.Username & "' , " & _
                            "user_type='" & Me.User_type & "' , " & _
-                           "contact_no='" & Me.Contact_no & "' , " & _
-                           "date_registered= Now()  " & _
+                           "contact_no='" & Me.Contact_no & "'  " & _
                            "WHERE ID=" & id
         GLOBAL_VARS.db.executeNonReader(sql)
         MsgBox("Succesfuly Updated", MsgBoxStyle.Information, "information")

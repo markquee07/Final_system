@@ -32,6 +32,8 @@ Partial Class frmFamilyDetails
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,22 +57,22 @@ Partial Class frmFamilyDetails
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "CHILD ID"
-        Me.ColumnHeader1.Width = 66
+        Me.ColumnHeader1.Width = 64
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "FIRST NAME"
-        Me.ColumnHeader2.Width = 180
+        Me.ColumnHeader2.Width = 166
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "LAST NAME"
-        Me.ColumnHeader3.Width = 167
+        Me.ColumnHeader3.Width = 141
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "MIDDLE NAME"
-        Me.ColumnHeader4.Width = 152
+        Me.ColumnHeader4.Width = 94
         '
         'ColumnHeader5
         '
@@ -80,7 +82,7 @@ Partial Class frmFamilyDetails
         'ColumnHeader6
         '
         Me.ColumnHeader6.Text = "GENDER"
-        Me.ColumnHeader6.Width = 71
+        Me.ColumnHeader6.Width = 58
         '
         'ColumnHeader7
         '
@@ -97,11 +99,31 @@ Partial Class frmFamilyDetails
         Me.PictureBox1.TabIndex = 46
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(428, 24)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 23)
+        Me.Button2.TabIndex = 47
+        Me.Button2.Text = "Add"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(539, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(101, 23)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "Status"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmFamilyDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(923, 522)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.lsvListOffamilydetails)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frmFamilyDetails"
@@ -120,4 +142,6 @@ Partial Class frmFamilyDetails
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
