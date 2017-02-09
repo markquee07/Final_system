@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2017 at 03:25 AM
+-- Generation Time: Feb 09, 2017 at 07:59 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -214,8 +214,49 @@ CREATE TABLE `tbl_fines` (
 
 CREATE TABLE `tbl_host_pastor` (
   `id` int(10) UNSIGNED NOT NULL,
-  `Pastor Name` varchar(45) NOT NULL
+  `First_Name` varchar(45) NOT NULL,
+  `Last_name` varchar(45) NOT NULL,
+  `Middle_Name` varchar(45) NOT NULL,
+  `Address` varchar(60) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `Date_of_birth` datetime DEFAULT NULL,
+  `concat_number` varchar(45) NOT NULL,
+  `Name_of_school_grad` varchar(45) NOT NULL,
+  `Address_of_school_graduaterd` varchar(45) NOT NULL,
+  `year_graduated` varchar(45) NOT NULL,
+  `Chutch_name` varchar(45) NOT NULL,
+  `Church_address` varchar(45) NOT NULL,
+  `years_of_service` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_host_pastor`
+--
+
+INSERT INTO `tbl_host_pastor` (`id`, `First_Name`, `Last_name`, `Middle_Name`, `Address`, `gender`, `Date_of_birth`, `concat_number`, `Name_of_school_grad`, `Address_of_school_graduaterd`, `year_graduated`, `Chutch_name`, `Church_address`, `years_of_service`) VALUES
+(1, 'a', 'a', 'a', 'a', 'MALE', '2017-07-25 00:00:00', '1111111', 'bible', 'bilbe address', '2121', 'church name', ' church address', '52525'),
+(2, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(3, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(4, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(5, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(6, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(7, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(8, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(9, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(10, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(11, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(12, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(13, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(14, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(15, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(16, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(17, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(18, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
+(19, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
+(20, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
+(21, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
+(22, 'asd', 'asd', 'asd', 'asd', 'MALE', '2017-02-09 00:00:00', '23123', '', '', '', 'None', 'None', 'None'),
+(23, 'asd', 'asdasd', 'asd', 'asd', 'MALE', '2017-02-09 00:00:00', '123', 'zzzzz', 'zzzzz', 'zzzzzz', 'None', 'None', 'None');
 
 -- --------------------------------------------------------
 
@@ -515,7 +556,7 @@ ALTER TABLE `tbl_fines`
 -- AUTO_INCREMENT for table `tbl_host_pastor`
 --
 ALTER TABLE `tbl_host_pastor`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `tbl_member_information`
 --
