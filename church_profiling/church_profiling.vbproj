@@ -155,6 +155,12 @@
     <Compile Include="Forms\frmRegisterChurchOfficials.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmRegisterPastor.Designer.vb">
+      <DependentUpon>frmRegisterPastor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegisterPastor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmRegisterUser.Designer.vb">
       <DependentUpon>frmRegisterUser.vb</DependentUpon>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegisterChurchOfficials.resx">
       <DependentUpon>frmRegisterChurchOfficials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegisterPastor.resx">
+      <DependentUpon>frmRegisterPastor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegisterUser.resx">
       <DependentUpon>frmRegisterUser.vb</DependentUpon>
