@@ -5,6 +5,7 @@
     Public p_id2 As Integer
 
     Private Sub frmListOfHousehold_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         c.displayMemberInformation(lsvListOfMember)
     End Sub
 

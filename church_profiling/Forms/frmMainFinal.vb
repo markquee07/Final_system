@@ -604,4 +604,17 @@ Public Class frmMainFinal
     Private Sub ptbViewBurialFinancialTrans_Click(sender As Object, e As EventArgs) Handles ptbViewBurialFinancialTrans.Click
 
     End Sub
+
+    Private Sub ptbUserAccount_Click(sender As Object, e As EventArgs) Handles ptbUserAccount.Click
+        frmUserAccountProfile.ShowDialog()
+    End Sub
+
+    Private Sub ptbM_member_Click(sender As Object, e As EventArgs) Handles ptbM_member.Click
+        With frmListOfHousehold
+            .Button1.Text = "Edit"
+            .ShowDialog()
+        End With
+
+
+    End Sub
 End Class

@@ -394,7 +394,6 @@ Partial Class frmRegisterUser
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents cboUsertype As System.Windows.Forms.ComboBox
-    Private WithEvents btnRegister As System.Windows.Forms.Button
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
@@ -404,4 +403,5 @@ Partial Class frmRegisterUser
     Friend WithEvents lblcpass As System.Windows.Forms.Label
     Private WithEvents txtcPass As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Public WithEvents btnRegister As System.Windows.Forms.Button
 End Class
