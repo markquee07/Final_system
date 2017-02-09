@@ -2,7 +2,7 @@
 Imports AForge.Video.DirectShow
 
 Public Class frmMember_registration
-
+    Public m_id As Integer
    
     Dim resized As Image
 
@@ -11,21 +11,114 @@ Public Class frmMember_registration
     Public cart_id As cart
 
     Private Sub frmMember_registration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ID.Text = generatedID(8)
-        dtpMarriedDate.Enabled = False
-        txtWorkAddress.Enabled = False
-        txtSpecify.Enabled = False
-        dtpDateBaptize.Enabled = False
+        If btnSave.Text = "Update" Then
+            c.displayMemberDetails(m_id)
+            With Me
+                .txtFname.Text = c.First_name
+                .txtLname.Text = c.Last_name
+                .txtMname.Text = c.Middle_name
+                .cboGender.Text = c.Gender
+                .dtpDateofbirth.Text = c.Date_of_birth
+                .cboBloodType.Text = c.Blood_type
+                .txtContactNo.Text = c.Contact_no
+                .txtEmail.Text = c.Email_ad
+                .txtprovince.Text = c.Province
+                .txtCity.Text = c.City
+                .txtBarangay.Text = c.Barangay
+                .txtChurchName.Text = c.Church_name
+                .txtPastorName.Text = c.Pastor_name
+                If c.Baptized_date <> "" Then
+                    cbBaptizedYes.Checked = True
+                    dtpDateBaptize.Enabled = True
+                Else
+                    cbBaptizedNo.Checked = True
+                End If
+                .dtpDateBaptize.Text = c.Baptized_date
 
-        txtSchoolGrad.Enabled = False
-        txtSpecify.Enabled = False
-        txtCourseGrad.Enabled = False
-        cbLicenseYES.Enabled = False
-        cbLicenseNo.Enabled = False
 
-        txtNatureofwork.Enabled = False
-        txtNameofcomp.Enabled = False
-        txtSalary.Enabled = False
+
+                If c.Course_graduated = "None" Then
+                    cbNone.Checked = True
+                ElseIf c.Course_graduated = "Elementary" Then
+                    txtCourseGrad.Text = c.Course_graduated
+                    txtSchoolGrad.Text = c.Name_of_school_graduated
+                    cbElementary.Checked = True
+                ElseIf c.Course_graduated = "College" Then
+                    txtCourseGrad.Text = c.Course_graduated
+                    txtSchoolGrad.Text = c.Name_of_school_graduated
+                    cbCollege.Checked = True
+                ElseIf c.Course_graduated = "Masters" Then
+                    txtCourseGrad.Text = c.Course_graduated
+                    txtSchoolGrad.Text = c.Name_of_school_graduated
+                    cbMasters.Checked = True
+                ElseIf c.Course_graduated = "High School" Then
+                    txtCourseGrad.Text = c.Course_graduated
+                    txtSchoolGrad.Text = c.Name_of_school_graduated
+                    cbHighSchool.Checked = True
+                ElseIf c.Course_graduated = "PhD" Then
+                    txtCourseGrad.Text = c.Course_graduated
+                    txtSchoolGrad.Text = c.Name_of_school_graduated
+                    cbPhD.Checked = True
+                End If
+
+
+
+                If c.License_specification <> "None" Then
+                    .txtSpecify.Text = c.License_specification
+                    cbLicenseYES.Checked = True
+                    cbBaptizedYes.Enabled = False
+                Else
+                    .cbLicenseNo.Checked = True
+                    cbBaptizedNo.Enabled = False
+                End If
+
+
+                .dtpMarriedDate.Text = c.Marriage_date
+                If c.Marriage_date <> "" Then
+                    cbMarried.Checked = True
+                Else
+                    If c.Civil_status = "Single" Then
+                        cbSingle.Checked = True
+                    ElseIf c.Civil_status = "Widow" Then
+                        cbWidow.Checked = True
+                    ElseIf c.Civil_status = "Divorce" Then
+                        cbDivorce.Checked = True
+                    Else
+                    End If
+                End If
+                txtNatureofwork.Text = c.Nature_of_work
+                txtNameofcomp.Text = c.Name_of_company
+                txtSalary.Text = c.Salary
+                txtSelfEmplyed.Text = c.Self_employed
+                txtBusinessAddress.Text = c.Business_address
+                txtEstimatedIncome.Text = c.Estimated_annual_income
+                txtNameOfBusiness.Text = c.Name_of_business
+            End With
+        Else
+            ID.Text = generatedID(8)
+            dtpMarriedDate.Enabled = False
+            txtWorkAddress.Enabled = False
+            txtSpecify.Enabled = False
+            dtpDateBaptize.Enabled = False
+
+            txtSchoolGrad.Enabled = False
+            txtSpecify.Enabled = False
+            txtCourseGrad.Enabled = False
+            cbLicenseYES.Enabled = False
+            cbLicenseNo.Enabled = False
+
+            txtNatureofwork.Enabled = False
+            txtNameofcomp.Enabled = False
+            txtSalary.Enabled = False
+        End If
+        If c.Work_status = "No" Then
+            cbWorkNo.Checked = True
+        Else
+            cbWorkYEs.Checked = True
+            txtWorkAddress.Text = c.Work_address
+        End If
+
+       
     End Sub
 
 
@@ -71,7 +164,7 @@ Public Class frmMember_registration
     End Sub
 
     Private Sub cbMasters_Click(sender As Object, e As EventArgs) Handles cbMasters.Click
-        c.HEA = "Master's"
+        c.HEA = "Masters"
         cbCollege.Checked = False
         cbElementary.Checked = False
         cbHighSchool.Checked = False

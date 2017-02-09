@@ -192,10 +192,25 @@
                            "Email_ad='" & Me.Email_ad & "' , " & _
                            "Blood_type='" & Me.Blood_type & "' , " & _
                            "Contact_no='" & Me.Contact_no & "' , " & _
-                            "Contact_no='" & Me.Contact_no & "' , " & _
-                            "Contact_no='" & Me.Contact_no & "' , " & _
-                           "Contact_no='" & Me.Contact_no & "' , " & _
-                           "date_registered= Now()  " & _
+                            "Civil_status='" & Me.Civil_status & "' , " & _
+                            "Church_name='" & Me.Church_name & "' , " & _
+                           "Pastor_name='" & Me.Pastor_name & "' , " & _
+                           "Marriage_date='" & Me.Marriage_date & "' , " & _
+                           "HEA='" & Me.HEA & "' , " & _
+                           "Course_graduated='" & Me.Course_graduated & "' , " & _
+                           "Name_of_school_graduated='" & Me.Name_of_school_graduated & "' , " & _
+                           "Licensure_passer='" & Me.Licensure_passer & "' , " & _
+                           "License_specification='" & Me.License_specification & "' , " & _
+                           "Work_status='" & Me.Work_status & "' , " & _
+                           "Work_address='" & Me.Work_address & "' , " & _
+                           "Nature_of_work='" & Me.Nature_of_work & "' , " & _
+                           "Name_of_company='" & Me.Name_of_company & "' , " & _
+                           "Salary='" & Me.Salary & "' , " & _
+                           "Self_employed='" & Me.Self_employed & "' , " & _
+                           "Nature_of_business='" & Me.Nature_of_business & "' , " & _
+                           "Name_of_business='" & Me.Name_of_business & "' , " & _
+                           "Business_address='" & Me.Business_address & "' , " & _
+                           "Estimated_annual_income='" & Me.Estimated_annual_income & "' , " & _
                            "WHERE ID=" & id
         GLOBAL_VARS.db.executeNonReader(sql)
         MsgBox("Succesfuly Updated", MsgBoxStyle.Information, "information")

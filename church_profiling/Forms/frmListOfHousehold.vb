@@ -15,10 +15,14 @@
             MsgBox("Please select member", MsgBoxStyle.Information, "Information")
         Else
             If Button1.Text = "Edit" Then
-
+                frmMember_registration.m_id = p_id
+                frmMember_registration.btnSave.Text = "Update"
+                frmMember_registration.ShowDialog()
+            Else
+                p_id2 = p_id
+                frmViewMemberDetails.ShowDialog()
             End If
-            p_id2 = p_id
-            frmViewMemberDetails.ShowDialog()
+           
         End If
     End Sub
 
