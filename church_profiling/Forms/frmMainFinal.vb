@@ -559,6 +559,7 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbPastor_Click(sender As Object, e As EventArgs) Handles ptbPastor.Click
+        frmRegisterPastor.ShowDialog()
         slideRegisterSub_up()
         slideFileSub_up()
     End Sub

@@ -1,7 +1,6 @@
 ﻿Public Class cart
 
-    'pastor
-    Public pstor_name As String
+    
 
     ''last_id saved in sql
     Public last_id As Integer
@@ -62,10 +61,62 @@
     Public Position As String
     Public Year As String
 
+    'Pastor information
+    Public p_first_name As String
+    Public p_last_name As String
+    Public p_middle_name As String
+    Public p_address As String
+    Public p_gender As String
+    Public p_date_of_birth As String
+    Public p_contact_no As String
+    Public p_name_of_school_grad As String
+    Public p_address_of_school_grad As String
+    Public p_year_grad As String
+    Public p_name_of_church As String
+    Public p_address_of_church As String
+    Public p_year_of_service As String
+    Public p_pastor_fullname As String
+
+
     Public Structure Selected_Officials
         Public member As cart
         Public position As String
     End Structure
+
+    Public Sub displayPasotr(lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT id,concat(first_name,' ',middle_name,' ',last_name) as Fullname FROM tbl_host_pastor"
+
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Fullname").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
+    Public Sub loadPastor(id As Integer)
+        Dim sql As String = "SELECT id,concat(first_name,' ',middle_name,' ',last_name) as Fullname FROM tbl_host_pastor where id = " & id & ";"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            GLOBAL_VARS.db.reader.Read()
+            Me.id = GLOBAL_VARS.db.reader("id")
+            Me.p_pastor_fullname = GLOBAL_VARS.db.reader("Fullname")
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
+
+    Public Sub savePastorInformation()
+        Dim sql As String = "insert into tbl_host_pastor values (null,'" & Me.p_first_name & "','" & Me.p_last_name & "','" & Me.p_middle_name & "','" & Me.p_address & "','" & Me.p_gender & "','" & Me.p_date_of_birth & "','" & Me.p_contact_no & "','" & Me.p_name_of_school_grad & "','" & Me.p_address_of_school_grad & "','" & Me.p_year_grad & "','" & Me.p_name_of_church & "','" & Me.p_address_of_church & "','" & Me.p_year_of_service & "');"
+        GLOBAL_VARS.db.executeNonReader(sql)
+        MsgBox("Pastor Information Successfully Save", MsgBoxStyle.Information)
+    End Sub
 
     Public Sub savePersonalInformation()
         Dim sql As String = "insert into tbl_member_information values (null,'" & Me.Member_id & "','" & Me.First_name & "','" & Me.Last_name & "','" & Me.Middle_name & "','" & Me.Date_of_birth & "','" & Me.Gender & "','" & Me.Province & "','" & Me.City & "','" & Me.Barangay & "','" & Me.Baptized_status & "','" & Me.Baptized_date & "','" & Me.Contact_no & "','" & Me.Email_ad & "','" & Me.Blood_type & "','" & Me.Civil_status & "','" & Me.Church_name & "','" & Me.Pastor_name & "','" & Me.Marriage_date & "');"
@@ -276,12 +327,6 @@
         GLOBAL_VARS.db.reader.Close()
     End Sub
 
-    Public Sub savePastorInfo()
-        Dim sql As String = "insert into tbl_host_pastor values (null,'" & Me.Pastor_name & "');"
-        GLOBAL_VARS.db.executeNonReader(sql)
-        Dim id As Integer = GLOBAL_VARS.db.getLastId()
-        saveChurchOfficial(id)
-    End Sub
 
     Public Sub saveChurchOfficial(member_id As Integer)
         Dim sql As String = "insert into tbl_church_officials values (" & Me.Member_id & ",'" & Me.Position & "'," & Me.Year & ");"

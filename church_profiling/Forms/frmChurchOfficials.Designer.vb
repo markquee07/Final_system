@@ -65,6 +65,9 @@ Partial Class frmChurchOfficials
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.txtYear = New System.Windows.Forms.TextBox()
+        Me.lsvPastorList = New System.Windows.Forms.ListView()
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -536,12 +539,39 @@ Partial Class frmChurchOfficials
         Me.txtYear.Text = "2017-2018"
         Me.txtYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'lsvPastorList
+        '
+        Me.lsvPastorList.BackColor = System.Drawing.Color.White
+        Me.lsvPastorList.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lsvPastorList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4, Me.ColumnHeader6})
+        Me.lsvPastorList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lsvPastorList.ForeColor = System.Drawing.Color.Black
+        Me.lsvPastorList.FullRowSelect = True
+        Me.lsvPastorList.Location = New System.Drawing.Point(870, 127)
+        Me.lsvPastorList.Name = "lsvPastorList"
+        Me.lsvPastorList.Size = New System.Drawing.Size(322, 467)
+        Me.lsvPastorList.TabIndex = 86
+        Me.lsvPastorList.UseCompatibleStateImageBehavior = False
+        Me.lsvPastorList.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ID"
+        Me.ColumnHeader4.Width = 0
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Pastor Name"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 317
+        '
         'frmChurchOfficials
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1204, 694)
+        Me.Controls.Add(Me.lsvPastorList)
         Me.Controls.Add(Me.txtYear)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.PictureBox10)
@@ -642,4 +672,7 @@ Partial Class frmChurchOfficials
     Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
     Friend WithEvents txtYear As System.Windows.Forms.TextBox
+    Public WithEvents lsvPastorList As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
 End Class

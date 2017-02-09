@@ -6,7 +6,8 @@
     End Sub
 
     Private Sub btnAddNEw_Click(sender As Object, e As EventArgs) Handles btnAddNEw.Click
-        frmRegisterUser.ShowDialog()
+        Dim ru As New frmRegisterUser
+        ru.ShowDialog()
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
