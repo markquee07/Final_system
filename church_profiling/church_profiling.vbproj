@@ -210,6 +210,12 @@
     <Compile Include="Forms\frmViewMemberDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmViewOffiical.Designer.vb">
+      <DependentUpon>frmViewOffiical.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewOffiical.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MDIParent1.Designer.vb">
       <DependentUpon>MDIParent1.vb</DependentUpon>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmViewMemberDetails.resx">
       <DependentUpon>frmViewMemberDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewOffiical.resx">
+      <DependentUpon>frmViewOffiical.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>

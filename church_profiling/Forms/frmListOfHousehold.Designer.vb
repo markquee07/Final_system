@@ -261,9 +261,9 @@ Partial Class frmListOfHousehold
         Me.lblAttendanceType.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.lblAttendanceType.Location = New System.Drawing.Point(55, 20)
         Me.lblAttendanceType.Name = "lblAttendanceType"
-        Me.lblAttendanceType.Size = New System.Drawing.Size(345, 31)
+        Me.lblAttendanceType.Size = New System.Drawing.Size(419, 31)
         Me.lblAttendanceType.TabIndex = 37
-        Me.lblAttendanceType.Text = "List of Registered Members"
+        Me.lblAttendanceType.Text = "List of Registered Church  Official"
         '
         'lblSearchMember
         '
@@ -274,9 +274,9 @@ Partial Class frmListOfHousehold
         Me.lblSearchMember.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.lblSearchMember.Location = New System.Drawing.Point(729, 72)
         Me.lblSearchMember.Name = "lblSearchMember"
-        Me.lblSearchMember.Size = New System.Drawing.Size(91, 17)
+        Me.lblSearchMember.Size = New System.Drawing.Size(89, 17)
         Me.lblSearchMember.TabIndex = 40
-        Me.lblSearchMember.Text = "Search Member"
+        Me.lblSearchMember.Text = "Search Official"
         '
         'txtSearch
         '
@@ -335,7 +335,7 @@ Partial Class frmListOfHousehold
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(101, 23)
         Me.Button2.TabIndex = 43
-        Me.Button2.Text = "Children"
+        Me.Button2.Text = "Add"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
