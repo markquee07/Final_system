@@ -385,7 +385,7 @@ Public Class frmMember_registration
             Else
                 c.updateMember(m_id)
                 c.displayMemberInformation(frmListOfHousehold.lsvListOfMember)
-
+                Me.clearMemberInformation()
 
             End If
            
@@ -528,5 +528,32 @@ Public Class frmMember_registration
                 Me.checkRequiredField()
             End With
         End If
+    End Sub
+
+    Private Sub txtSalary_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSalary.KeyPress
+        If IsNumeric(e.KeyChar) Or Convert.ToInt32(e.KeyChar).ToString() = 46 Or Convert.ToInt32(e.KeyChar).ToString() = 8 Then
+            e.Handled = False
+        Else
+            MsgBox("Please Enter number  only ", MsgBoxStyle.Information, "Information")
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtEstimatedIncome_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEstimatedIncome.KeyPress
+        If IsNumeric(e.KeyChar) Or Convert.ToInt32(e.KeyChar).ToString() = 46 Or Convert.ToInt32(e.KeyChar).ToString() = 8 Then
+
+            e.Handled = False
+        Else
+            MsgBox("Please Enter number  only ", MsgBoxStyle.Information, "Information")
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtMname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMname.KeyPress
+        If Char.IsDigit(e.KeyChar) Then
+            MsgBox("Please Enter Alphabates  only ", MsgBoxStyle.Information, "Information")
+            e.Handled = True
+        End If
+
     End Sub
 End Class

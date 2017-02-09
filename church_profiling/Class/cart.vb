@@ -359,5 +359,10 @@
         Dim sql As String = "insert into tbl_church_officials values (" & member_id & ",'" & position & "','" & year & "');"
         GLOBAL_VARS.db.executeNonReader(sql)
     End Sub
-
+    Public Sub deleteMember(ByVal id As Integer)
+        Dim sql As String = "DELETE FROM tbl_member_information WHERE ID=" & id
+        GLOBAL_VARS.db.executeNonReader(sql)
+        MsgBox("Successfully Deleted", MsgBoxStyle.Information, "Information")
+    End Sub
+   
 End Class

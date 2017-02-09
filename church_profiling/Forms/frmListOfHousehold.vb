@@ -35,15 +35,25 @@
         If selected_p_id <= 0 Then
             MsgBox("Please select member", MsgBoxStyle.Information, "Information")
         Else
-            If Button2.Text = "Add Child(ren)" Then
-
-                frmSiblingsRegistration.ShowDialog()
-            Else
-                p_id2 = p_id
+            p_id2 = p_id
+            frmFamilyDetails.prt = p_id
                 frmFamilyDetails.ShowDialog()
-            End If
           
         End If
         selected_p_id = 0
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim selected_id = lsvListOfMember.SelectedItems.Count
+        If selected_id <= 0 Then
+            MsgBox("Select data first", MsgBoxStyle.Information, "Information")
+        Else
+            Dim d As DialogResult = MsgBox("Are you about to delete this data?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Question")
+            If d = MsgBoxResult.Yes Then
+                c.deleteMember(p_id)
+                c.displayMemberInformation(lsvListOfMember)
+            End If
+            
+        End If
     End Sub
 End Class

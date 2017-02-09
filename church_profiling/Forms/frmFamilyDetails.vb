@@ -6,6 +6,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frmSiblingsRegistration.mem_last_id = prt
         frmSiblingsRegistration.ShowDialog()
     End Sub
 End Class

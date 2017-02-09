@@ -169,11 +169,13 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+
         Me.saveSiblingsInfo()
         MsgBox("Successfully saved", MsgBoxStyle.Information)
         frmMember_registration.clearMemberInformation()
         clearAllInformation()
         Me.Close()
+        carts.displayFamilyDetails(frmFamilyDetails.lsvListOffamilydetails, mem_last_id)
     End Sub
 
     Public Sub saveSiblingsInfo()
