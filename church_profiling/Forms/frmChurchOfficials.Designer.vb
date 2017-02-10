@@ -68,6 +68,7 @@ Partial Class frmChurchOfficials
         Me.lsvPastorList = New System.Windows.Forms.ListView()
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -565,12 +566,26 @@ Partial Class frmChurchOfficials
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader6.Width = 317
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Label10.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Gray
+        Me.Label10.Location = New System.Drawing.Point(377, 76)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(37, 16)
+        Me.Label10.TabIndex = 87
+        Me.Label10.Text = "Year"
+        '
         'frmChurchOfficials
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1204, 694)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.lsvPastorList)
         Me.Controls.Add(Me.txtYear)
         Me.Controls.Add(Me.PictureBox11)
@@ -613,7 +628,7 @@ Partial Class frmChurchOfficials
         Me.Controls.Add(Me.PictureBox2)
         Me.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Name = "frmChurchOfficials"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ELDER"
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -675,4 +690,5 @@ Partial Class frmChurchOfficials
     Public WithEvents lsvPastorList As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

@@ -756,6 +756,7 @@ Partial Class frmRegisterPastor
         Me.Controls.Add(Me.txtFname)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frmRegisterPastor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmRegisterPastor"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

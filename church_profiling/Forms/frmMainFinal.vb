@@ -44,12 +44,12 @@ Public Class frmMainFinal
         ptbPastor.BackgroundImage = church_profiling.My.Resources.Pastor_dodge
     End Sub
 
-    Private Sub ptbChurchOfficial_MouseEnter(sender As Object, e As EventArgs) Handles ptbChurchOfficial.MouseEnter
-        ptbChurchOfficial.BackgroundImage = church_profiling.My.Resources.church_official_dodge
+    Private Sub ptbChurchOfficial_MouseEnter(sender As Object, e As EventArgs)
+        'ptbChurchOfficial.BackgroundImage = church_profiling.My.Resources.church_official_dodge
     End Sub
 
-    Private Sub ptbBurialOfficial_MouseEnter(sender As Object, e As EventArgs) Handles ptbBurialOfficial.MouseEnter
-        ptbBurialOfficial.BackgroundImage = church_profiling.My.Resources.Burial_official_dodge
+    Private Sub ptbBurialOfficial_MouseEnter(sender As Object, e As EventArgs)
+        'ptbBurialOfficial.BackgroundImage = church_profiling.My.Resources.Burial_official_dodge
     End Sub
 
     Private Sub ptbIncome_MouseEnter(sender As Object, e As EventArgs) Handles ptbIncome.MouseEnter
@@ -94,7 +94,7 @@ Public Class frmMainFinal
     'Register sub
     Public Sub slideRegisterSub_down()
         ptbRegister.BackgroundImage = church_profiling.My.Resources.register_deepsky
-        While (panelRegisterUnder.Height < 181)
+        While (panelRegisterUnder.Height < 91)
             panelRegisterUnder.Height += 1
         End While
     End Sub
@@ -236,12 +236,12 @@ Public Class frmMainFinal
         ptbPastor.BackgroundImage = church_profiling.My.Resources.pastor_deepsky
     End Sub
 
-    Private Sub ptbChurchOfficial_MouseLeave(sender As Object, e As EventArgs) Handles ptbChurchOfficial.MouseLeave
-        ptbChurchOfficial.BackgroundImage = church_profiling.My.Resources.church_official_deepsky
+    Private Sub ptbChurchOfficial_MouseLeave(sender As Object, e As EventArgs)
+        ' ptbChurchOfficial.BackgroundImage = church_profiling.My.Resources.church_official_deepsky
     End Sub
 
-    Private Sub ptbBurialOfficial_MouseLeave(sender As Object, e As EventArgs) Handles ptbBurialOfficial.MouseLeave
-        ptbBurialOfficial.BackgroundImage = church_profiling.My.Resources.burial_official_deepsky
+    Private Sub ptbBurialOfficial_MouseLeave(sender As Object, e As EventArgs)
+        ' ptbBurialOfficial.BackgroundImage = church_profiling.My.Resources.burial_official_deepsky
     End Sub
 
     Private Sub ptbIncome_MouseLeave(sender As Object, e As EventArgs) Handles ptbIncome.MouseLeave
@@ -524,8 +524,8 @@ Public Class frmMainFinal
 
     Private Sub frmMainFinal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
-        Dim path As String = Directory.GetCurrentDirectory()
-        MsgBox(path)
+        'Dim path As String = Directory.GetCurrentDirectory()
+        'MsgBox(path)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -559,18 +559,19 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbPastor_Click(sender As Object, e As EventArgs) Handles ptbPastor.Click
-        frmRegisterPastor.ShowDialog()
         slideRegisterSub_up()
         slideFileSub_up()
+        frmRegisterPastor.ShowDialog()
+
     End Sub
 
-    Private Sub ptbChurchOfficial_Click(sender As Object, e As EventArgs) Handles ptbChurchOfficial.Click
+    Private Sub ptbChurchOfficial_Click(sender As Object, e As EventArgs)
         slideRegisterSub_up()
         slideFileSub_up()
         frmChurchOfficials.ShowDialog()
     End Sub
 
-    Private Sub ptbBurialOfficial_Click(sender As Object, e As EventArgs) Handles ptbBurialOfficial.Click
+    Private Sub ptbBurialOfficial_Click(sender As Object, e As EventArgs)
         slideRegisterSub_up()
         slideFileSub_up()
         frmBurialOfficers.ShowDialog()
@@ -587,14 +588,30 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbViewOfficials_Click(sender As Object, e As EventArgs) Handles ptbViewOfficials.Click
+        slideViewSub_up()
+        With frmListofBurialOfficial
+            .lblTypeOfOfficial.Text = "List of Church Officials"
+            .lsvBurialOfficial.Visible = False
+            .lsvListOfMember.Visible = True
+            .ShowDialog()
+        End With
 
     End Sub
 
     Private Sub ptbViewBurialOfficials_Click(sender As Object, e As EventArgs) Handles ptbViewBurialOfficials.Click
+        slideViewSub_up()
+        With frmListofBurialOfficial
+            .lblTypeOfOfficial.Text = "List of Burial Officials"
+            .lsvListOfMember.Visible = False
+            .lsvBurialOfficial.Visible = True
+            .ShowDialog()
+        End With
 
     End Sub
 
     Private Sub ptbViewAttendance_Click(sender As Object, e As EventArgs) Handles ptbViewAttendance.Click
+        slideViewSub_up()
+        frmListOfAttendance.ShowDialog()
 
     End Sub
 
@@ -607,10 +624,12 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbUserAccount_Click(sender As Object, e As EventArgs) Handles ptbUserAccount.Click
+        slideMaintenanceSub_up()
         frmUserAccountProfile.ShowDialog()
     End Sub
 
     Private Sub ptbM_member_Click(sender As Object, e As EventArgs) Handles ptbM_member.Click
+        slideMaintenanceSub_up()
         With frmListOfHousehold
             .Button1.Text = "Edit"
             .ShowDialog()
@@ -620,6 +639,21 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbM_church_name_Click(sender As Object, e As EventArgs) Handles ptbM_church_name.Click
+        slideMaintenanceSub_up()
         frmchurchlist.ShowDialog()
+    End Sub
+
+    Private Sub ptbChurchFinancialtrans_Click(sender As Object, e As EventArgs) Handles ptbChurchFinancialtrans.Click
+
+    End Sub
+
+    Private Sub ptbM_church_officials_Click(sender As Object, e As EventArgs) Handles ptbM_church_officials.Click
+        slideMaintenanceSub_up()
+        frmChurchOfficials.ShowDialog()
+    End Sub
+
+    Private Sub ptbM_burial_officials_Click(sender As Object, e As EventArgs) Handles ptbM_burial_officials.Click
+        slideMaintenanceSub_up()
+        frmBurialOfficers.ShowDialog()
     End Sub
 End Class

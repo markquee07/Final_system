@@ -84,4 +84,14 @@
         txtSecretary.Clear()
         lsvMemberList.Items.Clear()
     End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        If txtSearch.Text.Length > 0 Then
+            lblSearchMember.Visible = False
+            c.searhMemberInChurch(txtSearch.Text, lsvMemberList)
+        Else
+            lblSearchMember.Visible = True
+            c.displayMemberForChurchOfficial(lsvMemberList)
+        End If
+    End Sub
 End Class

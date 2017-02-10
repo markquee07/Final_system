@@ -56,4 +56,14 @@
             
         End If
     End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        If txtSearch.Text.Length > 0 Then
+            lblSearchMember.Visible = False
+            c.searchMember(txtSearch.Text, lsvListOfMember)
+        Else
+            lblSearchMember.Visible = True
+            c.displayMemberInformation(lsvListOfMember)
+        End If
+    End Sub
 End Class

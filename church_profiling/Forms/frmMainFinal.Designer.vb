@@ -77,9 +77,7 @@ Partial Class frmMainFinal
         Me.ptbExpenditures = New System.Windows.Forms.PictureBox()
         Me.panelRegisterUnder = New System.Windows.Forms.Panel()
         Me.ptbMember = New System.Windows.Forms.PictureBox()
-        Me.ptbBurialOfficial = New System.Windows.Forms.PictureBox()
         Me.ptbPastor = New System.Windows.Forms.PictureBox()
-        Me.ptbChurchOfficial = New System.Windows.Forms.PictureBox()
         Me.panelReport.SuspendLayout()
         CType(Me.ptbReportCerficate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbReportChurchFinancialTrans, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,9 +128,7 @@ Partial Class frmMainFinal
         CType(Me.ptbExpenditures, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelRegisterUnder.SuspendLayout()
         CType(Me.ptbMember, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ptbBurialOfficial, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbPastor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ptbChurchOfficial, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelReport
@@ -638,9 +634,7 @@ Partial Class frmMainFinal
         '
         Me.panelRegisterUnder.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.panelRegisterUnder.Controls.Add(Me.ptbMember)
-        Me.panelRegisterUnder.Controls.Add(Me.ptbBurialOfficial)
         Me.panelRegisterUnder.Controls.Add(Me.ptbPastor)
-        Me.panelRegisterUnder.Controls.Add(Me.ptbChurchOfficial)
         Me.panelRegisterUnder.Location = New System.Drawing.Point(277, 46)
         Me.panelRegisterUnder.Name = "panelRegisterUnder"
         Me.panelRegisterUnder.Size = New System.Drawing.Size(277, 0)
@@ -655,15 +649,6 @@ Partial Class frmMainFinal
         Me.ptbMember.TabIndex = 22
         Me.ptbMember.TabStop = False
         '
-        'ptbBurialOfficial
-        '
-        Me.ptbBurialOfficial.BackgroundImage = Global.church_profiling.My.Resources.Resources.burial_official_deepsky
-        Me.ptbBurialOfficial.Location = New System.Drawing.Point(0, 135)
-        Me.ptbBurialOfficial.Name = "ptbBurialOfficial"
-        Me.ptbBurialOfficial.Size = New System.Drawing.Size(277, 46)
-        Me.ptbBurialOfficial.TabIndex = 25
-        Me.ptbBurialOfficial.TabStop = False
-        '
         'ptbPastor
         '
         Me.ptbPastor.BackgroundImage = Global.church_profiling.My.Resources.Resources.pastor_deepsky
@@ -672,15 +657,6 @@ Partial Class frmMainFinal
         Me.ptbPastor.Size = New System.Drawing.Size(277, 46)
         Me.ptbPastor.TabIndex = 23
         Me.ptbPastor.TabStop = False
-        '
-        'ptbChurchOfficial
-        '
-        Me.ptbChurchOfficial.BackgroundImage = Global.church_profiling.My.Resources.Resources.church_officials_deepsky
-        Me.ptbChurchOfficial.Location = New System.Drawing.Point(0, 90)
-        Me.ptbChurchOfficial.Name = "ptbChurchOfficial"
-        Me.ptbChurchOfficial.Size = New System.Drawing.Size(277, 46)
-        Me.ptbChurchOfficial.TabIndex = 24
-        Me.ptbChurchOfficial.TabStop = False
         '
         'frmMainFinal
         '
@@ -751,9 +727,7 @@ Partial Class frmMainFinal
         CType(Me.ptbExpenditures, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelRegisterUnder.ResumeLayout(False)
         CType(Me.ptbMember, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ptbBurialOfficial, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbPastor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ptbChurchOfficial, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -805,9 +779,7 @@ Partial Class frmMainFinal
     Friend WithEvents ptbChurchFinancialtrans As System.Windows.Forms.PictureBox
     Friend WithEvents ptbMothyFee As System.Windows.Forms.PictureBox
     Friend WithEvents ptbMember As System.Windows.Forms.PictureBox
-    Friend WithEvents ptbBurialOfficial As System.Windows.Forms.PictureBox
     Friend WithEvents ptbPastor As System.Windows.Forms.PictureBox
-    Friend WithEvents ptbChurchOfficial As System.Windows.Forms.PictureBox
     Friend WithEvents panelChurchFinancialTrans_under As System.Windows.Forms.Panel
     Friend WithEvents ptbIncome As System.Windows.Forms.PictureBox
     Friend WithEvents ptbExpenses As System.Windows.Forms.PictureBox

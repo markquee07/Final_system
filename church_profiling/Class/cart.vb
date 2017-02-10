@@ -100,6 +100,23 @@
         GLOBAL_VARS.db.reader.Close()
     End Sub
 
+    Public Sub searchPastor(key As String, lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT id,concat(first_name,' ',middle_name,' ',last_name) as Fullname FROM tbl_host_pastor where first_name like '%" & key & "%' or last_name like '%" & key & "%';"
+
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Fullname").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
     Public Sub loadPastor(id As Integer)
         Dim sql As String = "SELECT id,concat(first_name,' ',middle_name,' ',last_name) as Fullname FROM tbl_host_pastor where id = " & id & ";"
         GLOBAL_VARS.db.execute(sql)
@@ -209,6 +226,56 @@
         End If
         GLOBAL_VARS.db.reader.Close()
     End Sub
+
+
+    Public Sub searchMember(key As String, ByVal lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,if (baptized_date = '0000-00-00 00:00:00','None',date_format(baptized_date,'%M %d, %Y')) as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,if (marriage_date = '0000-00-00 00:00:00','None',date_format(marriage_date,'%M %d, %Y')) as Marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id  where m.first_name like '%" & key & "%' or m.last_name like '%" & key & "%' or m.member_id like '%" & key & "%';"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("ID").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Member_id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("First_name").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Last_name").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Middle_name").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Date_of_birth").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Gender").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Province").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("City").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Barangay").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Baptized_status").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Baptized_date").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Contact_no").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Email_ad").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Blood_type").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Civil_status").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Church_name").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Pastor_name").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Marriage_date").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("HEA").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Course_graduated").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_school_graduated").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Licensure_passer").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("License_specification").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Work_status").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Work_address").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Nature_of_work").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_company").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Salary").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Self_employed").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_business").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Business_address").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Estimated_annual_income").ToString())
+
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
     Public Sub displayFamilyDetails(ByVal lsv As ListView, p_id As Integer)
         lsv.Items.Clear()
         Dim sql As String = "SELECT c.id,c.child_id,c.first_name,c.last_name,c.middle_name,date_format(c.birth_date,'%M %d, %Y') as birth_date,c.gender,c.church_member FROM tbl_child_information c inner join tbl_family_details f on c.id= f.child_id inner join tbl_member_information m on m.id=f.parent_id where f.parent_id=" & p_id & ""
@@ -359,6 +426,23 @@
         GLOBAL_VARS.db.reader.Close()
     End Sub
 
+    Public Sub searhMemberInChurch(key As String, lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "select id,member_id,concat(first_name,' ',middle_name,' ',Last_name) as fullname from tbl_member_information where first_name like '%" & key & "%' or last_name like '%" & key & "%' or member_id like '%" & key & "%';"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("member_id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("fullname").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
 
     Public Sub saveChurchOfficial(member_id As Integer, position As String, year As String)
         Dim sql As String = "insert into tbl_church_officials values (" & member_id & ",'" & position & "','" & year & "');"
@@ -369,5 +453,24 @@
         GLOBAL_VARS.db.executeNonReader(sql)
         MsgBox("Successfully Deleted", MsgBoxStyle.Information, "Information")
     End Sub
-   
+
+
+
+    Public Sub displayBurialOfficial(ByVal lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT m.id,concat(m.first_name,' ',' ',m.middle_name,' ',m.last_name) as Fullname,b.position,b.year FROM tbl_burialofficial b inner join tbl_member_information m on m.id = b.member_id"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Fullname").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("position").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("year").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
 End Class

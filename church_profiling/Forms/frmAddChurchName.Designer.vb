@@ -52,7 +52,7 @@ Partial Class frmAddChurchName
         Me.Label6.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(42, 18)
+        Me.Label6.Location = New System.Drawing.Point(43, 20)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(151, 24)
         Me.Label6.TabIndex = 73
@@ -64,7 +64,7 @@ Partial Class frmAddChurchName
         Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegister.ForeColor = System.Drawing.Color.White
-        Me.btnRegister.Location = New System.Drawing.Point(47, 308)
+        Me.btnRegister.Location = New System.Drawing.Point(47, 306)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(284, 56)
         Me.btnRegister.TabIndex = 71
@@ -78,7 +78,7 @@ Partial Class frmAddChurchName
         Me.lblemail.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblemail.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblemail.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblemail.Location = New System.Drawing.Point(68, 266)
+        Me.lblemail.Location = New System.Drawing.Point(68, 252)
         Me.lblemail.Name = "lblemail"
         Me.lblemail.Size = New System.Drawing.Size(95, 18)
         Me.lblemail.TabIndex = 67
@@ -88,7 +88,7 @@ Partial Class frmAddChurchName
         '
         Me.txtcemailadd.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtcemailadd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcemailadd.Location = New System.Drawing.Point(63, 268)
+        Me.txtcemailadd.Location = New System.Drawing.Point(63, 254)
         Me.txtcemailadd.Name = "txtcemailadd"
         Me.txtcemailadd.Size = New System.Drawing.Size(255, 14)
         Me.txtcemailadd.TabIndex = 65
@@ -100,7 +100,7 @@ Partial Class frmAddChurchName
         Me.lblccontact.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblccontact.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblccontact.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblccontact.Location = New System.Drawing.Point(68, 218)
+        Me.lblccontact.Location = New System.Drawing.Point(68, 204)
         Me.lblccontact.Name = "lblccontact"
         Me.lblccontact.Size = New System.Drawing.Size(109, 18)
         Me.lblccontact.TabIndex = 64
@@ -110,7 +110,7 @@ Partial Class frmAddChurchName
         '
         Me.txtccontact.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtccontact.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtccontact.Location = New System.Drawing.Point(63, 219)
+        Me.txtccontact.Location = New System.Drawing.Point(63, 205)
         Me.txtccontact.Name = "txtccontact"
         Me.txtccontact.Size = New System.Drawing.Size(255, 15)
         Me.txtccontact.TabIndex = 62
@@ -122,7 +122,7 @@ Partial Class frmAddChurchName
         Me.lblcadress.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblcadress.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcadress.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblcadress.Location = New System.Drawing.Point(68, 170)
+        Me.lblcadress.Location = New System.Drawing.Point(68, 156)
         Me.lblcadress.Name = "lblcadress"
         Me.lblcadress.Size = New System.Drawing.Size(58, 18)
         Me.lblcadress.TabIndex = 61
@@ -132,7 +132,7 @@ Partial Class frmAddChurchName
         '
         Me.txtcadrress.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtcadrress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcadrress.Location = New System.Drawing.Point(63, 171)
+        Me.txtcadrress.Location = New System.Drawing.Point(63, 157)
         Me.txtcadrress.Name = "txtcadrress"
         Me.txtcadrress.Size = New System.Drawing.Size(255, 15)
         Me.txtcadrress.TabIndex = 59
@@ -144,7 +144,7 @@ Partial Class frmAddChurchName
         Me.lblcname.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblcname.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcname.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblcname.Location = New System.Drawing.Point(68, 122)
+        Me.lblcname.Location = New System.Drawing.Point(68, 108)
         Me.lblcname.Name = "lblcname"
         Me.lblcname.Size = New System.Drawing.Size(91, 18)
         Me.lblcname.TabIndex = 58
@@ -154,7 +154,7 @@ Partial Class frmAddChurchName
         '
         Me.txtChurchName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtChurchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChurchName.Location = New System.Drawing.Point(63, 123)
+        Me.txtChurchName.Location = New System.Drawing.Point(63, 109)
         Me.txtChurchName.Name = "txtChurchName"
         Me.txtChurchName.Size = New System.Drawing.Size(255, 15)
         Me.txtChurchName.TabIndex = 56
@@ -183,7 +183,7 @@ Partial Class frmAddChurchName
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.White
         Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox4.Location = New System.Drawing.Point(47, 255)
+        Me.PictureBox4.Location = New System.Drawing.Point(47, 241)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(284, 39)
         Me.PictureBox4.TabIndex = 66
@@ -193,7 +193,7 @@ Partial Class frmAddChurchName
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.White
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Location = New System.Drawing.Point(47, 206)
+        Me.PictureBox3.Location = New System.Drawing.Point(47, 192)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(284, 39)
         Me.PictureBox3.TabIndex = 63
@@ -203,7 +203,7 @@ Partial Class frmAddChurchName
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(47, 158)
+        Me.PictureBox1.Location = New System.Drawing.Point(47, 144)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(284, 39)
         Me.PictureBox1.TabIndex = 60
@@ -213,7 +213,7 @@ Partial Class frmAddChurchName
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.White
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(47, 110)
+        Me.PictureBox2.Location = New System.Drawing.Point(47, 96)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(284, 39)
         Me.PictureBox2.TabIndex = 57
@@ -241,6 +241,7 @@ Partial Class frmAddChurchName
         Me.Controls.Add(Me.txtChurchName)
         Me.Controls.Add(Me.PictureBox2)
         Me.Name = "frmAddChurchName"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddChurchName"
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()

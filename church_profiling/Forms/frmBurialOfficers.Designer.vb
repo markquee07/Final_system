@@ -53,8 +53,8 @@ Partial Class frmBurialOfficers
         Me.lsvMemberList = New System.Windows.Forms.ListView()
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnRegister = New System.Windows.Forms.Button()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtYear = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,7 +330,7 @@ Partial Class frmBurialOfficers
         Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox7.Location = New System.Drawing.Point(791, 81)
+        Me.PictureBox7.Location = New System.Drawing.Point(791, 69)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(30, 25)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -344,7 +344,7 @@ Partial Class frmBurialOfficers
         Me.lblSearchMember.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblSearchMember.Font = New System.Drawing.Font("Monotype Corsiva", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSearchMember.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblSearchMember.Location = New System.Drawing.Point(833, 85)
+        Me.lblSearchMember.Location = New System.Drawing.Point(833, 73)
         Me.lblSearchMember.Name = "lblSearchMember"
         Me.lblSearchMember.Size = New System.Drawing.Size(75, 15)
         Me.lblSearchMember.TabIndex = 94
@@ -354,7 +354,7 @@ Partial Class frmBurialOfficers
         '
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(828, 86)
+        Me.txtSearch.Location = New System.Drawing.Point(828, 74)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(154, 14)
         Me.txtSearch.TabIndex = 93
@@ -363,7 +363,7 @@ Partial Class frmBurialOfficers
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.White
         Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox8.Location = New System.Drawing.Point(821, 81)
+        Me.PictureBox8.Location = New System.Drawing.Point(821, 69)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(169, 25)
         Me.PictureBox8.TabIndex = 92
@@ -377,9 +377,9 @@ Partial Class frmBurialOfficers
         Me.lsvMemberList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsvMemberList.ForeColor = System.Drawing.Color.Black
         Me.lsvMemberList.FullRowSelect = True
-        Me.lsvMemberList.Location = New System.Drawing.Point(686, 110)
+        Me.lsvMemberList.Location = New System.Drawing.Point(686, 100)
         Me.lsvMemberList.Name = "lsvMemberList"
-        Me.lsvMemberList.Size = New System.Drawing.Size(303, 347)
+        Me.lsvMemberList.Size = New System.Drawing.Size(303, 357)
         Me.lsvMemberList.TabIndex = 96
         Me.lsvMemberList.UseCompatibleStateImageBehavior = False
         Me.lsvMemberList.View = System.Windows.Forms.View.Details
@@ -394,6 +394,11 @@ Partial Class frmBurialOfficers
         Me.ColumnHeader6.Text = "Member ID"
         Me.ColumnHeader6.Width = 123
         '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Member Name"
+        Me.ColumnHeader1.Width = 177
+        '
         'btnRegister
         '
         Me.btnRegister.BackColor = System.Drawing.Color.DeepSkyBlue
@@ -402,15 +407,10 @@ Partial Class frmBurialOfficers
         Me.btnRegister.ForeColor = System.Drawing.Color.White
         Me.btnRegister.Location = New System.Drawing.Point(686, 466)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(303, 43)
+        Me.btnRegister.Size = New System.Drawing.Size(303, 59)
         Me.btnRegister.TabIndex = 97
         Me.btnRegister.Text = "Save"
         Me.btnRegister.UseVisualStyleBackColor = False
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Member Name"
-        Me.ColumnHeader1.Width = 177
         '
         'txtYear
         '
@@ -459,6 +459,7 @@ Partial Class frmBurialOfficers
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frmBurialOfficers"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmBurialOfficers"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()

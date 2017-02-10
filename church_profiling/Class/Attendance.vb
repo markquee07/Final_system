@@ -8,10 +8,8 @@
     Public description As String
 
     Public Sub saveAttendanceInfo()
-        Dim sql As String = "insert into tbl_attendance values (" & Me.member_id & ",'" & Me.activity_type & "','" & Me.date_ & "','" & Me.meeting_time & "','" & Me.status & "','" & Me.description & "');"
+        Dim sql As String = "insert into tbl_attendance values (" & Me.member_id & ",'" & Me.activity_type & "','" & Me.date_ & "','" & Me.meeting_time & "','" & Me.status & "','" & Me.description & "',null);"
         GLOBAL_VARS.db.executeNonReader(sql)
-        MsgBox("Attendance Information Successfully Saved", MsgBoxStyle.Information)
-        GLOBAL_VARS.db.reader.Close()
     End Sub
 
     Public Sub displayAllMembersForAttendance(ByVal lsv As ListView)
@@ -45,6 +43,27 @@
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("member_id").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("full_name").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("gender").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
+
+    Public Sub displayAllAttendance(ByVal lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT member_id,activity_type,date_format(meeting_date,'%M %d, %Y') as meeting_date,meeting_time,status,description FROM tbl_attendance group by description,meeting_date,meeting_time"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("member_ID").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Activity_type").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("meeting_date").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("meeting_time").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("status").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("description").ToString())
                 End With
             End While
         End If

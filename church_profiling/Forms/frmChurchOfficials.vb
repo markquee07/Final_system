@@ -9,7 +9,7 @@
 
 
     Private Sub btnHostPastor_Click(sender As Object, e As EventArgs) Handles btnHostPastor.Click
-
+        txtSearch.Enabled = True
         slide_left()
         button_no = 1
         o_position = "HOST PASTOR"
@@ -53,7 +53,15 @@
     End Sub
 
     Private Sub frmChurchOfficials_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txtSearch.Enabled = False
+        Label10.Visible = True
+        txtHostPastor.Enabled = False
+        txtElder.Enabled = False
+        txtDeacon1.Enabled = False
+        txtDeacon2.Enabled = False
+        txtDeacon3.Enabled = False
+        txtSecretary.Enabled = False
+        txtTreasurer.Enabled = False
     End Sub
 
     Private Sub lblSearchMember_Click(sender As Object, e As EventArgs) Handles lblSearchMember.Click
@@ -63,8 +71,18 @@
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         If txtSearch.Text.Length > 0 Then
             lblSearchMember.Visible = False
+            If button_no = 1 Then
+                c.searchPastor(txtSearch.Text, lsvPastorList)
+            ElseIf button_no > 1 Then
+                c.searhMemberInChurch(txtSearch.Text, lsvMemberInformaion)
+            End If
         Else
             lblSearchMember.Visible = True
+            If button_no = 1 Then
+                c.displayPasotr(lsvPastorList)
+            ElseIf button_no > 1 Then
+                c.displayMemberForChurchOfficial(lsvMemberInformaion)
+            End If
         End If
     End Sub
 
@@ -190,5 +208,23 @@
         Me.active_official.member.loadPastor(active_id)
         Me.active_official.position = Me.o_position
         Me.setOfficial()
+    End Sub
+
+    Private Sub txtYear_TextChanged(sender As Object, e As EventArgs) Handles txtYear.TextChanged
+        If txtYear.Text.Length > 0 Then
+            Label10.Visible = False
+        Else
+            Label10.Visible = True
+        End If
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+        Label10.Visible = False
+        txtYear.Select()
+    End Sub
+
+    Private Sub txtYear_Click(sender As Object, e As EventArgs) Handles txtYear.Click
+        Label10.Visible = False
+        txtYear.Select()
     End Sub
 End Class

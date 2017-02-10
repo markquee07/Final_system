@@ -61,15 +61,17 @@ Partial Class frmListOfHousehold
         Me.lblAttendanceType = New System.Windows.Forms.Label()
         Me.lblSearchMember = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lsvListOfMember
@@ -77,7 +79,7 @@ Partial Class frmListOfHousehold
         Me.lsvListOfMember.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lsvListOfMember.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader20, Me.ColumnHeader21, Me.ColumnHeader22, Me.ColumnHeader23, Me.ColumnHeader24, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35})
         Me.lsvListOfMember.FullRowSelect = True
-        Me.lsvListOfMember.Location = New System.Drawing.Point(89, 112)
+        Me.lsvListOfMember.Location = New System.Drawing.Point(50, 152)
         Me.lsvListOfMember.Name = "lsvListOfMember"
         Me.lsvListOfMember.Size = New System.Drawing.Size(790, 436)
         Me.lsvListOfMember.TabIndex = 0
@@ -257,13 +259,14 @@ Partial Class frmListOfHousehold
         'lblAttendanceType
         '
         Me.lblAttendanceType.AutoSize = True
+        Me.lblAttendanceType.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.lblAttendanceType.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAttendanceType.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblAttendanceType.Location = New System.Drawing.Point(55, 20)
+        Me.lblAttendanceType.ForeColor = System.Drawing.Color.White
+        Me.lblAttendanceType.Location = New System.Drawing.Point(35, 36)
         Me.lblAttendanceType.Name = "lblAttendanceType"
-        Me.lblAttendanceType.Size = New System.Drawing.Size(419, 31)
+        Me.lblAttendanceType.Size = New System.Drawing.Size(206, 31)
         Me.lblAttendanceType.TabIndex = 37
-        Me.lblAttendanceType.Text = "List of Registered Church  Official"
+        Me.lblAttendanceType.Text = "List of Members"
         '
         'lblSearchMember
         '
@@ -272,20 +275,56 @@ Partial Class frmListOfHousehold
         Me.lblSearchMember.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblSearchMember.Font = New System.Drawing.Font("Monotype Corsiva", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSearchMember.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblSearchMember.Location = New System.Drawing.Point(729, 72)
+        Me.lblSearchMember.Location = New System.Drawing.Point(679, 107)
         Me.lblSearchMember.Name = "lblSearchMember"
-        Me.lblSearchMember.Size = New System.Drawing.Size(89, 17)
+        Me.lblSearchMember.Size = New System.Drawing.Size(91, 17)
         Me.lblSearchMember.TabIndex = 40
-        Me.lblSearchMember.Text = "Search Official"
+        Me.lblSearchMember.Text = "Search Member"
         '
         'txtSearch
         '
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(727, 73)
+        Me.txtSearch.Location = New System.Drawing.Point(677, 108)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(154, 15)
         Me.txtSearch.TabIndex = 39
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(157, 99)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 33)
+        Me.Button1.TabIndex = 42
+        Me.Button1.Text = "Personal Details"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(33, 99)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(121, 33)
+        Me.Button2.TabIndex = 43
+        Me.Button2.Text = "Add"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(272, 99)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(108, 33)
+        Me.Button3.TabIndex = 44
+        Me.Button3.Text = "Delete"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -293,7 +332,7 @@ Partial Class frmListOfHousehold
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(689, 68)
+        Me.PictureBox2.Location = New System.Drawing.Point(639, 103)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 25)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -304,7 +343,7 @@ Partial Class frmListOfHousehold
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.White
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Location = New System.Drawing.Point(719, 68)
+        Me.PictureBox3.Location = New System.Drawing.Point(669, 103)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(175, 25)
         Me.PictureBox3.TabIndex = 38
@@ -314,44 +353,27 @@ Partial Class frmListOfHousehold
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(61, 100)
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 140)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(833, 461)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'PictureBox4
         '
-        Me.Button1.Location = New System.Drawing.Point(462, 65)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 23)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Personal Details"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(355, 65)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 23)
-        Me.Button2.TabIndex = 43
-        Me.Button2.Text = "Add"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(569, 65)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 23)
-        Me.Button3.TabIndex = 44
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox4.Location = New System.Drawing.Point(22, 18)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(833, 122)
+        Me.PictureBox4.TabIndex = 45
+        Me.PictureBox4.TabStop = False
         '
         'frmListOfHousehold
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(960, 624)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(879, 634)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -362,12 +384,14 @@ Partial Class frmListOfHousehold
         Me.Controls.Add(Me.lblAttendanceType)
         Me.Controls.Add(Me.lsvListOfMember)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Name = "frmListOfHousehold"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmListOfHousehold"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -416,4 +440,5 @@ Partial Class frmListOfHousehold
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 End Class
