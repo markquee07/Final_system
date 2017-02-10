@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2017 at 05:58 PM
+-- Generation Time: Feb 10, 2017 at 02:45 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -29,10 +29,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_attendance` (
   `Member_id` int(10) UNSIGNED NOT NULL,
   `Activity_type` varchar(45) NOT NULL,
-  `Date_s` datetime NOT NULL,
+  `meeting_Date` date NOT NULL,
   `Meeting_time` time NOT NULL,
   `Status` varchar(10) NOT NULL,
-  `Description` varchar(45) NOT NULL
+  `Description` varchar(45) NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -46,20 +47,6 @@ CREATE TABLE `tbl_burialofficial` (
   `Position` varchar(45) NOT NULL,
   `Year` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_burialofficial`
---
-
-INSERT INTO `tbl_burialofficial` (`member_id`, `Position`, `Year`) VALUES
-(13, 'PRESIDENT', '2017-2018'),
-(15, 'VICE-PRESIDENT', '2017-2018'),
-(19, 'TREASURER', '2017-2018'),
-(21, 'SECRETARY', '2017-2018'),
-(14, 'PRESIDENT', '2017-2018'),
-(16, 'VICE-PRESIDENT', '2017-2018'),
-(23, 'TREASURER', '2017-2018'),
-(12, 'SECRETARY', '2017-2018');
 
 -- --------------------------------------------------------
 
@@ -77,25 +64,6 @@ CREATE TABLE `tbl_child_information` (
   `Last_name` varchar(45) NOT NULL,
   `Middle_name` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_child_information`
---
-
-INSERT INTO `tbl_child_information` (`id`, `Child_id`, `Gender`, `Birth_date`, `Church_member`, `First_name`, `Last_name`, `Middle_name`) VALUES
-(1, 'Y8Z95T15', 'MALE', '2017-02-05 00:00:00', '', 'mark1', 'mark1', 'm'),
-(2, 'YE748RVQ', 'FEMALE', '2017-02-05 00:00:00', '', 'asd', 'asd', 'd'),
-(3, 'Y69Y61MU', 'MALE', '2017-02-05 00:00:00', '', 'a', 'aa', 'a'),
-(4, '251Q71V2', 'MALE', '2017-02-05 00:00:00', '', 'asd', 'asd', 'asd'),
-(5, 'L0Y2JEOB', 'MALE', '2018-03-07 00:00:00', '', 'as', 'as', 'asa'),
-(6, '9PVQP7TK', 'FEMALE', '2018-03-07 00:00:00', '', 'kjhgckjhgvc', 'mjhgcx', ''),
-(7, 'IAQ0HWVK', 'FEMALE', '2013-06-24 00:00:00', '', 'hgc', 'kjhgc', ''),
-(8, 'M8LEWX9A', 'FEMALE', '2017-02-16 00:00:00', '', 'as', 's', ''),
-(9, '4G043VQ9', 'FEMALE', '2000-06-21 00:00:00', '', 'ad', 'ad', 'a'),
-(10, 'MXJLO5K3', 'FEMALE', '2017-02-24 00:00:00', '', 'as', 'as', ''),
-(11, '416U6WEJ', 'MALE', '2017-02-25 00:00:00', '', 'dd', 'sd', 'ds'),
-(12, 'MX4HD9E9', 'MALE', '2015-02-09 00:00:00', '', 'm', 'm', 'm'),
-(13, 'CRVGU936', 'MALE', '2017-02-09 00:00:00', '', 'k', 'k', 'lk');
 
 -- --------------------------------------------------------
 
@@ -136,14 +104,6 @@ CREATE TABLE `tbl_church_information` (
   `Email_ad` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tbl_church_information`
---
-
-INSERT INTO `tbl_church_information` (`id`, `Church_name`, `Church_address`, `Contact_no`, `Email_ad`) VALUES
-(1, 'mayang', 'p', '0', 'p'),
-(2, 'l', 'l', 'l', 'l');
-
 -- --------------------------------------------------------
 
 --
@@ -155,18 +115,6 @@ CREATE TABLE `tbl_church_officials` (
   `Position_type` varchar(20) NOT NULL,
   `Year` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_church_officials`
---
-
-INSERT INTO `tbl_church_officials` (`member_id`, `Position_type`, `Year`) VALUES
-(16, 'ELDER', '2017-2018'),
-(19, 'DEACON 1', '2017-2018'),
-(16, 'DEACON 2', '2017-2018'),
-(11, 'DEACON 3', '2017-2018'),
-(12, 'TREASURER', '2017-2018'),
-(14, 'SECRETARY', '2017-2018');
 
 -- --------------------------------------------------------
 
@@ -182,26 +130,6 @@ CREATE TABLE `tbl_educational_background` (
   `Licensure_passer` varchar(3) NOT NULL,
   `License_specification` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_educational_background`
---
-
-INSERT INTO `tbl_educational_background` (`Member_id`, `HEA`, `Course_graduated`, `Name_of_school_graduated`, `Licensure_passer`, `License_specification`) VALUES
-(10, 'None', 'None', 'None', 'No', ''),
-(11, 'None', 'None', 'None', 'No', ''),
-(12, 'None', 'None', 'None', 'No', 'No'),
-(13, 'Elementary', 'None', 'h', 'No', ''),
-(14, 'None', 'None', 'None', 'No', ''),
-(15, 'None', 'None', 'None', 'No', 'None'),
-(16, 'None', 'None', 'None', 'No', 'None'),
-(17, 'None', 'None', 'None', 'No', 'None'),
-(18, 'None', '', '', 'No', ''),
-(19, 'None', 'None', 'None', 'No', 'None'),
-(19, 'None', 'None', 'None', 'No', 'None'),
-(21, 'None', 'None', 'None', 'No', 'None'),
-(21, 'None', 'None', 'None', 'No', 'None'),
-(23, 'None', 'None', 'None', 'No', 'None');
 
 -- --------------------------------------------------------
 
@@ -241,15 +169,6 @@ CREATE TABLE `tbl_family_details` (
   `Child_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tbl_family_details`
---
-
-INSERT INTO `tbl_family_details` (`Parent_id`, `Child_id`) VALUES
-(12, 10),
-(14, 11),
-(16, 12);
-
 -- --------------------------------------------------------
 
 --
@@ -285,35 +204,6 @@ CREATE TABLE `tbl_host_pastor` (
   `Church_address` varchar(45) NOT NULL,
   `years_of_service` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_host_pastor`
---
-
-INSERT INTO `tbl_host_pastor` (`id`, `First_Name`, `Last_name`, `Middle_Name`, `Address`, `gender`, `Date_of_birth`, `concat_number`, `Name_of_school_grad`, `Address_of_school_graduaterd`, `year_graduated`, `Chutch_name`, `Church_address`, `years_of_service`) VALUES
-(1, 'a', 'a', 'a', 'a', 'MALE', '2017-07-25 00:00:00', '1111111', 'bible', 'bilbe address', '2121', 'church name', ' church address', '52525'),
-(2, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(3, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(4, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(5, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(6, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(7, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(8, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(9, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(10, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(11, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(12, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(13, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(14, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(15, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(16, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(17, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(18, '', '', '', '', '', '2017-02-09 00:00:00', '', '', '', '', '', '', ''),
-(19, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
-(20, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
-(21, 'asd', 'asd', 'ad', 'asd', 'MALE', '2017-02-08 00:00:00', '213123', 'None', 'None', 'None', 'None', 'None', 'None'),
-(22, 'asd', 'asd', 'asd', 'asd', 'MALE', '2017-02-09 00:00:00', '23123', '', '', '', 'None', 'None', 'None'),
-(23, 'asd', 'asdasd', 'asd', 'asd', 'MALE', '2017-02-09 00:00:00', '123', 'zzzzz', 'zzzzz', 'zzzzzz', 'None', 'None', 'None');
 
 -- --------------------------------------------------------
 
@@ -354,24 +244,6 @@ CREATE TABLE `tbl_member_information` (
   `Pastor_name` varchar(45) NOT NULL,
   `Marriage_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_member_information`
---
-
-INSERT INTO `tbl_member_information` (`id`, `Member_id`, `First_name`, `Last_name`, `Middle_name`, `Date_of_birth`, `Gender`, `Province`, `City`, `Barangay`, `Baptized_status`, `Baptized_date`, `Contact_no`, `Email_ad`, `Blood_type`, `Civil_status`, `Church_name`, `Pastor_name`, `Marriage_date`) VALUES
-(10, 'J38CHZZ7', 'SAS', 'ASAWA', '09876REDFG', '2017-01-29 00:00:00', 'Female', 'AS', 'AS', 'SAS', 'No', '2017-01-29 00:00:00', 'None', 'None', 'B-', 'Single', 'SA', 'AS', '0000-00-00 00:00:00'),
-(11, 'G95E2GSJ', 'T', 'YD', 'IUYF', '2017-01-29 00:00:00', 'Male', 'QWERT', 'WERTYUI', 'SDHJ', 'No', '2017-01-29 00:00:00', 'None', 'None', 'AB+', 'Single', 'WERTY', 'ASDF', '0000-00-00 00:00:00'),
-(12, 'VGEXNLAF', 'SD', 'AS', 'LOU', '2017-01-29 00:00:00', 'Female', 'S', 'S', 'AS', 'No', '2017-01-29 00:00:00', 'None', 'None', 'B+', 'Single', 'AS', 'AS', '0000-00-00 00:00:00'),
-(13, 'IIDU3RQM', 'M', 'N', 'J', '2017-01-29 00:00:00', 'Male', 'Y', 'Y', 'Y', 'No', '2017-01-29 00:00:00', 'None', 'None', 'B+', 'Single', 'Y', 'Y', '0000-00-00 00:00:00'),
-(14, '3HHMGZ9F', 'G', 'GJJ', 'O', '2017-01-29 00:00:00', 'Male', 'SSSSSS', 'SDSD', 'DSDS', 'No', '2017-01-29 00:00:00', 'None', 'None', 'B-', 'Single', 'DS', 'SDSD', '0000-00-00 00:00:00'),
-(15, '8IEZ9XTQ', 'N', 'N', 'N', '2017-01-29 00:00:00', 'Male', 'N', 'N', 'N', 'No', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', 'N', 'N', '0000-00-00 00:00:00'),
-(16, 'B3MGBBGU', 'O', 'OI', 'O', '2017-01-29 00:00:00', 'Male', 'L', 'L', 'L', 'Yes', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', 'L', 'L', '0000-00-00 00:00:00'),
-(17, 'VUBWIMLZ', 'K', 'K', 'LKK', '2017-01-29 00:00:00', 'Female', 'K', 'K', 'K', 'No', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', 'K', 'K', '0000-00-00 00:00:00'),
-(18, 'YXS7GWWS', 'Y', 'Y', 'KI', '2017-01-29 00:00:00', 'Male', 'T', 'T', 'T', 'No', '2017-02-09 00:00:00', '765456', 'ty', 'A+', 'Single', 'T', 'T', '0000-00-00 00:00:00'),
-(19, 'HUBHMHX8', 'PP', 'P', 'P', '2017-01-29 00:00:00', 'Male', '9', '9', '9', 'Yes', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', '8', 'I', '0000-00-00 00:00:00'),
-(21, '7DN5CJ1D', 'P', 'P', '', '2017-01-29 00:00:00', 'Male', 'P', 'P', 'P', 'No', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', 'P', 'P', '0000-00-00 00:00:00'),
-(23, '9SS3SJXA', 'J', 'J', '', '2017-01-29 00:00:00', 'Male', 'K', 'K', 'K', 'Yes', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', 'K', 'K', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -423,8 +295,7 @@ CREATE TABLE `tbl_useraccount` (
 --
 
 INSERT INTO `tbl_useraccount` (`id`, `First_Name`, `Last_Name`, `Username`, `Password`, `User_type`, `Contact_no`, `Date_registered`) VALUES
-(1, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN', '1=1', '2017-02-09 18:48:44'),
-(3, 'marianne', 'joy', 'gwapa', '202cb962ac59075b964b07152d234b70', 'ADMIN', '0935987670', '2017-02-09 16:55:07');
+(1, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN', '1=1', '2017-02-09 18:48:44');
 
 -- --------------------------------------------------------
 
@@ -459,26 +330,6 @@ CREATE TABLE `tbl_work_information` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_work_information`
---
-
-INSERT INTO `tbl_work_information` (`Members_id`, `Work_status`, `Work_address`, `Nature_of_work`, `Name_of_company`, `Salary`, `Self_employed`, `Name_of_business`, `Business_address`, `Estimated_annual_income`) VALUES
-(10, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(11, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(12, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(13, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(14, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(15, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(16, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(17, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(18, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(19, 'No', 'None', 'None', 'None', 0, 'jhgf', 'hgf', 'ih', '0'),
-(19, 'No', 'None', 'None', 'None', 0, 'jhgf', 'hgf', 'ih', '0'),
-(21, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(21, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(23, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0');
-
---
 -- Indexes for dumped tables
 --
 
@@ -486,6 +337,7 @@ INSERT INTO `tbl_work_information` (`Members_id`, `Work_status`, `Work_address`,
 -- Indexes for table `tbl_attendance`
 --
 ALTER TABLE `tbl_attendance`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `FK_tbl_church_attendance_2` (`Member_id`);
 
 --
@@ -611,6 +463,11 @@ ALTER TABLE `tbl_work_information`
 --
 
 --
+-- AUTO_INCREMENT for table `tbl_attendance`
+--
+ALTER TABLE `tbl_attendance`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT for table `tbl_child_information`
 --
 ALTER TABLE `tbl_child_information`
@@ -678,8 +535,7 @@ ALTER TABLE `tbl_wedding`
 -- Constraints for table `tbl_attendance`
 --
 ALTER TABLE `tbl_attendance`
-  ADD CONSTRAINT `FK_tbl_church_attendance_1` FOREIGN KEY (`Member_id`) REFERENCES `tbl_member_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_tbl_church_attendance_2` FOREIGN KEY (`Member_id`) REFERENCES `tbl_child_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_tbl_attendance_1` FOREIGN KEY (`Member_id`) REFERENCES `tbl_member_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tbl_burialofficial`
