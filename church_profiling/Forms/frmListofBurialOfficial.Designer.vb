@@ -38,9 +38,11 @@ Partial Class frmListofBurialOfficial
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -48,7 +50,7 @@ Partial Class frmListofBurialOfficial
         Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(39, 88)
+        Me.Button1.Location = New System.Drawing.Point(39, 84)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 33)
         Me.Button1.TabIndex = 51
@@ -71,7 +73,7 @@ Partial Class frmListofBurialOfficial
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.White
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Location = New System.Drawing.Point(517, 96)
+        Me.PictureBox3.Location = New System.Drawing.Point(532, 87)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(175, 25)
         Me.PictureBox3.TabIndex = 47
@@ -80,9 +82,10 @@ Partial Class frmListofBurialOfficial
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.PictureBox4.Location = New System.Drawing.Point(23, 18)
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(688, 116)
+        Me.PictureBox4.Size = New System.Drawing.Size(732, 128)
         Me.PictureBox4.TabIndex = 52
         Me.PictureBox4.TabStop = False
         '
@@ -92,7 +95,7 @@ Partial Class frmListofBurialOfficial
         Me.lsvListOfMember.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.ColumnHeader19, Me.ColumnHeader25})
         Me.lsvListOfMember.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsvListOfMember.FullRowSelect = True
-        Me.lsvListOfMember.Location = New System.Drawing.Point(23, 134)
+        Me.lsvListOfMember.Location = New System.Drawing.Point(23, 148)
         Me.lsvListOfMember.Name = "lsvListOfMember"
         Me.lsvListOfMember.Size = New System.Drawing.Size(688, 344)
         Me.lsvListOfMember.TabIndex = 53
@@ -118,7 +121,7 @@ Partial Class frmListofBurialOfficial
         '
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(529, 101)
+        Me.txtSearch.Location = New System.Drawing.Point(544, 92)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(154, 15)
         Me.txtSearch.TabIndex = 48
@@ -130,7 +133,7 @@ Partial Class frmListofBurialOfficial
         Me.lblSearchMember.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblSearchMember.Font = New System.Drawing.Font("Monotype Corsiva", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSearchMember.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblSearchMember.Location = New System.Drawing.Point(531, 100)
+        Me.lblSearchMember.Location = New System.Drawing.Point(546, 91)
         Me.lblSearchMember.Name = "lblSearchMember"
         Me.lblSearchMember.Size = New System.Drawing.Size(73, 15)
         Me.lblSearchMember.TabIndex = 49
@@ -142,7 +145,7 @@ Partial Class frmListofBurialOfficial
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(491, 96)
+        Me.PictureBox1.Location = New System.Drawing.Point(506, 87)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(30, 25)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -155,7 +158,7 @@ Partial Class frmListofBurialOfficial
         Me.lsvBurialOfficial.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.lsvBurialOfficial.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsvBurialOfficial.FullRowSelect = True
-        Me.lsvBurialOfficial.Location = New System.Drawing.Point(23, 134)
+        Me.lsvBurialOfficial.Location = New System.Drawing.Point(23, 148)
         Me.lsvBurialOfficial.Name = "lsvBurialOfficial"
         Me.lsvBurialOfficial.Size = New System.Drawing.Size(688, 344)
         Me.lsvBurialOfficial.TabIndex = 54
@@ -177,12 +180,23 @@ Partial Class frmListofBurialOfficial
         Me.ColumnHeader3.Text = "Official Name"
         Me.ColumnHeader3.Width = 387
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 513)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(732, 10)
+        Me.PictureBox2.TabIndex = 55
+        Me.PictureBox2.TabStop = False
+        '
         'frmListofBurialOfficial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(732, 511)
+        Me.ClientSize = New System.Drawing.Size(732, 523)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.lsvBurialOfficial)
         Me.Controls.Add(Me.lsvListOfMember)
         Me.Controls.Add(Me.Button1)
@@ -198,6 +212,7 @@ Partial Class frmListofBurialOfficial
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -217,4 +232,5 @@ Partial Class frmListofBurialOfficial
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 End Class

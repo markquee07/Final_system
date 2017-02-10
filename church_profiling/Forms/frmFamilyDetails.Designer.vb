@@ -35,8 +35,10 @@ Partial Class frmFamilyDetails
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.lblAttendanceType = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lsvListOffamilydetails
@@ -44,7 +46,7 @@ Partial Class frmFamilyDetails
         Me.lsvListOffamilydetails.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lsvListOffamilydetails.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7})
         Me.lsvListOffamilydetails.FullRowSelect = True
-        Me.lsvListOffamilydetails.Location = New System.Drawing.Point(45, 145)
+        Me.lsvListOffamilydetails.Location = New System.Drawing.Point(43, 176)
         Me.lsvListOffamilydetails.Name = "lsvListOffamilydetails"
         Me.lsvListOffamilydetails.Size = New System.Drawing.Size(751, 331)
         Me.lsvListOffamilydetails.TabIndex = 45
@@ -59,17 +61,17 @@ Partial Class frmFamilyDetails
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "CHILD ID"
-        Me.ColumnHeader1.Width = 64
+        Me.ColumnHeader1.Width = 86
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "FIRST NAME"
-        Me.ColumnHeader2.Width = 166
+        Me.ColumnHeader2.Width = 154
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "LAST NAME"
-        Me.ColumnHeader3.Width = 141
+        Me.ColumnHeader3.Width = 127
         '
         'ColumnHeader4
         '
@@ -84,7 +86,7 @@ Partial Class frmFamilyDetails
         'ColumnHeader6
         '
         Me.ColumnHeader6.Text = "GENDER"
-        Me.ColumnHeader6.Width = 58
+        Me.ColumnHeader6.Width = 71
         '
         'ColumnHeader7
         '
@@ -95,7 +97,7 @@ Partial Class frmFamilyDetails
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(23, 133)
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 164)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(787, 356)
         Me.PictureBox1.TabIndex = 46
@@ -106,7 +108,7 @@ Partial Class frmFamilyDetails
         Me.Button2.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(36, 93)
+        Me.Button2.Location = New System.Drawing.Point(45, 90)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(143, 34)
         Me.Button2.TabIndex = 47
@@ -116,9 +118,10 @@ Partial Class frmFamilyDetails
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.PictureBox4.Location = New System.Drawing.Point(23, 23)
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(787, 122)
+        Me.PictureBox4.Size = New System.Drawing.Size(831, 139)
         Me.PictureBox4.TabIndex = 48
         Me.PictureBox4.TabStop = False
         '
@@ -128,26 +131,41 @@ Partial Class frmFamilyDetails
         Me.lblAttendanceType.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.lblAttendanceType.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAttendanceType.ForeColor = System.Drawing.Color.White
-        Me.lblAttendanceType.Location = New System.Drawing.Point(39, 40)
+        Me.lblAttendanceType.Location = New System.Drawing.Point(39, 32)
         Me.lblAttendanceType.Name = "lblAttendanceType"
         Me.lblAttendanceType.Size = New System.Drawing.Size(195, 31)
         Me.lblAttendanceType.TabIndex = 49
         Me.lblAttendanceType.Text = "List of Children"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 555)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(831, 16)
+        Me.PictureBox2.TabIndex = 50
+        Me.PictureBox2.TabStop = False
+        '
         'frmFamilyDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(837, 521)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(831, 571)
         Me.Controls.Add(Me.lblAttendanceType)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.lsvListOffamilydetails)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox4)
         Me.Name = "frmFamilyDetails"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmFamilyDetails"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -165,4 +183,5 @@ Partial Class frmFamilyDetails
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents lblAttendanceType As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 End Class

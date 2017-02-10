@@ -703,6 +703,7 @@ Partial Class frmRegisterPastor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(882, 531)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.PictureBox15)

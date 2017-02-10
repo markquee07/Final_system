@@ -39,10 +39,12 @@ Partial Class frmchurchlist
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnDeleteChurch
@@ -120,7 +122,7 @@ Partial Class frmchurchlist
         Me.lsvChurch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lsvChurch.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader19, Me.ColumnHeader25, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader68})
         Me.lsvChurch.FullRowSelect = True
-        Me.lsvChurch.Location = New System.Drawing.Point(41, 161)
+        Me.lsvChurch.Location = New System.Drawing.Point(41, 192)
         Me.lsvChurch.Name = "lsvChurch"
         Me.lsvChurch.Size = New System.Drawing.Size(771, 436)
         Me.lsvChurch.TabIndex = 54
@@ -179,7 +181,7 @@ Partial Class frmchurchlist
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(23, 147)
+        Me.PictureBox1.Location = New System.Drawing.Point(23, 178)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(801, 469)
         Me.PictureBox1.TabIndex = 45
@@ -188,17 +190,29 @@ Partial Class frmchurchlist
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.PictureBox4.Location = New System.Drawing.Point(23, 20)
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(801, 135)
+        Me.PictureBox4.Size = New System.Drawing.Size(848, 155)
         Me.PictureBox4.TabIndex = 57
         Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 675)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(848, 12)
+        Me.PictureBox5.TabIndex = 58
+        Me.PictureBox5.TabStop = False
         '
         'frmchurchlist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(848, 645)
+        Me.ClientSize = New System.Drawing.Size(848, 687)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.lsvChurch)
         Me.Controls.Add(Me.btnAddChurch)
         Me.Controls.Add(Me.btnDeleteChurch)
@@ -217,6 +231,7 @@ Partial Class frmchurchlist
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -237,4 +252,5 @@ Partial Class frmchurchlist
     Friend WithEvents ColumnHeader37 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader68 As System.Windows.Forms.ColumnHeader
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
 End Class

@@ -38,10 +38,12 @@ Partial Class frmListOfAttendance
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lsvListOfAttendance
@@ -50,9 +52,9 @@ Partial Class frmListOfAttendance
         Me.lsvListOfAttendance.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.ColumnHeader19, Me.ColumnHeader25, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.lsvListOfAttendance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsvListOfAttendance.FullRowSelect = True
-        Me.lsvListOfAttendance.Location = New System.Drawing.Point(40, 145)
+        Me.lsvListOfAttendance.Location = New System.Drawing.Point(47, 163)
         Me.lsvListOfAttendance.Name = "lsvListOfAttendance"
-        Me.lsvListOfAttendance.Size = New System.Drawing.Size(752, 344)
+        Me.lsvListOfAttendance.Size = New System.Drawing.Size(741, 344)
         Me.lsvListOfAttendance.TabIndex = 61
         Me.lsvListOfAttendance.UseCompatibleStateImageBehavior = False
         Me.lsvListOfAttendance.View = System.Windows.Forms.View.Details
@@ -75,7 +77,7 @@ Partial Class frmListOfAttendance
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Meeting Time"
-        Me.ColumnHeader1.Width = 110
+        Me.ColumnHeader1.Width = 108
         '
         'ColumnHeader2
         '
@@ -107,9 +109,9 @@ Partial Class frmListOfAttendance
         Me.lblTypeOfOfficial.ForeColor = System.Drawing.Color.White
         Me.lblTypeOfOfficial.Location = New System.Drawing.Point(36, 41)
         Me.lblTypeOfOfficial.Name = "lblTypeOfOfficial"
-        Me.lblTypeOfOfficial.Size = New System.Drawing.Size(268, 31)
+        Me.lblTypeOfOfficial.Size = New System.Drawing.Size(232, 31)
         Me.lblTypeOfOfficial.TabIndex = 54
-        Me.lblTypeOfOfficial.Text = "List of Burial Officials"
+        Me.lblTypeOfOfficial.Text = "List of Attendance"
         '
         'lblSearchMember
         '
@@ -146,9 +148,10 @@ Partial Class frmListOfAttendance
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.PictureBox4.Location = New System.Drawing.Point(26, 24)
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(778, 116)
+        Me.PictureBox4.Size = New System.Drawing.Size(826, 139)
         Me.PictureBox4.TabIndex = 60
         Me.PictureBox4.TabStop = False
         '
@@ -169,18 +172,29 @@ Partial Class frmListOfAttendance
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.White
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(26, 137)
+        Me.PictureBox2.Location = New System.Drawing.Point(38, 155)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(778, 358)
+        Me.PictureBox2.Size = New System.Drawing.Size(759, 358)
         Me.PictureBox2.TabIndex = 62
         Me.PictureBox2.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 554)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(826, 12)
+        Me.PictureBox5.TabIndex = 63
+        Me.PictureBox5.TabStop = False
         '
         'frmListOfAttendance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(826, 521)
+        Me.ClientSize = New System.Drawing.Size(826, 566)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.lsvListOfAttendance)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblTypeOfOfficial)
@@ -197,6 +211,7 @@ Partial Class frmListOfAttendance
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -216,4 +231,5 @@ Partial Class frmListOfAttendance
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
 End Class

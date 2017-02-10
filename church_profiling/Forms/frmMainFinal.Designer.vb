@@ -510,6 +510,7 @@ Partial Class frmMainFinal
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackgroundImage = Global.church_profiling.My.Resources.Resources.logout_white
         Me.PictureBox1.Location = New System.Drawing.Point(157, 6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
@@ -662,6 +663,7 @@ Partial Class frmMainFinal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1243, 557)
         Me.Controls.Add(Me.panelReport)
         Me.Controls.Add(Me.panelReportChurchFinancial)

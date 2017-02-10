@@ -161,12 +161,6 @@
     <Compile Include="Forms\frmListOfHousehold.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frmMainFinal.Designer.vb">
       <DependentUpon>frmMainFinal.vb</DependentUpon>
     </Compile>
@@ -178,12 +172,6 @@
     </Compile>
     <Compile Include="Forms\frmMember_registration.Designer.vb">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmRegisterChurchOfficials.Designer.vb">
-      <DependentUpon>frmRegisterChurchOfficials.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmRegisterChurchOfficials.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmRegisterPastor.Designer.vb">
@@ -284,17 +272,11 @@
     <EmbeddedResource Include="Forms\frmListOfHousehold.resx">
       <DependentUpon>frmListOfHousehold.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMainFinal.resx">
       <DependentUpon>frmMainFinal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMember_registration.resx">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmRegisterChurchOfficials.resx">
-      <DependentUpon>frmRegisterChurchOfficials.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegisterPastor.resx">
       <DependentUpon>frmRegisterPastor.vb</DependentUpon>

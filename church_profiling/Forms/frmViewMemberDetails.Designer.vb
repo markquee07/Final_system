@@ -775,7 +775,7 @@ Partial Class frmViewMemberDetails
         Me.GroupBox3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GroupBox3.Location = New System.Drawing.Point(338, 450)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(572, 272)
+        Me.GroupBox3.Size = New System.Drawing.Size(572, 231)
         Me.GroupBox3.TabIndex = 81
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Personal Information"
@@ -786,7 +786,7 @@ Partial Class frmViewMemberDetails
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(263, 733)
+        Me.PictureBox1.Size = New System.Drawing.Size(263, 691)
         Me.PictureBox1.TabIndex = 82
         Me.PictureBox1.TabStop = False
         '
@@ -794,7 +794,8 @@ Partial Class frmViewMemberDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(947, 733)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(947, 691)
         Me.Controls.Add(Me.lblBarangay)
         Me.Controls.Add(Me.lblCity)
         Me.Controls.Add(Me.lblProvince)

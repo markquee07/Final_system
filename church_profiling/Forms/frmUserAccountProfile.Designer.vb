@@ -42,10 +42,12 @@ Partial Class frmUserAccountProfile
         Me.ColumnHeader39 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader40 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnDelete
@@ -121,7 +123,7 @@ Partial Class frmUserAccountProfile
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(25, 153)
+        Me.PictureBox1.Location = New System.Drawing.Point(25, 181)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(833, 400)
         Me.PictureBox1.TabIndex = 45
@@ -168,7 +170,7 @@ Partial Class frmUserAccountProfile
         Me.lsvUsers.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lsvUsers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader19, Me.ColumnHeader25, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38, Me.ColumnHeader39, Me.ColumnHeader40})
         Me.lsvUsers.FullRowSelect = True
-        Me.lsvUsers.Location = New System.Drawing.Point(49, 166)
+        Me.lsvUsers.Location = New System.Drawing.Point(49, 194)
         Me.lsvUsers.Name = "lsvUsers"
         Me.lsvUsers.Size = New System.Drawing.Size(793, 373)
         Me.lsvUsers.TabIndex = 55
@@ -213,17 +215,30 @@ Partial Class frmUserAccountProfile
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.PictureBox4.Location = New System.Drawing.Point(25, 20)
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(833, 139)
+        Me.PictureBox4.Size = New System.Drawing.Size(884, 160)
         Me.PictureBox4.TabIndex = 56
         Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 606)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(884, 10)
+        Me.PictureBox5.TabIndex = 57
+        Me.PictureBox5.TabStop = False
         '
         'frmUserAccountProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(884, 582)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(884, 616)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.lsvUsers)
         Me.Controls.Add(Me.btnAddNEw)
         Me.Controls.Add(Me.btnEdit)
@@ -243,6 +258,7 @@ Partial Class frmUserAccountProfile
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -266,4 +282,5 @@ Partial Class frmUserAccountProfile
     Friend WithEvents ColumnHeader39 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader40 As System.Windows.Forms.ColumnHeader
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
 End Class

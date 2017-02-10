@@ -68,10 +68,12 @@ Partial Class frmListOfHousehold
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lsvListOfMember
@@ -79,7 +81,7 @@ Partial Class frmListOfHousehold
         Me.lsvListOfMember.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lsvListOfMember.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader20, Me.ColumnHeader21, Me.ColumnHeader22, Me.ColumnHeader23, Me.ColumnHeader24, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35})
         Me.lsvListOfMember.FullRowSelect = True
-        Me.lsvListOfMember.Location = New System.Drawing.Point(50, 152)
+        Me.lsvListOfMember.Location = New System.Drawing.Point(50, 180)
         Me.lsvListOfMember.Name = "lsvListOfMember"
         Me.lsvListOfMember.Size = New System.Drawing.Size(790, 436)
         Me.lsvListOfMember.TabIndex = 0
@@ -311,7 +313,7 @@ Partial Class frmListOfHousehold
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(121, 33)
         Me.Button2.TabIndex = 43
-        Me.Button2.Text = "Add"
+        Me.Button2.Text = "Children Details"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -353,7 +355,7 @@ Partial Class frmListOfHousehold
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(22, 140)
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 168)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(833, 461)
         Me.PictureBox1.TabIndex = 1
@@ -362,18 +364,30 @@ Partial Class frmListOfHousehold
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.PictureBox4.Location = New System.Drawing.Point(22, 18)
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(833, 122)
+        Me.PictureBox4.Size = New System.Drawing.Size(879, 146)
         Me.PictureBox4.TabIndex = 45
         Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 656)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(879, 15)
+        Me.PictureBox5.TabIndex = 46
+        Me.PictureBox5.TabStop = False
         '
         'frmListOfHousehold
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(879, 634)
+        Me.ClientSize = New System.Drawing.Size(879, 671)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -392,6 +406,7 @@ Partial Class frmListOfHousehold
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -441,4 +456,5 @@ Partial Class frmListOfHousehold
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
 End Class
