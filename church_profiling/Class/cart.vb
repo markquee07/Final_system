@@ -1,6 +1,6 @@
 ﻿Public Class cart
 
-    
+    Public s_count As Integer = 0
 
     ''last_id saved in sql
     Public last_id As Integer
@@ -163,6 +163,8 @@
     Public Sub saveOccupatiion(mem_id As Integer)
         Dim sql As String = "insert into tbl_work_information values (" & mem_id & ",'" & Me.Work_status & "','" & Me.Work_address & "','" & Me.Nature_of_work & "','" & Me.Name_of_company & "','" & Me.Salary & "','" & Me.Self_employed & "','" & Me.Name_of_business & "','" & Me.Business_address & "'," & Me.Estimated_annual_income & ");"
         GLOBAL_VARS.db.executeNonReader(sql)
+
+        frmSiblingsRegistration.mem_last_id = mem_id
     End Sub
 
     Public Sub saveSiblingsInformation(mem_id As Integer)

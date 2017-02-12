@@ -373,6 +373,7 @@ Public Class frmMember_registration
                 Dim d As DialogResult = MsgBox("Do you have children?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Question")
                 If d = MsgBoxResult.Yes Then
                     With frmSiblingsRegistration
+                        .lblId = ID
                         .mem_last_id = c.member_last_id
                         .ShowDialog()
                     End With
@@ -421,12 +422,14 @@ Public Class frmMember_registration
         cbWorkNo.Checked = False
         txtNatureofwork.Clear()
         txtNameofcomp.Clear()
-        txtSalary.Clear()
+        txtSalary.Text = "0"
         txtSelfEmplyed.Clear()
         txtBusinessAddress.Clear()
-        txtEstimatedIncome.Clear()
+        txtEstimatedIncome.Text = "0"
         txtNameOfBusiness.Clear()
-
+        cbMarried.Checked = False
+        cbWidow.Checked = False
+        cbDivorce.Checked = False
 
 
     End Sub

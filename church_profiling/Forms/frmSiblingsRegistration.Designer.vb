@@ -34,7 +34,6 @@ Partial Class frmSiblingsRegistration
         Me.cboGender = New System.Windows.Forms.ComboBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.ID = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.btnTakePhoto = New System.Windows.Forms.Button()
@@ -69,6 +68,7 @@ Partial Class frmSiblingsRegistration
         Me.lblGender = New System.Windows.Forms.Label()
         Me.lblBirthDate = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.lblId = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -183,7 +183,7 @@ Partial Class frmSiblingsRegistration
         'GroupBox7
         '
         Me.GroupBox7.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.GroupBox7.Controls.Add(Me.ID)
+        Me.GroupBox7.Controls.Add(Me.lblId)
         Me.GroupBox7.Controls.Add(Me.Label31)
         Me.GroupBox7.Controls.Add(Me.Label30)
         Me.GroupBox7.Controls.Add(Me.btnTakePhoto)
@@ -197,18 +197,6 @@ Partial Class frmSiblingsRegistration
         Me.GroupBox7.TabIndex = 11
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Photo"
-        '
-        'ID
-        '
-        Me.ID.AutoSize = True
-        Me.ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ID.ForeColor = System.Drawing.Color.White
-        Me.ID.Location = New System.Drawing.Point(95, 30)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(102, 24)
-        Me.ID.TabIndex = 14
-        Me.ID.Text = "1A35CDE2"
-        Me.ID.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label31
         '
@@ -559,6 +547,18 @@ Partial Class frmSiblingsRegistration
         Me.PictureBox7.TabIndex = 34
         Me.PictureBox7.TabStop = False
         '
+        'lblId
+        '
+        Me.lblId.AutoSize = True
+        Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.ForeColor = System.Drawing.Color.White
+        Me.lblId.Location = New System.Drawing.Point(93, 29)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(37, 24)
+        Me.lblId.TabIndex = 14
+        Me.lblId.Text = "zzz"
+        Me.lblId.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'frmSiblingsRegistration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -577,7 +577,6 @@ Partial Class frmSiblingsRegistration
         Me.Controls.Add(Me.cboxNo)
         Me.Controls.Add(Me.cboxYes)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.cboGender)
         Me.Controls.Add(Me.dtpBirthDate)
         Me.Controls.Add(Me.PictureBox4)
@@ -588,6 +587,7 @@ Partial Class frmSiblingsRegistration
         Me.Controls.Add(Me.txtFname)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.PictureBox7)
         Me.Name = "frmSiblingsRegistration"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -623,7 +623,6 @@ Partial Class frmSiblingsRegistration
     Public WithEvents cboGender As System.Windows.Forms.ComboBox
     Public WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Public WithEvents GroupBox7 As System.Windows.Forms.GroupBox
-    Public WithEvents ID As System.Windows.Forms.Label
     Public WithEvents Label31 As System.Windows.Forms.Label
     Public WithEvents Label30 As System.Windows.Forms.Label
     Public WithEvents btnTakePhoto As System.Windows.Forms.Button
@@ -656,4 +655,5 @@ Partial Class frmSiblingsRegistration
     Public WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
     Public WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
     Public WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
+    Public WithEvents lblId As System.Windows.Forms.Label
 End Class

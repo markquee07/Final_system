@@ -35,7 +35,7 @@
         End If
 
         row = lsvSiblingsInformation.Items.Count
-        lsvSiblingsInformation.Items.Add(ID.Text)
+        lsvSiblingsInformation.Items.Add(lblId.Text)
         lsvSiblingsInformation.Items(row).SubItems.Add(txtFname.Text)
         lsvSiblingsInformation.Items(row).SubItems.Add(txtLname.Text)
         lsvSiblingsInformation.Items(row).SubItems.Add(txtMiddlename.Text)
@@ -49,7 +49,6 @@
         cboGender.Text = ""
         cboxYes.Checked = False
         cboxNo.Checked = False
-        ID.Text = generatedID(8)
         txtFname.Focus()
 
     End Sub
@@ -146,7 +145,7 @@
     End Sub
 
     Private Sub frmSiblingsRegistration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ID.Text = generatedID(8)
+        MsgBox(lblId.Text)
     End Sub
 
     Public Sub clearAllInformation()
@@ -160,7 +159,7 @@
         cboGender.Text = ""
         cboxYes.Checked = False
         cboxNo.Checked = False
-        ID.Text = generatedID(8)
+
         txtFname.Focus()
     End Sub
 
@@ -169,11 +168,16 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-
+        With frmMember_registration
+            carts.s_count = 1
+            .defualtValue()
+            .c.savePersonalInformation()
+        End With
         Me.saveSiblingsInfo()
         MsgBox("Successfully saved", MsgBoxStyle.Information)
         frmMember_registration.clearMemberInformation()
         clearAllInformation()
+        Me.Dispose()
         Me.Close()
         carts.displayFamilyDetails(frmFamilyDetails.lsvListOffamilydetails, mem_last_id)
     End Sub
@@ -187,7 +191,8 @@
             carts.s_Middle_name = lsv.SubItems(3).Text
             carts.s_Date_of_birth = lsv.SubItems(4).Text
             carts.s_Gender = lsv.SubItems(5).Text
-            carts.Church_name = lsv.SubItems(6).Text
+            carts.s_Church_member = lsv.SubItems(6).Text
+
             carts.saveSiblingsInformation(Me.mem_last_id)
         Next
     End Sub
