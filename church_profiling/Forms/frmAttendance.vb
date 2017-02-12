@@ -274,25 +274,29 @@
 
     
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        num_of_present = num_of_present + 1
-        lblTotalPresent.Text = num_of_present.ToString()
+       
+        Dim selected_id = lsvAttendance.SelectedItems.Count
+        If selected_id <= 0 Then
+            MsgBox("Search and select the Member first", MsgBoxStyle.Information, "Information")
+        Else
+            num_of_present = num_of_present + 1
+            lblTotalPresent.Text = num_of_present.ToString()
+            Dim i As Integer = lsvPresentMember.Items.Count
 
-        Dim i As Integer = lsvPresentMember.Items.Count
+            lsvPresentMember.Items.Add(lsvAttendance.SelectedItems(0).SubItems(0).Text)
+            lsvPresentMember.Items(i).SubItems.Add(lsvAttendance.SelectedItems(0).SubItems(1).Text)
+            lsvPresentMember.Items(i).SubItems.Add(lsvAttendance.SelectedItems(0).SubItems(2).Text)
+            lsvPresentMember.Items(i).SubItems.Add(Date.Now.ToString("yyyy-MM-dd"))
+            lsvPresentMember.Items(i).SubItems.Add("Present")
+            lsvPresentMember.Items(i).SubItems.Add(txtDescription.Text)
+            lsvPresentMember.Items(i).SubItems.Add(cboHour.Text & ":" & cboMins.Text & ":00")
+            lsvPresentMember.Items(i).SubItems.Add(cboMeetingtype.Text)
 
-        lsvPresentMember.Items.Add(lsvAttendance.SelectedItems(0).SubItems(0).Text)
-        lsvPresentMember.Items(i).SubItems.Add(lsvAttendance.SelectedItems(0).SubItems(1).Text)
-        lsvPresentMember.Items(i).SubItems.Add(lsvAttendance.SelectedItems(0).SubItems(2).Text)
-        lsvPresentMember.Items(i).SubItems.Add(Date.Now.ToString("yyyy-MM-dd"))
-        lsvPresentMember.Items(i).SubItems.Add("Present")
-        lsvPresentMember.Items(i).SubItems.Add(txtDescription.Text)
-        lsvPresentMember.Items(i).SubItems.Add(cboHour.Text & ":" & cboMins.Text & ":00")
-        lsvPresentMember.Items(i).SubItems.Add(cboMeetingtype.Text)
-
-        lsvAttendance.Visible = False
-        lsvPresentMember.Visible = True
-        txtSearch.Clear()
-        txtSearch.Focus()
-
+            lsvAttendance.Visible = False
+            lsvPresentMember.Visible = True
+            txtSearch.Clear()
+            txtSearch.Focus()
+        End If
     End Sub
 
    
@@ -361,7 +365,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
 
-            Dim s As DialogResult = MsgBox("Do you really want it to be remove from the list ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Question")
+        Dim s As DialogResult = MsgBox("Are you sure you want to remove '" & lsvPresentMember.SelectedItems(0).SubItems(2).Text & "' from the list ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Question")
             If s = MsgBoxResult.Yes Then
             lsvPresentMember.SelectedItems(0).Remove()
             num_of_present = num_of_present - 1

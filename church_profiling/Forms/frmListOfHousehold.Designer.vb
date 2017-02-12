@@ -69,6 +69,7 @@ Partial Class frmListOfHousehold
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.btnEdit = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -321,7 +322,7 @@ Partial Class frmListOfHousehold
         Me.Button3.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(272, 99)
+        Me.Button3.Location = New System.Drawing.Point(387, 99)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(108, 33)
         Me.Button3.TabIndex = 44
@@ -381,12 +382,25 @@ Partial Class frmListOfHousehold
         Me.PictureBox5.TabIndex = 46
         Me.PictureBox5.TabStop = False
         '
+        'btnEdit
+        '
+        Me.btnEdit.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Location = New System.Drawing.Point(272, 99)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(112, 34)
+        Me.btnEdit.TabIndex = 47
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
         'frmListOfHousehold
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(879, 671)
+        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -457,4 +471,5 @@ Partial Class frmListOfHousehold
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
 End Class

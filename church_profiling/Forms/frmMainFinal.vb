@@ -656,4 +656,18 @@ Public Class frmMainFinal
         slideMaintenanceSub_up()
         frmBurialOfficers.ShowDialog()
     End Sub
+
+    Private Sub ptbExpenses_Click(sender As Object, e As EventArgs) Handles ptbExpenses.Click
+        slideChurchFinancialTrans_up()
+        slideFileSub_up()
+        frmExpenses.ShowDialog()
+    End Sub
+
+    Private Sub ptbEmergencyFunds_Click(sender As Object, e As EventArgs) Handles ptbEmergencyFunds.Click
+
+    End Sub
+
+    Private Sub ptbIncome_Click(sender As Object, e As EventArgs) Handles ptbIncome.Click
+
+    End Sub
 End Class

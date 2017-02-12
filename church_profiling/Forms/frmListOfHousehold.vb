@@ -14,15 +14,15 @@
         If selected_p_id <= 0 Then
             MsgBox("Please select member", MsgBoxStyle.Information, "Information")
         Else
-            If Button1.Text = "Edit" Then
-                frmMember_registration.m_id = p_id
-                frmMember_registration.btnSave.Text = "Update"
-                frmMember_registration.ShowDialog()
-            Else
-                p_id2 = p_id
-                frmViewMemberDetails.ShowDialog()
-            End If
-           
+            'If Button1.Text = "Edit" Then
+            '    frmMember_registration.m_id = p_id
+            '    frmMember_registration.btnSave.Text = "Update"
+            '    frmMember_registration.ShowDialog()
+            'Else
+            p_id2 = p_id
+            frmViewMemberDetails.ShowDialog()
+            'End If
+
         End If
     End Sub
 
@@ -37,7 +37,7 @@
         Else
             p_id2 = p_id
             frmFamilyDetails.prt = p_id
-                frmFamilyDetails.ShowDialog()
+            frmFamilyDetails.ShowDialog()
           
         End If
         selected_p_id = 0
@@ -65,5 +65,18 @@
             lblSearchMember.Visible = True
             c.displayMemberInformation(lsvListOfMember)
         End If
+    End Sub
+
+ 
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Dim selected_p_id = lsvListOfMember.SelectedItems.Count
+        If selected_p_id <= 0 Then
+            MsgBox("Please select member", MsgBoxStyle.Information, "Information")
+        Else
+            frmMember_registration.m_id = p_id
+            frmMember_registration.btnSave.Text = "Update"
+            frmMember_registration.ShowDialog()
+        End If
+        selected_p_id = 0
     End Sub
 End Class
