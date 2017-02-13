@@ -225,7 +225,7 @@ Partial Class frmemergencyFund
         Me.lsvListofmember.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader20})
         Me.lsvListofmember.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsvListofmember.FullRowSelect = True
-        Me.lsvListofmember.Location = New System.Drawing.Point(38, 135)
+        Me.lsvListofmember.Location = New System.Drawing.Point(40, 135)
         Me.lsvListofmember.Name = "lsvListofmember"
         Me.lsvListofmember.Size = New System.Drawing.Size(435, 333)
         Me.lsvListofmember.TabIndex = 4
@@ -318,7 +318,7 @@ Partial Class frmemergencyFund
         '
         Me.l1.AutoSize = True
         Me.l1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l1.Location = New System.Drawing.Point(120, 178)
+        Me.l1.Location = New System.Drawing.Point(131, 155)
         Me.l1.Name = "l1"
         Me.l1.Size = New System.Drawing.Size(170, 20)
         Me.l1.TabIndex = 47
@@ -328,7 +328,7 @@ Partial Class frmemergencyFund
         '
         Me.l2.AutoSize = True
         Me.l2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l2.Location = New System.Drawing.Point(121, 220)
+        Me.l2.Location = New System.Drawing.Point(132, 197)
         Me.l2.Name = "l2"
         Me.l2.Size = New System.Drawing.Size(77, 16)
         Me.l2.TabIndex = 48
@@ -338,7 +338,7 @@ Partial Class frmemergencyFund
         '
         Me.l3.AutoSize = True
         Me.l3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l3.Location = New System.Drawing.Point(121, 254)
+        Me.l3.Location = New System.Drawing.Point(132, 231)
         Me.l3.Name = "l3"
         Me.l3.Size = New System.Drawing.Size(101, 16)
         Me.l3.TabIndex = 49
@@ -348,7 +348,7 @@ Partial Class frmemergencyFund
         '
         Me.l4.AutoSize = True
         Me.l4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l4.Location = New System.Drawing.Point(121, 289)
+        Me.l4.Location = New System.Drawing.Point(132, 266)
         Me.l4.Name = "l4"
         Me.l4.Size = New System.Drawing.Size(101, 16)
         Me.l4.TabIndex = 50
@@ -358,7 +358,7 @@ Partial Class frmemergencyFund
         '
         Me.l5.AutoSize = True
         Me.l5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l5.Location = New System.Drawing.Point(121, 325)
+        Me.l5.Location = New System.Drawing.Point(132, 302)
         Me.l5.Name = "l5"
         Me.l5.Size = New System.Drawing.Size(68, 16)
         Me.l5.TabIndex = 51
@@ -368,7 +368,7 @@ Partial Class frmemergencyFund
         '
         Me.l6.AutoSize = True
         Me.l6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l6.Location = New System.Drawing.Point(121, 358)
+        Me.l6.Location = New System.Drawing.Point(132, 335)
         Me.l6.Name = "l6"
         Me.l6.Size = New System.Drawing.Size(48, 16)
         Me.l6.TabIndex = 52
@@ -378,7 +378,7 @@ Partial Class frmemergencyFund
         '
         Me.l7.AutoSize = True
         Me.l7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l7.Location = New System.Drawing.Point(121, 390)
+        Me.l7.Location = New System.Drawing.Point(132, 367)
         Me.l7.Name = "l7"
         Me.l7.Size = New System.Drawing.Size(61, 16)
         Me.l7.TabIndex = 53
@@ -388,7 +388,7 @@ Partial Class frmemergencyFund
         '
         Me.lblMemberID.AutoSize = True
         Me.lblMemberID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMemberID.Location = New System.Drawing.Point(248, 220)
+        Me.lblMemberID.Location = New System.Drawing.Point(259, 197)
         Me.lblMemberID.Name = "lblMemberID"
         Me.lblMemberID.Size = New System.Drawing.Size(77, 16)
         Me.lblMemberID.TabIndex = 54
@@ -398,7 +398,7 @@ Partial Class frmemergencyFund
         '
         Me.lblMemberName.AutoSize = True
         Me.lblMemberName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMemberName.Location = New System.Drawing.Point(248, 254)
+        Me.lblMemberName.Location = New System.Drawing.Point(259, 231)
         Me.lblMemberName.Name = "lblMemberName"
         Me.lblMemberName.Size = New System.Drawing.Size(77, 16)
         Me.lblMemberName.TabIndex = 55
@@ -408,7 +408,7 @@ Partial Class frmemergencyFund
         '
         Me.lblDateBorrowed.AutoSize = True
         Me.lblDateBorrowed.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDateBorrowed.Location = New System.Drawing.Point(248, 289)
+        Me.lblDateBorrowed.Location = New System.Drawing.Point(259, 266)
         Me.lblDateBorrowed.Name = "lblDateBorrowed"
         Me.lblDateBorrowed.Size = New System.Drawing.Size(77, 16)
         Me.lblDateBorrowed.TabIndex = 56
@@ -418,7 +418,7 @@ Partial Class frmemergencyFund
         '
         Me.lblDueDate.AutoSize = True
         Me.lblDueDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDueDate.Location = New System.Drawing.Point(248, 321)
+        Me.lblDueDate.Location = New System.Drawing.Point(259, 298)
         Me.lblDueDate.Name = "lblDueDate"
         Me.lblDueDate.Size = New System.Drawing.Size(77, 16)
         Me.lblDueDate.TabIndex = 57
@@ -428,7 +428,7 @@ Partial Class frmemergencyFund
         '
         Me.lblPaidStatus.AutoSize = True
         Me.lblPaidStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPaidStatus.Location = New System.Drawing.Point(248, 358)
+        Me.lblPaidStatus.Location = New System.Drawing.Point(259, 335)
         Me.lblPaidStatus.Name = "lblPaidStatus"
         Me.lblPaidStatus.Size = New System.Drawing.Size(77, 16)
         Me.lblPaidStatus.TabIndex = 58
@@ -438,7 +438,7 @@ Partial Class frmemergencyFund
         '
         Me.lblBalance.AutoSize = True
         Me.lblBalance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBalance.Location = New System.Drawing.Point(248, 390)
+        Me.lblBalance.Location = New System.Drawing.Point(259, 367)
         Me.lblBalance.Name = "lblBalance"
         Me.lblBalance.Size = New System.Drawing.Size(77, 16)
         Me.lblBalance.TabIndex = 59
@@ -450,6 +450,7 @@ Partial Class frmemergencyFund
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(795, 500)
+        Me.Controls.Add(Me.lsvListofmember)
         Me.Controls.Add(Me.lblBalance)
         Me.Controls.Add(Me.lblPaidStatus)
         Me.Controls.Add(Me.lblDueDate)
@@ -458,7 +459,6 @@ Partial Class frmemergencyFund
         Me.Controls.Add(Me.lblMemberID)
         Me.Controls.Add(Me.l7)
         Me.Controls.Add(Me.l6)
-        Me.Controls.Add(Me.lsvListofmember)
         Me.Controls.Add(Me.l5)
         Me.Controls.Add(Me.l4)
         Me.Controls.Add(Me.l3)

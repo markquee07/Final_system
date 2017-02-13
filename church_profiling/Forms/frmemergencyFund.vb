@@ -15,8 +15,11 @@
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         If txtSearch.Text.Length > 0 Then
             lblSearchMember.Visible = False
+            ex.serachMemberToBorrow(lsvListofmember, txtSearch.Text)
+
         Else
             lblSearchMember.Visible = True
+            ex.displayMemberToBorrow(lsvListofmember)
         End If
     End Sub
 
@@ -139,5 +142,9 @@
             lblStatus.Text = .status
             lblBalance.Text = .balance
         End With
+    End Sub
+
+    Private Sub frmemergencyFund_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Me.Dispose()
     End Sub
 End Class

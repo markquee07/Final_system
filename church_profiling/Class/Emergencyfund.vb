@@ -10,6 +10,7 @@
     Public amount_tendered As Double
     Public status As String
     Public balance As String
+    Public val As String
 
     Public Sub saveEmergencyFund()
         Dim sql As String = "INSERT INTO  tbl_emergency_funds " & _
@@ -41,22 +42,38 @@
         GLOBAL_VARS.db.reader.Close()
     End Sub
 
+    Public Sub serachMemberToBorrow(ByVal lsv As ListView, key As String)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT id,member_id,concat(first_name,' ',middle_name,' ',last_name) as fullname FROM tbl_member_information where first_name Like '%" & key & "%' or last_name Like '%" & key & "%' Or member_id Like '%" & key & "%'"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("member_id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Fullname").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
     Public Function checkEmergencyBudget() As String
-        Dim x As String
+
         Dim sql As String = "SELECT if(amount = 0,'Unavailable',amount) as availability FROM tbl_emergency_fund_budget"
         GLOBAL_VARS.db.execute(sql)
 
         While GLOBAL_VARS.db.reader.Read()
             If GLOBAL_VARS.db.reader.HasRows Then
-                x = GLOBAL_VARS.db.reader("availability").ToString()
+                val = GLOBAL_VARS.db.reader("availability").ToString()
             End If
         End While
         GLOBAL_VARS.db.reader.Close()
-        Return x
+        Return val
     End Function
 
     Public Sub displayCurrentBorrower()
-        Dim x As String
         Dim sql As String = "SELECT m.member_id,concat(m.first_name,' ',m.middle_name,' ',m.last_name) as fullname,date_format(e.date_borrowed,'%M %d, %Y') as Date_borrowed,date_format(e.due_date,'%M %d, %Y') as due_date,e.status FROM tbl_member_information m inner join tbl_emergency_funds e where e.status = 'unpaid'"
         GLOBAL_VARS.db.execute(sql)
 
@@ -74,7 +91,6 @@
         GLOBAL_VARS.db.reader.Close()
     End Sub
     Public Sub currentBalance()
-        Dim x As String
         Dim sql As String = "SELECT 1000 - amount as balance FROM tbl_emergency_fund_budget"
         GLOBAL_VARS.db.execute(sql)
 
