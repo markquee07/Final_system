@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2017 at 02:45 AM
+-- Generation Time: Feb 13, 2017 at 03:18 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -75,8 +75,23 @@ CREATE TABLE `tbl_church_expenses` (
   `id` int(10) UNSIGNED NOT NULL,
   `Expenses_type` varchar(45) NOT NULL,
   `Amount` double NOT NULL,
-  `Date` datetime NOT NULL
+  `Transaction_Date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_church_expenses`
+--
+
+INSERT INTO `tbl_church_expenses` (`id`, `Expenses_type`, `Amount`, `Transaction_Date`) VALUES
+(1, 'HOSPITALITY', 300, '2017-02-12 08:37:40'),
+(2, 'MISSION AND EVANGELISM', 50066, '2017-02-12 08:38:07'),
+(3, 'YOUTH FELLOWSHIP', 530, '2017-02-12 20:12:53'),
+(4, 'WATER BILL', 300, '2017-02-12 20:33:33'),
+(5, 'DEVELOMPENT', 230, '2017-02-12 20:33:33'),
+(6, 'MAINTENANCE', 340, '2017-02-12 20:33:33'),
+(7, 'YOUTH FELLOWSHIP', 410, '2017-02-12 20:33:33'),
+(8, 'HOSPITALITY', 200, '2017-02-12 20:39:05'),
+(9, 'WINES AND WAFERS', 100, '2017-02-12 20:39:05');
 
 -- --------------------------------------------------------
 
@@ -131,6 +146,14 @@ CREATE TABLE `tbl_educational_background` (
   `License_specification` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_educational_background`
+--
+
+INSERT INTO `tbl_educational_background` (`Member_id`, `HEA`, `Course_graduated`, `Name_of_school_graduated`, `Licensure_passer`, `License_specification`) VALUES
+(24, 'None', 'None', 'None', 'No', 'None'),
+(25, 'None', 'None', 'None', 'No', 'None');
+
 -- --------------------------------------------------------
 
 --
@@ -142,8 +165,39 @@ CREATE TABLE `tbl_emergency_funds` (
   `member_id` int(10) UNSIGNED NOT NULL,
   `Amount` double NOT NULL,
   `Date_borrowed` datetime NOT NULL,
-  `Due_date` datetime NOT NULL
+  `Due_date` datetime NOT NULL,
+  `Status` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_emergency_funds`
+--
+
+INSERT INTO `tbl_emergency_funds` (`id`, `member_id`, `Amount`, `Date_borrowed`, `Due_date`, `Status`) VALUES
+(1, 24, 1000, '2017-02-13 00:00:00', '2017-03-13 00:00:00', 'PAID'),
+(2, 25, 1000, '2017-02-13 00:00:00', '2017-03-13 00:00:00', 'PAID'),
+(3, 24, 1000, '2017-02-13 00:00:00', '2017-03-13 00:00:00', 'PAID'),
+(4, 25, 1000, '2017-02-09 00:00:00', '2017-03-09 00:00:00', 'PAID'),
+(5, 24, 1000, '2017-02-07 00:00:00', '2017-03-07 00:00:00', 'PAID'),
+(6, 24, 1000, '2017-02-13 00:00:00', '2017-03-13 00:00:00', 'UNPAID');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_emergency_fund_budget`
+--
+
+CREATE TABLE `tbl_emergency_fund_budget` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `amount` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_emergency_fund_budget`
+--
+
+INSERT INTO `tbl_emergency_fund_budget` (`id`, `amount`) VALUES
+(1, 0);
 
 -- --------------------------------------------------------
 
@@ -205,6 +259,13 @@ CREATE TABLE `tbl_host_pastor` (
   `years_of_service` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_host_pastor`
+--
+
+INSERT INTO `tbl_host_pastor` (`id`, `First_Name`, `Last_name`, `Middle_Name`, `Address`, `gender`, `Date_of_birth`, `concat_number`, `Name_of_school_grad`, `Address_of_school_graduaterd`, `year_graduated`, `Chutch_name`, `Church_address`, `years_of_service`) VALUES
+(24, 'Pastor', 'Pastor', 'Pastor', 'Balilihan', 'MALE', '2017-02-14 00:00:00', 'pastor@gmail.com', 'Pastoral School', 'Balilihan', '2015-2016', 'None', 'None', 'None');
+
 -- --------------------------------------------------------
 
 --
@@ -244,6 +305,14 @@ CREATE TABLE `tbl_member_information` (
   `Pastor_name` varchar(45) NOT NULL,
   `Marriage_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_member_information`
+--
+
+INSERT INTO `tbl_member_information` (`id`, `Member_id`, `First_name`, `Last_name`, `Middle_name`, `Date_of_birth`, `Gender`, `Province`, `City`, `Barangay`, `Baptized_status`, `Baptized_date`, `Contact_no`, `Email_ad`, `Blood_type`, `Civil_status`, `Church_name`, `Pastor_name`, `Marriage_date`) VALUES
+(24, 'E55TZM17', 'DUMMY', 'DUMMY', 'DUMMY', '2017-01-29 00:00:00', 'Male', 'BOHOL', 'TAGBILARAN', 'BALILIHAN', 'No', '2017-01-29 00:00:00', 'None', 'None', 'A+', 'Single', 'MARCH OF FAITH BOCTOL', 'PASTOR', '0000-00-00 00:00:00'),
+(25, 'EO6SVRQF', 'A', 'A', 'A', '2017-01-29 00:00:00', 'Male', 'A', 'A', 'A', 'No', '2017-01-29 00:00:00', 'None', 'None', 'A-', 'Single', 'A', 'A', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -330,6 +399,14 @@ CREATE TABLE `tbl_work_information` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `tbl_work_information`
+--
+
+INSERT INTO `tbl_work_information` (`Members_id`, `Work_status`, `Work_address`, `Nature_of_work`, `Name_of_company`, `Salary`, `Self_employed`, `Name_of_business`, `Business_address`, `Estimated_annual_income`) VALUES
+(24, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
+(25, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -388,6 +465,12 @@ ALTER TABLE `tbl_educational_background`
 ALTER TABLE `tbl_emergency_funds`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_tbl_emergency_funds_1` (`member_id`);
+
+--
+-- Indexes for table `tbl_emergency_fund_budget`
+--
+ALTER TABLE `tbl_emergency_fund_budget`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_expenditures`
@@ -466,27 +549,32 @@ ALTER TABLE `tbl_work_information`
 -- AUTO_INCREMENT for table `tbl_attendance`
 --
 ALTER TABLE `tbl_attendance`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_child_information`
 --
 ALTER TABLE `tbl_child_information`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_church_expenses`
 --
 ALTER TABLE `tbl_church_expenses`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_church_information`
 --
 ALTER TABLE `tbl_church_information`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_emergency_funds`
 --
 ALTER TABLE `tbl_emergency_funds`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `tbl_emergency_fund_budget`
+--
+ALTER TABLE `tbl_emergency_fund_budget`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_expenditures`
 --
@@ -501,7 +589,7 @@ ALTER TABLE `tbl_fines`
 -- AUTO_INCREMENT for table `tbl_host_pastor`
 --
 ALTER TABLE `tbl_host_pastor`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `tbl_listofhostpastor`
 --
@@ -511,7 +599,7 @@ ALTER TABLE `tbl_listofhostpastor`
 -- AUTO_INCREMENT for table `tbl_member_information`
 --
 ALTER TABLE `tbl_member_information`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `tbl_offerings`
 --
@@ -521,7 +609,7 @@ ALTER TABLE `tbl_offerings`
 -- AUTO_INCREMENT for table `tbl_useraccount`
 --
 ALTER TABLE `tbl_useraccount`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_wedding`
 --
