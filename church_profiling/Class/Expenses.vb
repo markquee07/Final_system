@@ -9,7 +9,6 @@
         Dim sql As String = "INSERT INTO  tbl_church_expenses " & _
                "VALUES(NULL,'" & Me.expenses_type & "'," & Me.amount & ",NOW());"
         GLOBAL_VARS.db.executeNonReader(sql)
-        MsgBox("New Expenses Saved")
     End Sub
     Public Sub displayListOfExpenses(ByVal lsv As ListView)
         lsv.Items.Clear()

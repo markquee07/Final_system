@@ -99,6 +99,7 @@
     <Compile Include="Class\cart.vb" />
     <Compile Include="Class\Church.vb" />
     <Compile Include="Class\Database.vb" />
+    <Compile Include="Class\Emergencyfund.vb" />
     <Compile Include="Class\Expenses.vb" />
     <Compile Include="Class\Selected_Official.vb" />
     <Compile Include="Class\Useraccount.vb" />
@@ -136,6 +137,12 @@
       <DependentUpon>frmChurchOfficials.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmChurchOfficials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmemergencyFund.Designer.vb">
+      <DependentUpon>frmemergencyFund.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmemergencyFund.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmExpenses.Designer.vb">
@@ -266,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChurchOfficials.resx">
       <DependentUpon>frmChurchOfficials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmemergencyFund.resx">
+      <DependentUpon>frmemergencyFund.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmExpenses.resx">
       <DependentUpon>frmExpenses.vb</DependentUpon>

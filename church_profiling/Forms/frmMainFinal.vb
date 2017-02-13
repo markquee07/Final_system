@@ -664,10 +664,17 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbEmergencyFunds_Click(sender As Object, e As EventArgs) Handles ptbEmergencyFunds.Click
-
+        slideChurchFinancialTrans_up()
+        slideFileSub_up()
+        frmemergencyFund.ShowDialog()
     End Sub
 
     Private Sub ptbIncome_Click(sender As Object, e As EventArgs) Handles ptbIncome.Click
 
     End Sub
+
+
+
+
+   
 End Class

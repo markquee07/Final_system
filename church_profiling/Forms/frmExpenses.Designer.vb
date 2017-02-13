@@ -23,11 +23,6 @@ Partial Class frmExpenses
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lsvlistofexpenses = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,39 +48,6 @@ Partial Class frmExpenses
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lsvlistofexpenses
-        '
-        Me.lsvlistofexpenses.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.lsvlistofexpenses.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.lsvlistofexpenses.FullRowSelect = True
-        Me.lsvlistofexpenses.GridLines = True
-        Me.lsvlistofexpenses.Location = New System.Drawing.Point(31, 206)
-        Me.lsvlistofexpenses.Name = "lsvlistofexpenses"
-        Me.lsvlistofexpenses.Size = New System.Drawing.Size(477, 171)
-        Me.lsvlistofexpenses.TabIndex = 2
-        Me.lsvlistofexpenses.UseCompatibleStateImageBehavior = False
-        Me.lsvlistofexpenses.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "ID"
-        Me.ColumnHeader1.Width = 0
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "EXPENSES TYPE"
-        Me.ColumnHeader2.Width = 207
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "AMOUNT"
-        Me.ColumnHeader3.Width = 87
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "DATE"
-        Me.ColumnHeader4.Width = 177
         '
         'ContextMenuStrip1
         '
@@ -237,7 +199,7 @@ Partial Class frmExpenses
         Me.lsvAddedExpenses.ContextMenuStrip = Me.ContextMenuStrip1
         Me.lsvAddedExpenses.FullRowSelect = True
         Me.lsvAddedExpenses.GridLines = True
-        Me.lsvAddedExpenses.Location = New System.Drawing.Point(31, 207)
+        Me.lsvAddedExpenses.Location = New System.Drawing.Point(31, 204)
         Me.lsvAddedExpenses.Name = "lsvAddedExpenses"
         Me.lsvAddedExpenses.Size = New System.Drawing.Size(477, 171)
         Me.lsvAddedExpenses.TabIndex = 21
@@ -268,7 +230,6 @@ Partial Class frmExpenses
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnsave)
-        Me.Controls.Add(Me.lsvlistofexpenses)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox4)
@@ -287,11 +248,6 @@ Partial Class frmExpenses
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lsvlistofexpenses As System.Windows.Forms.ListView
-    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
