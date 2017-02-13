@@ -169,6 +169,12 @@
     <Compile Include="Forms\frmListofBurialOfficial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmListofDebts.Designer.vb">
+      <DependentUpon>frmListofDebts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListofDebts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmListOfHousehold.Designer.vb">
       <DependentUpon>frmListOfHousehold.vb</DependentUpon>
     </Compile>
@@ -186,6 +192,12 @@
     </Compile>
     <Compile Include="Forms\frmMember_registration.Designer.vb">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayBalance.Designer.vb">
+      <DependentUpon>frmPayBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPayBalance.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmRegisterPastor.Designer.vb">
@@ -289,6 +301,9 @@
     <EmbeddedResource Include="Forms\frmListofBurialOfficial.resx">
       <DependentUpon>frmListofBurialOfficial.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListofDebts.resx">
+      <DependentUpon>frmListofDebts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmListOfHousehold.resx">
       <DependentUpon>frmListOfHousehold.vb</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMember_registration.resx">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayBalance.resx">
+      <DependentUpon>frmPayBalance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegisterPastor.resx">
       <DependentUpon>frmRegisterPastor.vb</DependentUpon>

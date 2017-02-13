@@ -616,7 +616,8 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbViewChurchFinancialTrans_Click(sender As Object, e As EventArgs) Handles ptbViewChurchFinancialTrans.Click
-
+        slideViewSub_up()
+        frmListofDebts.ShowDialog()
     End Sub
 
     Private Sub ptbViewBurialFinancialTrans_Click(sender As Object, e As EventArgs) Handles ptbViewBurialFinancialTrans.Click

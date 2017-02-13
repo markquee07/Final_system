@@ -548,9 +548,9 @@ Partial Class frmChurchOfficials
         Me.lsvPastorList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsvPastorList.ForeColor = System.Drawing.Color.Black
         Me.lsvPastorList.FullRowSelect = True
-        Me.lsvPastorList.Location = New System.Drawing.Point(870, 127)
+        Me.lsvPastorList.Location = New System.Drawing.Point(870, 129)
         Me.lsvPastorList.Name = "lsvPastorList"
-        Me.lsvPastorList.Size = New System.Drawing.Size(322, 467)
+        Me.lsvPastorList.Size = New System.Drawing.Size(322, 465)
         Me.lsvPastorList.TabIndex = 86
         Me.lsvPastorList.UseCompatibleStateImageBehavior = False
         Me.lsvPastorList.View = System.Windows.Forms.View.Details

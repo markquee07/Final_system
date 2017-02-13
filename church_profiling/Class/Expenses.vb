@@ -12,7 +12,7 @@
     End Sub
     Public Sub displayListOfExpenses(ByVal lsv As ListView)
         lsv.Items.Clear()
-        Dim sql As String = "SELECT * FROM  tbl_church_expenses;"
+        Dim sql As String = "SELECT id, expenses_type, amount, date_format(transaction_date,'%M %d, %Y') as transaction_date FROM tbl_church_expenses;"
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
             While GLOBAL_VARS.db.reader.Read()
@@ -21,7 +21,7 @@
                     .Items.Add(GLOBAL_VARS.db.reader("ID").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Expenses_type").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Amount").ToString())
-                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("date").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("transaction_date").ToString())
                 End With
             End While
         End If

@@ -94,4 +94,14 @@
             c.displayMemberForChurchOfficial(lsvMemberList)
         End If
     End Sub
+
+    Private Sub txtYear_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtYear.KeyPress
+        If IsNumeric(e.KeyChar) Or Convert.ToInt32(e.KeyChar).ToString() = 46 Or Convert.ToInt32(e.KeyChar).ToString() = 8 Or e.KeyChar = "-" Then
+
+            e.Handled = False
+        Else
+            MsgBox("Please enter year of term ", MsgBoxStyle.Information, "Information")
+            e.Handled = True
+        End If
+    End Sub
 End Class
