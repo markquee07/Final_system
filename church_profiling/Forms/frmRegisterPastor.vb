@@ -32,7 +32,7 @@
                 .p_gender = cboGender.Text
                 .p_contact_no = txtContanctNo.Text
                 .p_date_of_birth = dtpBirthDate.Text
-                .savePastorInformation()
+                .savePastorMember()
             End With
         End If
         

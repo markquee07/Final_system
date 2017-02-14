@@ -1143,6 +1143,46 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property offering_deepsky() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("offering_deepsky", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property offering_dodge() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("offering_dodge", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property offerings_deepsky() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("offerings_deepsky", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property offerings_dodge() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("offerings_dodge", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property pastor_deepsky() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("pastor_deepsky", resourceCulture)

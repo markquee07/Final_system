@@ -85,7 +85,7 @@
 
     Public Sub displayPasotr(lsv As ListView)
         lsv.Items.Clear()
-        Dim sql As String = "SELECT id,concat(first_name,' ',middle_name,' ',last_name) as Fullname FROM tbl_host_pastor"
+        Dim sql As String = "SELECT m.id,concat(p.first_name,' ',p.middle_name,' ',p.last_name) as Fullname FROM tbl_host_pastor p inner join tbl_member_information m on p.id = m.id where m.member_type = 'pastor'"
 
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
@@ -134,20 +134,33 @@
         GLOBAL_VARS.db.executeNonReader(sql)
     End Sub
 
-    Public Sub savePastorInformation()
-        Dim sql As String = "insert into tbl_host_pastor values (null,'" & Me.p_first_name & "','" & Me.p_last_name & "','" & Me.p_middle_name & "','" & Me.p_address & "','" & Me.p_gender & "','" & Me.p_date_of_birth & "','" & Me.p_contact_no & "','" & Me.p_name_of_school_grad & "','" & Me.p_address_of_school_grad & "','" & Me.p_year_grad & "','" & Me.p_name_of_church & "','" & Me.p_address_of_church & "','" & Me.p_year_of_service & "');"
+    Public Sub savePastorInformation(id As Integer)
+        Dim sql As String = "insert into tbl_host_pastor values (" & id & ",'" & Me.p_first_name & "','" & Me.p_last_name & "','" & Me.p_middle_name & "','" & Me.p_address & "','" & Me.p_gender & "','" & Me.p_date_of_birth & "','" & Me.p_contact_no & "','" & Me.p_name_of_school_grad & "','" & Me.p_address_of_school_grad & "','" & Me.p_year_grad & "','" & Me.p_name_of_church & "','" & Me.p_address_of_church & "','" & Me.p_year_of_service & "');"
         GLOBAL_VARS.db.executeNonReader(sql)
         MsgBox("Pastor Information Successfully Save", MsgBoxStyle.Information)
     End Sub
 
     Public Sub savePersonalInformation()
-        Dim sql As String = "insert into tbl_member_information values (null,'" & Me.Member_id & "','" & Me.First_name & "','" & Me.Last_name & "','" & Me.Middle_name & "','" & Me.Date_of_birth & "','" & Me.Gender & "','" & Me.Province & "','" & Me.City & "','" & Me.Barangay & "','" & Me.Baptized_status & "','" & Me.Baptized_date & "','" & Me.Contact_no & "','" & Me.Email_ad & "','" & Me.Blood_type & "','" & Me.Civil_status & "','" & Me.Church_name & "','" & Me.Pastor_name & "','" & Me.Marriage_date & "');"
+        Dim sql As String = "insert into tbl_member_information values (null,'" & Me.Member_id & "','" & Me.First_name & "','" & Me.Last_name & "','" & Me.Middle_name & "','" & Me.Date_of_birth & "','" & Me.Gender & "','" & Me.Province & "','" & Me.City & "','" & Me.Barangay & "','" & Me.Baptized_status & "','" & Me.Baptized_date & "','" & Me.Contact_no & "','" & Me.Email_ad & "','" & Me.Blood_type & "','" & Me.Civil_status & "','" & Me.Church_name & "','" & Me.Pastor_name & "','" & Me.Marriage_date & "','member','none');"
         GLOBAL_VARS.db.executeNonReader(sql)
         last_id = GLOBAL_VARS.db.getLastId()
         member_last_id = last_id
 
         'save educational background
         saveEducationalBackground(member_last_id)
+
+        'MsgBox("Information Successfully Saved", MsgBoxStyle.Information)
+    End Sub
+
+
+    Public Sub savePastorMember()
+        Dim sql As String = "insert into tbl_member_information values (null,'N/a','N/a','Pastors','N/a','2017-01-29','Male','N/a','N/a','N/a','No','2017-01-29','None','None','N/a','N/a','N/a','N/a','2017-01-29','pastor','N/a');"
+        GLOBAL_VARS.db.executeNonReader(sql)
+        last_id = GLOBAL_VARS.db.getLastId()
+        member_last_id = last_id
+
+        'save educational background
+        savePastorInformation(member_last_id)
 
         'MsgBox("Information Successfully Saved", MsgBoxStyle.Information)
     End Sub
@@ -183,7 +196,7 @@
 
     Public Sub displayMemberInformation(ByVal lsv As ListView)
         lsv.Items.Clear()
-        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,if (baptized_date = '0000-00-00 00:00:00','None',date_format(baptized_date,'%M %d, %Y')) as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,if (marriage_date = '0000-00-00 00:00:00','None',date_format(marriage_date,'%M %d, %Y')) as Marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id;"
+        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,if (baptized_date = '0000-00-00 00:00:00','None',date_format(baptized_date,'%M %d, %Y')) as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,if (marriage_date = '0000-00-00 00:00:00','None',date_format(marriage_date,'%M %d, %Y')) as Marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income,m.member_type,m.image_path FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id;"
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
             While GLOBAL_VARS.db.reader.Read()
@@ -222,6 +235,8 @@
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_business").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Business_address").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Estimated_annual_income").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("member_type").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("image_path").ToString())
 
                 End With
             End While
@@ -232,7 +247,7 @@
 
     Public Sub searchMember(key As String, ByVal lsv As ListView)
         lsv.Items.Clear()
-        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,if (baptized_date = '0000-00-00 00:00:00','None',date_format(baptized_date,'%M %d, %Y')) as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,if (marriage_date = '0000-00-00 00:00:00','None',date_format(marriage_date,'%M %d, %Y')) as Marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id  where m.first_name like '%" & key & "%' or m.last_name like '%" & key & "%' or m.member_id like '%" & key & "%';"
+        Dim sql As String = "SELECT m.id,m.member_id,m.first_name,m.last_name,m.middle_name,m.date_of_birth,m.gender,m.province,m.city,m.barangay,m.baptized_status,if (baptized_date = '0000-00-00 00:00:00','None',date_format(baptized_date,'%M %d, %Y')) as baptized_date,m.contact_no,m.email_ad,m.blood_type,m.civil_status,m.church_name,m.pastor_name,if (marriage_date = '0000-00-00 00:00:00','None',date_format(marriage_date,'%M %d, %Y')) as Marriage_date,e.hea,e.course_graduated,e.name_of_school_graduated,e.licensure_passer,e.license_specification,w.work_status,w.work_address,w.nature_of_work,w.name_of_company,w.salary,w.self_employed,w.name_of_business,w.business_address,w.estimated_annual_income,m.member_type,m.image_path FROM tbl_member_information m inner join tbl_educational_background e on m.id = e.member_id inner join tbl_work_information w on m.id = w.members_id  where m.first_name like '%" & key & "%' or m.last_name like '%" & key & "%' or m.member_id like '%" & key & "%';"
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
             While GLOBAL_VARS.db.reader.Read()
@@ -271,6 +286,8 @@
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Name_of_business").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Business_address").ToString())
                     .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Estimated_annual_income").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("member_type").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("image_path").ToString())
 
                 End With
             End While
@@ -413,7 +430,7 @@
     End Sub
     Public Sub displayMemberForChurchOfficial(ByVal lsv As ListView)
         lsv.Items.Clear()
-        Dim sql As String = "select id,member_id,concat(first_name,' ',middle_name,' ',Last_name) as fullname from tbl_member_information;"
+        Dim sql As String = "select id,member_id,concat(first_name,' ',middle_name,' ',Last_name) as fullname from tbl_member_information where member_type = 'member';"
         GLOBAL_VARS.db.execute(sql)
         If GLOBAL_VARS.db.reader.HasRows Then
             While GLOBAL_VARS.db.reader.Read()

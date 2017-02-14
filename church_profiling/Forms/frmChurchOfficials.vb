@@ -179,18 +179,20 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        'Dim co_id As Long
-        'If txtHostPastor.Text = Nothing Or txtElder.Text = Nothing Or txtDeacon1.Text = Nothing Or txtDeacon2.Text = Nothing Or txtDeacon3.Text = Nothing Or txtTreasurer.Text = Nothing Or txtSecretary.Text = Nothing Then
-        '    MsgBox("Please make sure to Complete all the Position", MsgBoxStyle.Exclamation, "Warning")
-        'Else
-        '    For Each mem As Selected_Official In Me.officials
-        '        If mem.position = "HOST PASTOR" Then
-        '            c.Pastor_name = txtHostPastor.Text
-        '        End If
-        '        c.saveChurchOfficial(mem.member.id, mem.position, txtYear.Text)
-        '    Next
-        '    MsgBox("New set of Church Officials successfully saved", MsgBoxStyle.Information, "Information")
-        'End If
+        If txtHostPastor.Text = Nothing Or txtElder.Text = Nothing Or txtDeacon1.Text = Nothing Or txtDeacon2.Text = Nothing Or txtDeacon3.Text = Nothing Or txtTreasurer.Text = Nothing Or txtSecretary.Text = Nothing Then
+            MsgBox("Please make sure to Complete all the Position", MsgBoxStyle.Exclamation, "Warning")
+
+        ElseIf Trim(txtYear.Text) = Nothing Then
+            MsgBox("Please Specify The Year", MsgBoxStyle.Information)
+        Else
+            For Each mem As Selected_Official In Me.officials
+                If mem.position = "HOST PASTOR" Then
+                    c.Pastor_name = txtHostPastor.Text
+                End If
+                c.saveChurchOfficial(mem.member.id, mem.position, txtYear.Text)
+            Next
+            MsgBox("New set of Church Officials successfully saved", MsgBoxStyle.Information, "Information")
+        End If
         
     End Sub
 

@@ -69,6 +69,7 @@ Partial Class frmMainFinal
         Me.ptbAttendance = New System.Windows.Forms.PictureBox()
         Me.ptbChurchFinancialtrans = New System.Windows.Forms.PictureBox()
         Me.panelChurchFinancialTrans_under = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ptbIncome = New System.Windows.Forms.PictureBox()
         Me.ptbExpenses = New System.Windows.Forms.PictureBox()
         Me.ptbEmergencyFunds = New System.Windows.Forms.PictureBox()
@@ -120,6 +121,7 @@ Partial Class frmMainFinal
         CType(Me.ptbAttendance, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbChurchFinancialtrans, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelChurchFinancialTrans_under.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbIncome, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbExpenses, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbEmergencyFunds, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -568,6 +570,7 @@ Partial Class frmMainFinal
         'panelChurchFinancialTrans_under
         '
         Me.panelChurchFinancialTrans_under.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.panelChurchFinancialTrans_under.Controls.Add(Me.PictureBox2)
         Me.panelChurchFinancialTrans_under.Controls.Add(Me.ptbIncome)
         Me.panelChurchFinancialTrans_under.Controls.Add(Me.ptbExpenses)
         Me.panelChurchFinancialTrans_under.Controls.Add(Me.ptbEmergencyFunds)
@@ -575,6 +578,15 @@ Partial Class frmMainFinal
         Me.panelChurchFinancialTrans_under.Name = "panelChurchFinancialTrans_under"
         Me.panelChurchFinancialTrans_under.Size = New System.Drawing.Size(277, 0)
         Me.panelChurchFinancialTrans_under.TabIndex = 38
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.church_profiling.My.Resources.Resources.offering_deepsky
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 45)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(277, 46)
+        Me.PictureBox2.TabIndex = 25
+        Me.PictureBox2.TabStop = False
         '
         'ptbIncome
         '
@@ -588,7 +600,7 @@ Partial Class frmMainFinal
         'ptbExpenses
         '
         Me.ptbExpenses.BackgroundImage = Global.church_profiling.My.Resources.Resources.expenses_deepsky
-        Me.ptbExpenses.Location = New System.Drawing.Point(0, 45)
+        Me.ptbExpenses.Location = New System.Drawing.Point(0, 90)
         Me.ptbExpenses.Name = "ptbExpenses"
         Me.ptbExpenses.Size = New System.Drawing.Size(277, 46)
         Me.ptbExpenses.TabIndex = 23
@@ -597,7 +609,7 @@ Partial Class frmMainFinal
         'ptbEmergencyFunds
         '
         Me.ptbEmergencyFunds.BackgroundImage = Global.church_profiling.My.Resources.Resources.emergency_funds_deepsky
-        Me.ptbEmergencyFunds.Location = New System.Drawing.Point(0, 90)
+        Me.ptbEmergencyFunds.Location = New System.Drawing.Point(0, 135)
         Me.ptbEmergencyFunds.Name = "ptbEmergencyFunds"
         Me.ptbEmergencyFunds.Size = New System.Drawing.Size(277, 46)
         Me.ptbEmergencyFunds.TabIndex = 24
@@ -721,6 +733,7 @@ Partial Class frmMainFinal
         CType(Me.ptbAttendance, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbChurchFinancialtrans, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelChurchFinancialTrans_under.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbIncome, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbExpenses, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbEmergencyFunds, System.ComponentModel.ISupportInitialize).EndInit()
@@ -788,4 +801,5 @@ Partial Class frmMainFinal
     Friend WithEvents ptbEmergencyFunds As System.Windows.Forms.PictureBox
     Friend WithEvents panelBurialFinancialTrans_under As System.Windows.Forms.Panel
     Friend WithEvents panelRegisterUnder As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 End Class

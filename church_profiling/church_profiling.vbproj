@@ -100,7 +100,9 @@
     <Compile Include="Class\Church.vb" />
     <Compile Include="Class\Database.vb" />
     <Compile Include="Class\Emergencyfund.vb" />
+    <Compile Include="Class\Expenditure.vb" />
     <Compile Include="Class\Expenses.vb" />
+    <Compile Include="Class\Offering.vb" />
     <Compile Include="Class\Selected_Official.vb" />
     <Compile Include="Class\Useraccount.vb" />
     <Compile Include="Forms\frmAddChurchName.Designer.vb">
@@ -145,6 +147,12 @@
     <Compile Include="Forms\frmemergencyFund.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmExpenditures.Designer.vb">
+      <DependentUpon>frmExpenditures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpenditures.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmExpenses.Designer.vb">
       <DependentUpon>frmExpenses.vb</DependentUpon>
     </Compile>
@@ -186,6 +194,12 @@
     </Compile>
     <Compile Include="Forms\frmMember_registration.Designer.vb">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOffering.Designer.vb">
+      <DependentUpon>frmOffering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOffering.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmRegisterPastor.Designer.vb">
@@ -277,6 +291,9 @@
     <EmbeddedResource Include="Forms\frmemergencyFund.resx">
       <DependentUpon>frmemergencyFund.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpenditures.resx">
+      <DependentUpon>frmExpenditures.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmExpenses.resx">
       <DependentUpon>frmExpenses.vb</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMember_registration.resx">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOffering.resx">
+      <DependentUpon>frmOffering.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegisterPastor.resx">
       <DependentUpon>frmRegisterPastor.vb</DependentUpon>
@@ -346,6 +366,10 @@
     <Content Include="opencv_ffmpeg310_64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\offerings_dodge.jpg" />
+    <None Include="Resources\offerings_deepsky.jpg" />
+    <None Include="Resources\offering_dodge.jpg" />
+    <None Include="Resources\offering_deepsky.jpg" />
     <None Include="Resources\view_sky.jpg" />
     <None Include="Resources\view_dodge.jpg" />
     <None Include="Resources\user_account_dodge.jpg" />

@@ -122,7 +122,7 @@ Public Class frmMainFinal
 
     Public Sub slideChurchFinancialTrans_down()
         ptbChurchFinancialtrans.BackgroundImage = church_profiling.My.Resources.church_financial_trans_deepsky
-        While (panelChurchFinancialTrans_under.Height < 136)
+        While (panelChurchFinancialTrans_under.Height < 181)
             panelChurchFinancialTrans_under.Height += 1
         End While
     End Sub
@@ -677,4 +677,23 @@ Public Class frmMainFinal
 
 
    
+    Private Sub PictureBox2_MouseEnter(sender As Object, e As EventArgs) Handles PictureBox2.MouseEnter
+        PictureBox2.BackgroundImage = church_profiling.My.Resources.offering_dodge
+    End Sub
+
+    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
+        PictureBox2.BackgroundImage = church_profiling.My.Resources.offering_deepsky
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        slideChurchFinancialTrans_up()
+        slideFileSub_up()
+        frmOffering.ShowDialog()
+    End Sub
+
+    Private Sub ptbExpenditures_Click(sender As Object, e As EventArgs) Handles ptbExpenditures.Click
+        slideBurialTrans_up()
+        slideFileSub_up()
+        frmExpenditures.ShowDialog()
+    End Sub
 End Class
