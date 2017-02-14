@@ -134,7 +134,7 @@ Public Class frmMainFinal
     End Sub
 
     Public Sub slideViewSub_down()
-        While (panelViewUnder.Height < 268)
+        While (panelViewUnder.Height < 316)
             panelViewUnder.Height += 1
         End While
     End Sub
@@ -678,4 +678,16 @@ Public Class frmMainFinal
 
 
    
+    Private Sub PictureBox2_MouseEnter(sender As Object, e As EventArgs) Handles PictureBox2.MouseEnter
+        PictureBox2.BackgroundImage = church_profiling.My.Resources.pastor_deepsky
+    End Sub
+
+    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
+        PictureBox2.BackgroundImage = church_profiling.My.Resources.Pastor_dodge
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        slideViewSub_up()
+        frmListofPastor.ShowDialog()
+    End Sub
 End Class
