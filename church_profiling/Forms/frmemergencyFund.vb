@@ -139,7 +139,7 @@
             lblMemberName.Text = .Fullname
             lblDateBorrowed.Text = .date_borrowed
             lblDueDate.Text = .due_date
-            lblStatus.Text = .status
+            lblPaidStatus.Text = .status
             lblBalance.Text = .balance
         End With
     End Sub

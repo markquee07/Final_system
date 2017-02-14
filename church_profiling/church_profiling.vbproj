@@ -102,7 +102,11 @@
     <Compile Include="Class\Emergencyfund.vb" />
     <Compile Include="Class\Expenditure.vb" />
     <Compile Include="Class\Expenses.vb" />
+<<<<<<< HEAD
     <Compile Include="Class\Offering.vb" />
+=======
+    <Compile Include="Class\Pastor.vb" />
+>>>>>>> d638a4d13f5f91ac2f9e0e1fdc3bfbc9de694d0f
     <Compile Include="Class\Selected_Official.vb" />
     <Compile Include="Class\Useraccount.vb" />
     <Compile Include="Forms\frmAddChurchName.Designer.vb">
@@ -177,10 +181,22 @@
     <Compile Include="Forms\frmListofBurialOfficial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmListofDebts.Designer.vb">
+      <DependentUpon>frmListofDebts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListofDebts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmListOfHousehold.Designer.vb">
       <DependentUpon>frmListOfHousehold.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmListOfHousehold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListofPastor.Designer.vb">
+      <DependentUpon>frmListofPastor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListofPastor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmMainFinal.Designer.vb">
@@ -196,10 +212,23 @@
       <DependentUpon>frmMember_registration.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\frmOffering.Designer.vb">
       <DependentUpon>frmOffering.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmOffering.vb">
+=======
+    <Compile Include="Forms\frmPastorViewDetails.Designer.vb">
+      <DependentUpon>frmPastorViewDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPastorViewDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayBalance.Designer.vb">
+      <DependentUpon>frmPayBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPayBalance.vb">
+>>>>>>> d638a4d13f5f91ac2f9e0e1fdc3bfbc9de694d0f
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmRegisterPastor.Designer.vb">
@@ -306,8 +335,14 @@
     <EmbeddedResource Include="Forms\frmListofBurialOfficial.resx">
       <DependentUpon>frmListofBurialOfficial.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListofDebts.resx">
+      <DependentUpon>frmListofDebts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmListOfHousehold.resx">
       <DependentUpon>frmListOfHousehold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListofPastor.resx">
+      <DependentUpon>frmListofPastor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMainFinal.resx">
       <DependentUpon>frmMainFinal.vb</DependentUpon>
@@ -315,8 +350,16 @@
     <EmbeddedResource Include="Forms\frmMember_registration.resx">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Forms\frmOffering.resx">
       <DependentUpon>frmOffering.vb</DependentUpon>
+=======
+    <EmbeddedResource Include="Forms\frmPastorViewDetails.resx">
+      <DependentUpon>frmPastorViewDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayBalance.resx">
+      <DependentUpon>frmPayBalance.vb</DependentUpon>
+>>>>>>> d638a4d13f5f91ac2f9e0e1fdc3bfbc9de694d0f
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegisterPastor.resx">
       <DependentUpon>frmRegisterPastor.vb</DependentUpon>

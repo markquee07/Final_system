@@ -134,7 +134,7 @@ Public Class frmMainFinal
     End Sub
 
     Public Sub slideViewSub_down()
-        While (panelViewUnder.Height < 268)
+        While (panelViewUnder.Height < 316)
             panelViewUnder.Height += 1
         End While
     End Sub
@@ -616,7 +616,8 @@ Public Class frmMainFinal
     End Sub
 
     Private Sub ptbViewChurchFinancialTrans_Click(sender As Object, e As EventArgs) Handles ptbViewChurchFinancialTrans.Click
-
+        slideViewSub_up()
+        frmListofDebts.ShowDialog()
     End Sub
 
     Private Sub ptbViewBurialFinancialTrans_Click(sender As Object, e As EventArgs) Handles ptbViewBurialFinancialTrans.Click
@@ -678,6 +679,7 @@ Public Class frmMainFinal
 
    
     Private Sub PictureBox2_MouseEnter(sender As Object, e As EventArgs) Handles PictureBox2.MouseEnter
+<<<<<<< HEAD
         PictureBox2.BackgroundImage = church_profiling.My.Resources.offering_dodge
     End Sub
 
@@ -695,5 +697,17 @@ Public Class frmMainFinal
         slideBurialTrans_up()
         slideFileSub_up()
         frmExpenditures.ShowDialog()
+=======
+        PictureBox2.BackgroundImage = church_profiling.My.Resources.pastor_deepsky
+    End Sub
+
+    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
+        PictureBox2.BackgroundImage = church_profiling.My.Resources.Pastor_dodge
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        slideViewSub_up()
+        frmListofPastor.ShowDialog()
+>>>>>>> d638a4d13f5f91ac2f9e0e1fdc3bfbc9de694d0f
     End Sub
 End Class

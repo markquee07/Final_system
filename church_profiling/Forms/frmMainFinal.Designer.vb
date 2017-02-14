@@ -79,6 +79,7 @@ Partial Class frmMainFinal
         Me.panelRegisterUnder = New System.Windows.Forms.Panel()
         Me.ptbMember = New System.Windows.Forms.PictureBox()
         Me.ptbPastor = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.panelReport.SuspendLayout()
         CType(Me.ptbReportCerficate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbReportChurchFinancialTrans, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,6 +132,7 @@ Partial Class frmMainFinal
         Me.panelRegisterUnder.SuspendLayout()
         CType(Me.ptbMember, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbPastor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelReport
@@ -252,6 +254,7 @@ Partial Class frmMainFinal
         'panelViewUnder
         '
         Me.panelViewUnder.BackColor = System.Drawing.Color.DodgerBlue
+        Me.panelViewUnder.Controls.Add(Me.PictureBox2)
         Me.panelViewUnder.Controls.Add(Me.ptbViewChurchFinancialTrans)
         Me.panelViewUnder.Controls.Add(Me.ptbViewAttendance)
         Me.panelViewUnder.Controls.Add(Me.ptbViewMembers)
@@ -266,7 +269,7 @@ Partial Class frmMainFinal
         'ptbViewChurchFinancialTrans
         '
         Me.ptbViewChurchFinancialTrans.BackgroundImage = Global.church_profiling.My.Resources.Resources.church_financial_trans_dodge
-        Me.ptbViewChurchFinancialTrans.Location = New System.Drawing.Point(0, 180)
+        Me.ptbViewChurchFinancialTrans.Location = New System.Drawing.Point(0, 225)
         Me.ptbViewChurchFinancialTrans.Name = "ptbViewChurchFinancialTrans"
         Me.ptbViewChurchFinancialTrans.Size = New System.Drawing.Size(277, 46)
         Me.ptbViewChurchFinancialTrans.TabIndex = 27
@@ -275,7 +278,7 @@ Partial Class frmMainFinal
         'ptbViewAttendance
         '
         Me.ptbViewAttendance.BackgroundImage = Global.church_profiling.My.Resources.Resources.attendance_dodge
-        Me.ptbViewAttendance.Location = New System.Drawing.Point(0, 135)
+        Me.ptbViewAttendance.Location = New System.Drawing.Point(0, 180)
         Me.ptbViewAttendance.Name = "ptbViewAttendance"
         Me.ptbViewAttendance.Size = New System.Drawing.Size(277, 46)
         Me.ptbViewAttendance.TabIndex = 26
@@ -293,7 +296,7 @@ Partial Class frmMainFinal
         'ptbViewBurialFinancialTrans
         '
         Me.ptbViewBurialFinancialTrans.BackgroundImage = Global.church_profiling.My.Resources.Resources.burial_financial_trans_dodge
-        Me.ptbViewBurialFinancialTrans.Location = New System.Drawing.Point(0, 225)
+        Me.ptbViewBurialFinancialTrans.Location = New System.Drawing.Point(0, 270)
         Me.ptbViewBurialFinancialTrans.Name = "ptbViewBurialFinancialTrans"
         Me.ptbViewBurialFinancialTrans.Size = New System.Drawing.Size(277, 46)
         Me.ptbViewBurialFinancialTrans.TabIndex = 25
@@ -311,7 +314,7 @@ Partial Class frmMainFinal
         'ptbViewBurialOfficials
         '
         Me.ptbViewBurialOfficials.BackgroundImage = Global.church_profiling.My.Resources.Resources.burial_officials_dodge
-        Me.ptbViewBurialOfficials.Location = New System.Drawing.Point(0, 90)
+        Me.ptbViewBurialOfficials.Location = New System.Drawing.Point(0, 135)
         Me.ptbViewBurialOfficials.Name = "ptbViewBurialOfficials"
         Me.ptbViewBurialOfficials.Size = New System.Drawing.Size(277, 46)
         Me.ptbViewBurialOfficials.TabIndex = 24
@@ -671,6 +674,15 @@ Partial Class frmMainFinal
         Me.ptbPastor.TabIndex = 23
         Me.ptbPastor.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.church_profiling.My.Resources.Resources.Pastor_dodge
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 90)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(277, 46)
+        Me.PictureBox2.TabIndex = 28
+        Me.PictureBox2.TabStop = False
+        '
         'frmMainFinal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -743,6 +755,7 @@ Partial Class frmMainFinal
         Me.panelRegisterUnder.ResumeLayout(False)
         CType(Me.ptbMember, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbPastor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

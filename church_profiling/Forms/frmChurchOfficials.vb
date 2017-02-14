@@ -6,6 +6,9 @@
     Public officials As New Collection
     Public o_position As String
     Dim active_official As New Selected_Official
+    Public count As Integer
+    Public o_id As Integer
+    Public o_member_id As String
 
 
     Private Sub btnHostPastor_Click(sender As Object, e As EventArgs) Handles btnHostPastor.Click
@@ -94,21 +97,22 @@
         ElseIf button_no = 3 Then
             txtDeacon1.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
         ElseIf button_no = 4 Then
-            txtDeacon2.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
+        txtDeacon2.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
         ElseIf button_no = 5 Then
-            txtDeacon3.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
+        txtDeacon3.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
         ElseIf button_no = 6 Then
-            txtTreasurer.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
+        txtTreasurer.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
         ElseIf button_no = 7 Then
-            txtSecretary.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
+        txtSecretary.Text = lsvMemberInformaion.SelectedItems(0).SubItems(2).Text
         End If
 
 
-        Dim active_id As Integer = lsvMemberInformaion.SelectedItems(0).Text
-        Me.active_official = New Selected_Official
-        Me.active_official.member.loadMember(active_id)
-        Me.active_official.position = Me.o_position
-        Me.setOfficial()
+            Dim active_id As Integer = lsvMemberInformaion.SelectedItems(0).Text
+            Me.active_official = New Selected_Official
+            Me.active_official.member.loadMember(active_id)
+            Me.active_official.position = Me.o_position
+            Me.setOfficial()
+
     End Sub
 
     
@@ -128,11 +132,16 @@
         Me.officials.Add(active_official)
     End Sub
     Private Sub btnElder_Click(sender As Object, e As EventArgs) Handles btnElder.Click
+
         c.displayMemberForChurchOfficial(lsvMemberInformaion)
         lsvPastorList.Visible = False
         lsvMemberInformaion.Visible = True
         button_no = 2
         o_position = "ELDER"
+
+
+
+
     End Sub
 
     Private Sub btnDeacon1_Click(sender As Object, e As EventArgs) Handles btnDeacon1.Click
@@ -203,6 +212,7 @@
     Private Sub lsvPastorList_Click(sender As Object, e As EventArgs) Handles lsvPastorList.Click
         If button_no = 1 Then
             txtHostPastor.Text = lsvPastorList.SelectedItems(0).SubItems(1).Text
+
         End If
 
         Dim active_id As Integer = lsvPastorList.SelectedItems(0).Text
@@ -210,6 +220,9 @@
         Me.active_official.member.loadPastor(active_id)
         Me.active_official.position = Me.o_position
         Me.setOfficial()
+
+
+
     End Sub
 
     Private Sub txtYear_TextChanged(sender As Object, e As EventArgs) Handles txtYear.TextChanged
@@ -228,5 +241,16 @@
     Private Sub txtYear_Click(sender As Object, e As EventArgs) Handles txtYear.Click
         Label10.Visible = False
         txtYear.Select()
+    End Sub
+
+    Private Sub txtYear_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtYear.KeyPress
+        If IsNumeric(e.KeyChar) Or Convert.ToInt32(e.KeyChar).ToString() = 46 Or Convert.ToInt32(e.KeyChar).ToString() = 8 Or e.KeyChar = "-" Then
+
+            e.Handled = False
+        Else
+            MsgBox("Please enter year of term ", MsgBoxStyle.Information, "Information")
+            e.Handled = True
+        End If
+
     End Sub
 End Class

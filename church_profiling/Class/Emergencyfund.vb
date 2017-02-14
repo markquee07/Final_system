@@ -25,6 +25,30 @@
         GLOBAL_VARS.db.executeNonReader(sql)
     End Sub
 
+
+    Public Sub listOfAllEmergencyFundsRecord(bal As String, ByVal lsv As ListView)
+        lsv.Items.Clear()
+        Dim sql As String = "SELECT e.id,m.member_id,concat(m.first_name,' ',m.middle_name,' ',m.last_name) as fullname,m.contact_no,amount,if(status = 'PAID',0,amount) as balance,date_format(e.date_borrowed,'%M %d, %Y') as Date_borrowed,date_format(e.due_date,'%M %d, %Y') as due_date,e.status FROM tbl_member_information m inner join tbl_emergency_funds e on m.id = e.member_id"
+        GLOBAL_VARS.db.execute(sql)
+        If GLOBAL_VARS.db.reader.HasRows Then
+            While GLOBAL_VARS.db.reader.Read()
+                Dim i As Integer = lsv.Items.Count
+                With lsv
+                    .Items.Add(GLOBAL_VARS.db.reader("id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("member_id").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Fullname").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("contact_no").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("amount").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("Balance").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("date_borrowed").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("due_date").ToString())
+                    .Items(i).SubItems.Add(GLOBAL_VARS.db.reader("status").ToString())
+                End With
+            End While
+        End If
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+
     Public Sub displayMemberToBorrow(ByVal lsv As ListView)
         lsv.Items.Clear()
         Dim sql As String = "SELECT id,member_id,concat(first_name,' ',middle_name,' ',last_name) as fullname FROM tbl_member_information"
@@ -70,17 +94,42 @@
             End If
         End While
         GLOBAL_VARS.db.reader.Close()
+        If val = "Unavailable" Then
+            val = 0
+            Me.listOfAllEmergencyFundsRecord(val, frmListofDebts.lsvEmergencyFund)
+        End If
+        If val = "0" Then
+            val = "Unavailable"
+        End If
         Return val
+
     End Function
 
     Public Sub displayCurrentBorrower()
-        Dim sql As String = "SELECT m.member_id,concat(m.first_name,' ',m.middle_name,' ',m.last_name) as fullname,date_format(e.date_borrowed,'%M %d, %Y') as Date_borrowed,date_format(e.due_date,'%M %d, %Y') as due_date,e.status FROM tbl_member_information m inner join tbl_emergency_funds e where e.status = 'unpaid'"
+        Dim sql As String = "SELECT m.member_id,concat(m.first_name,' ',m.middle_name,' ',m.last_name) as fullname,date_format(e.date_borrowed,'%M %d, %Y') as Date_borrowed,date_format(e.due_date,'%M %d, %Y') as due_date,e.status FROM tbl_member_information m inner join tbl_emergency_funds e on m.id = e.member_id where e.status = 'unpaid'"
         GLOBAL_VARS.db.execute(sql)
 
         While GLOBAL_VARS.db.reader.Read()
             If GLOBAL_VARS.db.reader.HasRows Then
                 With Me
                     .members_id = GLOBAL_VARS.db.reader("member_id").ToString()
+                    .Fullname = GLOBAL_VARS.db.reader("fullname").ToString()
+                    .date_borrowed = GLOBAL_VARS.db.reader("date_borrowed").ToString()
+                    .due_date = GLOBAL_VARS.db.reader("due_date").ToString()
+                    .status = GLOBAL_VARS.db.reader("status").ToString()
+                End With
+            End If
+        End While
+        GLOBAL_VARS.db.reader.Close()
+    End Sub
+    Public Sub displayCurrentBorrowerByID(ID As Integer)
+        Dim sql As String = "SELECT e.id,concat(m.first_name,' ',m.middle_name,' ',m.last_name) as fullname,date_format(e.date_borrowed,'%M %d, %Y') as Date_borrowed,date_format(e.due_date,'%M %d, %Y') as due_date,e.status FROM tbl_member_information m inner join tbl_emergency_funds e on m.id = e.member_id where e.status = 'unpaid' and e.id = " & ID & ""
+        GLOBAL_VARS.db.execute(sql)
+
+        While GLOBAL_VARS.db.reader.Read()
+            If GLOBAL_VARS.db.reader.HasRows Then
+                With Me
+                    .members_id = GLOBAL_VARS.db.reader("id").ToString()
                     .Fullname = GLOBAL_VARS.db.reader("fullname").ToString()
                     .date_borrowed = GLOBAL_VARS.db.reader("date_borrowed").ToString()
                     .due_date = GLOBAL_VARS.db.reader("due_date").ToString()

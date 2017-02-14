@@ -52,7 +52,7 @@ Partial Class frmchurchlist
         Me.btnDeleteChurch.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnDeleteChurch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDeleteChurch.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteChurch.Location = New System.Drawing.Point(263, 103)
+        Me.btnDeleteChurch.Location = New System.Drawing.Point(238, 103)
         Me.btnDeleteChurch.Name = "btnDeleteChurch"
         Me.btnDeleteChurch.Size = New System.Drawing.Size(101, 36)
         Me.btnDeleteChurch.TabIndex = 51
@@ -66,7 +66,7 @@ Partial Class frmchurchlist
         Me.lblSearchMember.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblSearchMember.Font = New System.Drawing.Font("Monotype Corsiva", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSearchMember.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblSearchMember.Location = New System.Drawing.Point(634, 112)
+        Me.lblSearchMember.Location = New System.Drawing.Point(657, 112)
         Me.lblSearchMember.Name = "lblSearchMember"
         Me.lblSearchMember.Size = New System.Drawing.Size(121, 17)
         Me.lblSearchMember.TabIndex = 49
@@ -76,7 +76,7 @@ Partial Class frmchurchlist
         '
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(632, 113)
+        Me.txtSearch.Location = New System.Drawing.Point(655, 113)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(154, 15)
         Me.txtSearch.TabIndex = 48
@@ -87,7 +87,7 @@ Partial Class frmchurchlist
         Me.lblAttendanceType.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.lblAttendanceType.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAttendanceType.ForeColor = System.Drawing.Color.White
-        Me.lblAttendanceType.Location = New System.Drawing.Point(43, 42)
+        Me.lblAttendanceType.Location = New System.Drawing.Point(18, 39)
         Me.lblAttendanceType.Name = "lblAttendanceType"
         Me.lblAttendanceType.Size = New System.Drawing.Size(321, 31)
         Me.lblAttendanceType.TabIndex = 46
@@ -98,7 +98,7 @@ Partial Class frmchurchlist
         Me.btnEdit.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(156, 103)
+        Me.btnEdit.Location = New System.Drawing.Point(131, 103)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(101, 34)
         Me.btnEdit.TabIndex = 52
@@ -110,7 +110,7 @@ Partial Class frmchurchlist
         Me.btnAddChurch.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnAddChurch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddChurch.ForeColor = System.Drawing.Color.White
-        Me.btnAddChurch.Location = New System.Drawing.Point(49, 103)
+        Me.btnAddChurch.Location = New System.Drawing.Point(24, 103)
         Me.btnAddChurch.Name = "btnAddChurch"
         Me.btnAddChurch.Size = New System.Drawing.Size(101, 34)
         Me.btnAddChurch.TabIndex = 53
@@ -160,7 +160,7 @@ Partial Class frmchurchlist
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(594, 108)
+        Me.PictureBox2.Location = New System.Drawing.Point(617, 108)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 25)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -171,7 +171,7 @@ Partial Class frmchurchlist
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.White
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Location = New System.Drawing.Point(624, 108)
+        Me.PictureBox3.Location = New System.Drawing.Point(647, 108)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(175, 25)
         Me.PictureBox3.TabIndex = 47
